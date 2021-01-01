@@ -978,7 +978,7 @@ padding:10px;
     display: flex;
 flex-direction:column;
 width:250px;
-height:240px;
+
     justify-content:center;
     align-items: center;
     color:rgb(87, 62, 47);
@@ -1017,7 +1017,7 @@ height:240px;
 .serviceContentHeader{
   /* width:100%; */
 
- text-align: center;
+text-align: left;
   font-weight: 600;
 
   font-size:18px;
@@ -1037,10 +1037,14 @@ gap:50px;
   gap:50px;
 }
 .serviceContentText{
-text-align: center;
+display:flex;
+flex-direction:column;
+justify-content: flex-start;
+align-items: flex-start;
+gap:7px;
 width:100%;
-word-wrap: break-word;
-  font-size:14px;
+height:auto;
+  font-size:18px;
 }
  
   .services:hover{
@@ -1050,7 +1054,7 @@ word-wrap: break-word;
 .fa_icons{
   width:100%;
   font-size: 70px;
-  text-align: center;
+  text-align: left;
 }
   .services i{
    
@@ -1326,7 +1330,7 @@ animation: 1s anim-flipX ease infinite;
 }
 .rate:not(:checked) > input {
     position:absolute;
-    top:-9999px;
+    /* top:-9999px; */
 }
 .rate:not(:checked) > label {
     float:right;
@@ -1587,7 +1591,41 @@ align-items: center;
   .return_button button:hover{
 background:rgb(238, 237, 237);
   }
+
+
+  .feedbackTab{
+    display:flex;
+    flex-direction: column;
+    gap:25px;
+  }
+  .commentTitle{
+    width:100%;
+    font-family: 'Times New Roman', Times, serif;
+  
+    
+  }
+
+  .afterfeedbackTab
+  {
+height:100%;
+width:100%;
+
+display:flex;
+justify-content: center;
+align-items: center;
+color:rgb(9, 210, 9);
+font-size: 50px;
+font-family: 'Times New Roman', Times, serif;
+text-align: center;
+  }
+
+
 @media only screen and (max-width: 780px) {    
+
+  .comments{
+  background:rgb(255, 255, 255);
+  width:100%;
+  }
 
   .return_button{
     width:100%;
@@ -1611,7 +1649,7 @@ background:rgb(238, 237, 237);
     width:100%;
   }
 .commentTitle{
-  width:1px;
+  width:100%;
   text-align: center;
 }
 .commentForm{
@@ -1982,7 +2020,7 @@ text-align: center;
 
 }
 .serviceContentText{
-  text-align: center;
+  text-align: left;
  width:100%;
  padding: 0;
 

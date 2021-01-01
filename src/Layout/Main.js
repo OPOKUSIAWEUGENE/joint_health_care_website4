@@ -21,7 +21,7 @@ import Square from "./Headercomponents/square"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import Animation1 from "./Maincontentcomponents/Animation1"
 import Animation2 from "./Maincontentcomponents/Animation2"
 import Animation3 from "./Maincontentcomponents/Animation3"
@@ -62,6 +62,78 @@ export default function Main(){
           control.start("hidden");
         }
       }, [control, inView]);
+
+
+  const afterFeedback= <div className={styles.afterfeedbackTab} >
+    <div>Thanks!!</div>
+
+  </div>
+
+    const feedback=  <form className={styles.feedbackTab} onSubmit={handleSubmit}>
+          
+      <div className={styles.rating}>
+      <div className={styles.rateHeading}>  RATE US</div>
+  
+      <div className={styles.rateContent}>
+      <div className={styles.rate}>
+<input type="radio" id="star5" name="rate" value="5" />
+<label for="star5" title="text">5 stars</label>
+<input type="radio" id="star4" name="rate" value="4" />
+<label for="star4" title="text">4 stars</label>
+<input type="radio" id="star3" name="rate" value="3" />
+<label for="star3" title="text">3 stars</label>
+<input type="radio" id="star2" name="rate" value="2" />
+<label for="star2" title="text">2 stars</label>
+<input type="radio" id="star1" name="rate" value="1" />
+<label for="star1" title="text">1 star</label>
+</div>
+</div>
+<div className={styles.rateCaptions}>
+<i className="fa fa-hand-o-up fa-flip "></i>
+Rate Us
+</div>
+</div>
+
+<div className={styles.comments}>
+
+<div className={styles.commentTitle}>Kindly leave your feedback</div>
+<div>
+    <div className={styles.commentForm}>
+        <textarea required name="comments">
+
+        </textarea>
+        <button  className={styles.applicationButton}>Submit</button>
+    </div>
+</div>
+</div>
+</form>
+
+const [feedbackTab, setfeedbackTab]=useState(feedback);
+
+
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+    
+        const data = new FormData(event.target);
+        console.log(data)
+        const requestOptions = {
+          method: 'POST',
+          // headers: { 'Content-Type': 'application/json' },
+          body: data
+      };
+      const response = await fetch(`${process.env.REACT_APP_BASE_URL}add-comment`,requestOptions);
+  
+      const datas = await response.json();
+      console.log(data);
+     if(response.ok)
+     { 
+        setfeedbackTab(afterFeedback)
+     }
+   else{
+    alert('application not sent. please try sending the application again')
+   }
+      }
     
 
     return(
@@ -250,18 +322,18 @@ export default function Main(){
 
 <div className={styles.fa_icons}><i className="fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}>Skilled nurse</span>
-        <span className={styles.serviceContentText}>
-           <strong>*</strong>Injection
-           <strong>*</strong>Wound care 
-           <strong>*</strong>Tube feeding
-           <strong>*</strong>Bowel regimen 
-           <strong>*</strong>Catheter care
-           <strong>*</strong>Nutritional instructions
-           <strong>*</strong>Respiratory/Tracheostomy
+<div className={styles.serviceContentHeader}>Skilled nurse</div>
+        <div className={styles.serviceContentText}>
+           <div><strong>*</strong>Injection</div>
+           <div> <strong>*</strong>Wound care </div>
+           <div> <strong>*</strong>Tube feeding</div>
+           <div>   <strong>*</strong>Bowel regimen </div>
+           <div>   <strong>*</strong>Catheter care</div>
+           <div>   <strong>*</strong>Nutritional instructions</div>
+           <div>   <strong>*</strong>Respiratory/Tracheostomy</div>
 
-           <strong>*</strong>Medication administration and Education
-             </span>
+           <div>  <strong>*</strong>Medication administration and Education</div>
+             </div>
 
 </div>
     
@@ -270,14 +342,14 @@ export default function Main(){
 {/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.fa_icons}><i className="fa fa-home"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}>Non-skilled</span>
-        <span className={styles.serviceContentText}>
-          Home-health aid;
-          <strong>*</strong>Bath 
-          <strong>*</strong>Dressing 
-          <strong>*</strong>Personal lining change 
-          <strong>*</strong>Light house duties 
-         </span>
+<div className={styles.serviceContentHeader}>Non-skilled</div>
+        <div className={styles.serviceContentText}>
+        <div> <strong>*</strong>Home-health aid; </div>
+          <div>    <strong>*</strong>Bath </div>
+          <div>   <strong>*</strong>Dressing </div>
+          <div> <strong>*</strong>Personal lining change</div> 
+          <div> <strong>*</strong>Light house duties </div>
+         </div>
 
 </div>
     
@@ -286,13 +358,13 @@ export default function Main(){
 {/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.fa_icons}><i className="fa fa-bicycle"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}>Physical Therapy</span>
-        <span className={styles.serviceContentText}>
-        <strong>*</strong>Reforming optimal level of functioning 
-        <strong>*</strong>Gait training
-        <strong>*</strong>Range of motion 
-        <strong>*</strong>Muscle strengthening 
-             </span>
+<div className={styles.serviceContentHeader}>Physical Therapy</div>
+        <div className={styles.serviceContentText}>
+        <div>    <strong>*</strong>Reforming optimal level of functioning </div>
+        <div>     <strong>*</strong>Gait training</div>
+        <div>      <strong>*</strong>Range of motion </div>
+        <div>     <strong>*</strong>Muscle strengthening </div>
+             </div>
 
 </div>
     
@@ -301,12 +373,12 @@ export default function Main(){
 {/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}>Occupational Therapy</span>
-        <span className={styles.serviceContentText}>
-        <strong>*</strong>Improving fine motor skill
-        <strong>*</strong>Independents with activities of daily living
-        <strong>*</strong>Adequate use of equipment
-             </span>
+<div className={styles.serviceContentHeader}>Occupational Therapy</div>
+        <div className={styles.serviceContentText}>
+        <div>     <strong>*</strong>Improving fine motor skill</div>
+        <div>     <strong>*</strong>Independents with activities of daily living</div>
+        <div>     <strong>*</strong>Adequate use of equipment</div>
+             </div>
 
 </div>  
     </div>
@@ -318,11 +390,11 @@ export default function Main(){
 {/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}>Speech Therapy</span>
-        <span className={styles.serviceContentText}>
-        <strong>*</strong>Swallowing disorders 
-        <strong>*</strong>Improved delayed or post illness speech disorder 
-             </span>
+<div className={styles.serviceContentHeader}>Speech Therapy</div>
+        <div className={styles.serviceContentText}>
+        <div>     <strong>*</strong>Swallowing disorders </div>
+        <div>     <strong>*</strong>Improved delayed or post illness speech disorder </div>
+             </div>
 
 </div>  
     </div>
@@ -331,10 +403,10 @@ export default function Main(){
 {/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}>Healthcare Social Worker</span>
-        <span className={styles.serviceContentText}>
-            <strong>*</strong>Help in need of assistance       
-          </span>
+<div className={styles.serviceContentHeader}>Healthcare Social Worker</div>
+        <div className={styles.serviceContentText}>
+        <div>   <strong>*</strong>Help in need of assistance   </div>    
+          </div>
 
 </div>  
     </div>
@@ -487,43 +559,7 @@ export default function Main(){
  <div className={styles.parallaxRowContents}>
                 <Parallaxcard height={"350px"} width={"28%"} >
       
- 
- 
-          
-          {/* <div className={styles.rating}>
-          <div className={styles.rateHeading}>  RATE US</div>
-      
-          <div className={styles.rateContent}>
-          <div className={styles.rate}>
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
-  </div>
-  </div>
-  <div className={styles.rateCaptions}>
-  <i className="fa fa-hand-o-up fa-flip "></i>
-Rate Us
-  </div>
-  </div> */}
-
-  <div className={styles.comment}>
-    <div className={styles.commentTitle}>Leave a Comment</div>
-    <div>
-        <form className={styles.commentForm}>
-            <textarea>
-
-            </textarea>
-            <button  className={styles.applicationButton}>Submit</button>
-        </form>
-    </div>
-  </div>
+ {feedbackTab}
             </Parallaxcard>
           
             <Parallaxcard height={"350px"} width={"50%"} >
