@@ -1,9 +1,9 @@
 // import styles from "../layout.module.css"
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import img1 from "../../resources/images/img1.jpg"
-import img2 from "../../resources/images/img2.jpg"
-import img3 from "../../resources/images/img3.jpg"
-import img4 from "../../resources/images/img4.jpg"
+import img1 from "../../resources/images/img1.webp"
+import img2 from "../../resources/images/img2.webp"
+import img3 from "../../resources/images/img3.webp"
+import img4 from "../../resources/images/img4.webp"
 import Electricity from "../Headercomponents/electricity";
 
 
