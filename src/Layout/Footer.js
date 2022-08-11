@@ -18,7 +18,7 @@ export default function Footer(){
             </div>
             <div className={styles.footerdescription}>
        
-            Elitefam is an energy commission certified electrical company founded by  
+            Ellitefam is an energy commission certified electrical company founded by  
             Patrick, a certified electrical engineer, with years of 
             experience delivery and mentainance of electrical solutions.
         

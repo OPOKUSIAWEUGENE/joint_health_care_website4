@@ -23,7 +23,7 @@ export default function Main(){
                 <Rowparagraph title={"ELITEFAM COMPANY LIMITED"}>
 
 
-   Elitefam Company is a certified electrical company located in Somanya, Ghana. Elitefam Company provides<br/> 
+   Ellitefam Company is a certified electrical company located in Somanya, Ghana. Elitefam Company provides<br/> 
    electrical services for homes, offices and industries with professional electrical engineers who are <br/>
    experts in factory setup and installations,  sachet water installations, factory maintenance, <br/>
    generator maintenance,gas & diesel boiler maintenance, streetlight installations, <br/>
