@@ -86,6 +86,8 @@ gap:2px;
 .parallaxbutton:hover{
     opacity: 0.7;
     cursor: pointer;
+    background: #2CA1AB;
+    color:rgb(234, 229, 229);
 }
 .rowcard{
    height:500px;
@@ -402,7 +404,9 @@ color:rgb(97, 171, 183);
 }
 .footerdescription{
     width:100%;
-    text-align: center;
+    word-wrap: break-word;
+    text-align: justify;
+   
     color:rgb(222, 218, 218);
     line-height: 25px;
   
@@ -487,6 +491,7 @@ justify-content: center;
 
 
 .aboutus{
-    padding:10px;
+    padding:20px;
+
 }
 

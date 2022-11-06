@@ -35,7 +35,7 @@ export default function Slider(){
                 <img src={Logo} style={{ width:400}} alt="logo"/>
                 </div>
      <div className="carouselButtons">
-     <a href="tel:+233245959600">   
+     <a href="tel:+8323437049">   
                     <button className="contactus" >
                     <i class="fa fa-phone"></i>(832)-343-7049
                
