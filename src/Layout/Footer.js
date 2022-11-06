@@ -3,54 +3,58 @@ import Footercards from "./Footercomponents/Footercards"
 import Footerparagraph from "./Footercomponents/footerparagraph"
 import Electricity from "./Headercomponents/electricity"
 import Footeraddress from "./Footercomponents/footeraddress"
+import Logo from "../resources/dlogo.png"
 export default function Footer(){
     return (
-        <div className={styles.footer}>
-            <Footercards >
-<div className={styles.logo}>
-            <div className={styles.logotext}>
-             <span className={styles.footlogoup}>ELLITEFAM</span>
-            <span className={styles.footlogodown}>Company Ltd</span>
-            </div>
-            <div>
-            <span><Electricity height={100} width={100} fill={"white"}/></span>
-            </div>
-            </div>
+        <div className={styles.footer} >
+            <Footercards title={"About Us"} >
+     
+         <div className={styles.aboutus}>
+             <img alt="logo" src={Logo} style={{width:100, height:100}}/>    
             <div className={styles.footerdescription}>
-       
-            Ellitefam is an energy commission certified electrical company founded by  
-            Patrick, a certified electrical engineer, with years of 
-            experience delivery and mentainance of electrical solutions.
-        
+            D’s World private care Companionship was established 2021 by Mrs .....
+            This idea started after Mrs..... had developed passion for 
+            helping and taking care of people especially the elderly in 
+            the community. D's world offers greate services at best and
+            affordable rates        
+            </div>
             </div>
 </Footercards>
 <Footercards title={"Our Services"} large={true}>
     <div className={styles.footercolumns}>
+
     <div className={styles.columndivisions}>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Electrical Designs</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Electrical wiring installation</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Streetlight installation</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Sachet water machine setup & installation</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Factory machine setup and maintenance</Footerparagraph>
-        </div>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Serving as a companion to Client</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Meal preparation</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Light housekeeping</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Medication reminder</Footerparagraph>
+         </div>
         <div className={styles.columndivisions}>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Generator maintenance</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Home automation</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> General electrical supplies</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Gas/diesel boiler machine maintenance</Footerparagraph> 
-        </div>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Assisting with transfer & mobility</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Assisting our clients through & from appointments</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Maintaining a safe & comfortable home environment</Footerparagraph>
+         </div>
         </div>
     </Footercards>
 
     <Footercards title={"Our Info"} >
     <Footeraddress><strong>Tel:</strong></Footeraddress>
-<Footeraddress>0247493689</Footeraddress>
-<Footeraddress>0245959600</Footeraddress>
+<Footeraddress>832-916-0400</Footeraddress>
+
 <hr/>
 <Footeraddress><strong>Location:</strong></Footeraddress>
-<Footeraddress>Somanya, Eastern Region</Footeraddress>
-<Footeraddress>New ECG - Yikrosec Road</Footeraddress>
-<Footeraddress>Close to the Yilo Krobo SHS School field</Footeraddress>
+<Footeraddress>14706 Loxley Meadows drive</Footeraddress>
+<Footeraddress>Houston tx 77082</Footeraddress>
+<hr/>
+<Footeraddress><strong>Social Media:</strong></Footeraddress>
+<Footeraddress>	<div class={styles.socialmedia}>
+	 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-instagram"></i></a>
+   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+
+ </div></Footeraddress>
+
     </Footercards>
 
 

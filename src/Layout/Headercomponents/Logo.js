@@ -1,12 +1,13 @@
 import styles from "../layout.module.css"
 import Electricity from "./electricity"
 
+
 export default function Logo(){
 
     return(
         <div className={styles.logo}>
             <div className={styles.logotext}>
-             <span className={styles.logoup}>ELLITEFAM</span>
+             <span className={styles.logoup}>DS WOLD</span>
             <span className={styles.logodown}>Company Ltd</span>
             </div>
             <div>

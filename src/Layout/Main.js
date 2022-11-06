@@ -20,23 +20,36 @@ export default function Main(){
             </Row>
 
             <Parallaxrow >
-                <Rowparagraph title={"ELITEFAM COMPANY LIMITED"}>
+                <Rowparagraph title={"DS WORLD"}>
+                <div class="card1">
+                <p>   D’s world Companionship is a non medical private care for the elderly.<br/>
+               At D'S WORLD, Our main aim is to improve  the quality  <br/> of life for our clients
+                by offering a wide variety <br/>of compassionate quality Home  Services <br/>and care programs 
+to our clients <br/> in the confort of their Homes.</p>
+<p>
+<i>These Services Include;</i>
+<ul>
 
+<li>Serving as a companion to Client</li>
+<li>Meal preparation </li>
+<li>Light housekeeping</li>
+<li>Medication reminder</li>
+<li>Assisting with transfer & mobility</li>
+<li>Assisting our clients through & from appointments</li>
+<li>Maintaining a safe & comfortable home environment</li>
 
-   Ellitefam Company is a certified electrical company located in Somanya, Ghana. Ellitefam Company provides<br/> 
-   electrical services for homes, offices and industries with professional electrical engineers who are <br/>
-   experts in factory setup and installations,  sachet water installations, factory maintenance, <br/>
-   generator maintenance,gas & diesel boiler maintenance, streetlight installations, <br/>
-   electrical wiring installations, electrical design, Home automations<br/>
-    and all other forms of electrical services.
+</ul>
+</p>
+</div>
 </Rowparagraph>
 <Row>
             <Parallaxcard height={"350px"} width={"340px"} background={"rgb(255, 255, 255)"}>
             <Parallaxword icon={<i className="fa fa-thin fa-check fa-fade animate"></i>} wordtitle={"Quality Services"} button={"Contact us now"}>
-            Every industry, office,<br/> 
-            and  home needs reliable electric <br/> 
-            services. Let Elitfam handle your <br/>
-            electrical problems
+           
+           Every home needs reliable home <br/>  
+            care service. Let D's  World<br/> 
+             handle all  your  home<br/>
+             care services
             </Parallaxword>
             </Parallaxcard>
             <Parallaxcard height={"400px"} width={"340px"} background={"rgb(51, 54, 69)"}>
@@ -44,15 +57,15 @@ export default function Main(){
         <i className='fa fa-circle fa-stack-2x'></i>
         <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
     </span>} titlecolor={"white"} contentcolor={"white"} wordtitle={"Always Available"} button={"Contact us now"}>
-            Call Elitfam today,<br/>
-            for all your electrical services<br/>
-            Count on Elitfam company ltd <br/>to be the best,
-            with guaranteed <br/> electrical resolutions
+            Call D's World today. Count<br/>
+          
+             on Ds World to be the<br/>  best,
+            with guaranteed <br/> home care services
             </Parallaxword>
                 </Parallaxcard>
             <Parallaxcard height={"350px"} width={"340px"} background={"rgb(255, 255, 255)"}>
-            <Parallaxword icon={ <i className="fa fa-diamond fa-spin"></i>} wordtitle={"Certified"} button={"Contact us now"}>
-            Fully certified by the <br/>Energy commission of ghana<br/>
+            <Parallaxword  icon={ <i className="fa fa-diamond fa-spin"></i>} wordtitle={"Certified"} button={"Contact us now"}>
+            Fully certified by the <br/>....................<br/>
             </Parallaxword>
                 </Parallaxcard>
 

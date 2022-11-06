@@ -56,10 +56,20 @@ transition: all 2s;
   display:flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center ;
+  align-items:flex-start ;
   gap:30px;
   transition: all 0.5s ease-out;
+
 }
+.carouselContent{
+  height:500px;
+margin-left: 80px;
+display:flex;
+flex-direction: column;
+gap:15px;
+
+}
+
 .line{
   display:flex;
   justify-content: center;
@@ -99,7 +109,7 @@ animation: pulse 5s infinite ease-in-out alternate, flash 500ms ease infinite al
   background: linear-gradient(to top, rgba(142, 13, 13, 0.75), rgba(0, 0, 0, 0.25));
 }
 @keyframes fade {
-    from{opacity: 0.3;}
+    from{opacity: 0.7;}
     to{opacity: 1;;}
     
 }
@@ -122,7 +132,9 @@ animation: pulse 5s infinite ease-in-out alternate, flash 500ms ease infinite al
 
 .prev, .next{
   font-size:50px;
-  opacity: 0.5;
+  color:rgb(208, 207, 207,0.5);
+
+
 }
 
 .next{
@@ -141,7 +153,7 @@ animation: pulse 5s infinite ease-in-out alternate, flash 500ms ease infinite al
   cursor: pointer;
   animation: pulse 2s infinite ease-in-out alternate, flash 500ms ease infinite alternate;
 
-margin-top: 400px;
+
   }
   .contentbuttons{
    
@@ -151,21 +163,27 @@ margin-top: 400px;
       align-items: center;
       height:100%;
      
+     
     
     }
-    .inboxus{
-      background:rgb(35, 156, 167);
+    .inboxus, .contactus{
+      font-family: "Times New Roman", Times, serif;
+      font-size:19px;
+      background-color: #2CA1AB;
+     color:white;
+      height:40px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    
       position: relative;
     }
   
-  .contactus{
-    background:rgb(246, 104, 72);
-  position: relative;
-  }
+
   
     @keyframes flash {
         from { opacity: 1; }	
-        to { opacity: 0.7; }
+        to { opacity: 0.9; }
     }
   
 @keyframes pulse {
@@ -217,31 +235,116 @@ button {
     opacity: 1;
    
   }
-  @media only screen and (max-width: 780px) {    
- 
 
-.contactus{
-  display: none;
-}
-    .contenttitle{
-     
-    font-size: 40px;
-   
-    }
+   /* Caption text */
+.text {
+  font-family: Arial, Helvetica, sans-serif;
+   color: #f2f2f2;
+   font-weight: 400;
+  
+
+   width: 100%;
+   text-align: left;
  
-    .contentbody{
-      font-family: Courier New, monospace;
-    font-size: 20px;
-    
-    color:rgba(255, 255, 255);
-    font-weight: 500;
-    animation: pulse 5s infinite ease-in-out alternate, flash 500ms ease infinite alternate;
-    
-    }
-    .carouselcontent{
-      gap:10px;
-    }
-      
+     animation: fadeInAnimation ease 2s;
+     animation-iteration-count: 1;
+     animation-fill-mode: forwards;
+ }
+
+
+
+
+ 
+ .text ul{
+ 
+ margin-top:-25px;
+ }
+ @keyframes fadeInAnimation {
+     0% {
+         opacity: 0;
+     }
+     100% {
+         opacity: 1;
+      }
+ }
+ .text li{
+     font-size: 24px;
  
  }
+ .text h3{
+ 
+ font-size:44px;
+  color: #ADF3FD;
+ }
+ .text p{
+    font-size: 20px;
+ }
+ .text span{
+   font-size:84px;
+  color: #ADF3FD;
+   
+ }
+
+ .card1 i{
+  font-size:18px;
+color:#789bb7;
+}
+.card1 ul{
+
+margin-left: 160px;
+
+ 
+letter-spacing: 1px;
+line-height: 30px;
+text-align:left;
+
+
+}
+
+
+@media only screen and (max-width: 780px) {    
+  .text{
+   margin-left: 40px;
+  }
+  .card1 ul{
+ 
+   margin-left:0px;
+  }  
+ 
+     .contenttitle{
+      
+     font-size: 40px;
+    
+     }
+  
+     .contentbody{
+       font-family: Courier New, monospace;
+     font-size: 20px;
+     width:100%;
+   
+     color:rgba(255, 255, 255);
+     font-weight: 500;
+     animation: pulse 5s infinite ease-in-out alternate, flash 500ms ease infinite alternate;
+     
+     }
+     .carouselcontent{
+       gap:10px;
+       width:100%;
+     }
+     .carouselContent{
+     width:100%;
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+     margin-left: 0;
+     }
+     .carouselButtons{
+ 
+       display:flex;
+       flex-direction: column;
+       
+       gap:10px;
+         }
+  }
+  
  

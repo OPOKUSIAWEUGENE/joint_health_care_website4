@@ -58,16 +58,7 @@ setCounter(content.length)
                     >
                       
                         {item}
-                        <div className="contentbuttons">
-                      
-                     <a href="tel:+233245959600"><button className="contactus" >
-                        
-                Contact us
-                </button></a>
-                <button className="inboxus" onClick={handleNext}>
-                Inbox us
-                </button>
-                </div>
+                       
                          </div>
                         
                 ))}
