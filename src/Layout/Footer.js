@@ -39,7 +39,7 @@ export default function Footer(){
 
     <Footercards title={"Our Info"} >
     <Footeraddress><strong>Tel:</strong></Footeraddress>
-<Footeraddress>832-916-0400</Footeraddress>
+<Footeraddress>(832)-916-0400</Footeraddress>
 
 <hr/>
 <Footeraddress><strong>Location:</strong></Footeraddress>

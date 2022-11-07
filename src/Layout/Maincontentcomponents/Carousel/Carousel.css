@@ -168,7 +168,7 @@ animation: pulse 5s infinite ease-in-out alternate, flash 500ms ease infinite al
     }
     .inboxus, .contactus{
       font-family: "Times New Roman", Times, serif;
-      font-size:90%;
+      font-size:80%;
       background-color: #2CA1AB;
      color:white;
       height:40px;
