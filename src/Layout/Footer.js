@@ -12,11 +12,10 @@ export default function Footer(){
          <div className={styles.aboutus}>
              <img alt="logo" src={Logo} style={{width:100, height:100}}/>    
             <div className={styles.footerdescription}>
-            D’s World private care and Companionship was established 2021 by Mrs Gladys Ohui
-            This idea started after Mrs Gladys Ohui had developed passion for 
-            helping and taking care of people especially the elderly in 
-            the community. D's world offers greate services at best and
-            affordable rates        
+            D’s World private care and Companionship was established by Mrs Gladys Ohui,
+            a woman who alsways had passion for helping and  taking care fo people, 
+            especially the elderly in the community since 2014.
+           D's world offers greate services at best and affordable rates        
             </div>
             </div>
 </Footercards>
