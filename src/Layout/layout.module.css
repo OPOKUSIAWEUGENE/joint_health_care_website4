@@ -81,8 +81,8 @@ gap:2px;
     flex-direction: column;
     justify-content:center;
     align-items: center;
-    padding-top:80px;
-    padding-bottom: 150px;
+    padding-top:40px;
+    padding-bottom: 40px;
    width:100vw;
     gap:120px;
 
@@ -98,7 +98,7 @@ gap:2px;
 .parallaxbutton{
     width:150px;
     height:40px;
-    background: #2CA1AB;
+    background: #ab7c2c;
     color:rgb(234, 229, 229);
     border:none;
     font-size: 15px;
@@ -108,7 +108,7 @@ gap:2px;
 .parallaxbutton:hover{
     opacity: 0.7;
     cursor: pointer;
-    background: #2CA1AB;
+    background: #a6781d;
     color:rgb(234, 229, 229);
 }
 .rowcard{
@@ -176,7 +176,7 @@ border:1px solid rgba(235, 232, 232, 0.2);
 }
 .parallaxfonticon{
     font-size:45px;
-    color:#3aa8b9;
+    color:#b98a3a;
   
    height:100px;
    width:100%;
@@ -198,7 +198,7 @@ border:1px solid rgba(235, 232, 232, 0.2);
   }
   
 .parallaxfonticon:hover{
-    color:#2fbbd1;
+    color:#714b09;
     
     font-size:47px;
 }
@@ -332,8 +332,7 @@ gap:15px;
 }
 .footercolumns{
     display: flex;
-    gap:8px;
-    
+    gap:8px;  
 }
 
 .footer_infos{
@@ -529,14 +528,13 @@ color:rgb(97, 171, 183);
 
 .socialmedia{
 justify-content: center;
-
 }
+
 .footer{
     flex-direction: column;
     gap:50px;
     padding: 10px;
-   padding-bottom:10%;
-   
+   padding-bottom:10%;  
 }
 .footercards, .footercardslarge{
     width:100%;
@@ -599,10 +597,52 @@ justify-content: center;
     bottom: 0;
     background-color: rgba(0,0,0,0.5);
     z-index: 2;
-  
+  display:flex;
+  justify-content: center;
+
+ 
   
   }
 
+  .carouselContent{
+    margin-top:100px;
+    display:flex;
+    flex-direction: column;
+
+  }
+  .carouselLinks{
+    font-family: monospace;
+    font-size:20px;
+    color:rgb(212, 152, 109);
+  
+  
+  }
+  .carouselButton{
+    position:inherit;
+    width:100px;
+    border-radius: 10px;
+    border:none;
+    font-size:15px;
+    background:rgb(240, 153, 92);
+    text-align: center;
+
+
+  }
+.carouselText1{
+    color:white;
+    font-size:50px;
+    font-weight:800;
+    font-family: Lucida Sans;
+
+
+
+}
+.carouselText2{
+    font-family: monospace;
+    font-size:30px;
+    color:white;
+  
+}
   .rowContent{
 
     width:100%;
@@ -647,12 +687,11 @@ justify-content: center;
 
   .contents{
     display:flex;
- flex-wrap: wrap;
+    flex-wrap: wrap;
     padding-top:30px;
     padding-bottom: 30px;
-   
-    align-items:center;
-    
+    align-items:center; 
+    gap:5px;
   }
 
   .services{
@@ -660,17 +699,24 @@ justify-content: center;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color:rgb(152, 108, 81);
-    font-size: 20px;
-width:200px;
-height:150px;
-
-
-
+    color:rgb(87, 62, 47);
+    font-size: 15px;
+    width:180px;
+    height:130px;
+    border:none;
+    background:rgb(253, 253, 253);
+    cursor:pointer;
+    border-radius: 5px;
+    animation:  fadeIn 5s, flash 600ms ease infinite alternate;
+    transition: transform .2s;
+  }
+  .services:hover{
+    background:rgb(236, 236, 236);
+    transform: scale(1.05);
   }
 
   .services i{
-    font-size: 40px;
+   
     color:rgb(173, 172, 172);
     
   }
@@ -679,11 +725,32 @@ height:150px;
     display:flex;
     justify-content: center;
   }
-  .textLower{
-    color:rgb(118, 77, 27, 0.7);
-   font-weight: 600;
+
+  .textUpper i{
+    font-size:34px;
+    text-align: center;
+   
+
   }
 
+  .textUpper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:rgb(154, 139, 127);
+  }
+  .textLower{
+    color:rgb(118, 77, 27);
+ 
+   font-size:16px;
+   font-style:bold;
+  }
+  .textLower2{
+    color:rgb(118, 77, 27);
+ 
+   font-size:13px;
+   font-style:bold;
+  }
   .contentRight{
     width:30%;
     padding:20px;
@@ -718,14 +785,138 @@ border-bottom: 1px dashed rgb(224, 223, 223);
 
     width:200px;
     height:110px;
-    background:rgb(253, 253, 253);
+    background:rgb(246, 246, 246);
     border:none;
     border-radius: 5px;
     cursor:pointer;
+    animation:  fadeIn 5s, flash 600ms ease infinite alternate;
+    transition: transform .2s;
+}
+.applicationFormElastic{
+    width:100%;
+    background:rgb(197, 123, 66);
+    padding:5px;
+    color:white;
+    letter-spacing: 7px;
+    font-weight: 600;
+    /* animation:  fadeIn 5s, flash 600ms ease infinite alternate; */
+    animation:  fadeIn 5s, flash 600ms,  anim-popoutin 8s ease infinite;
+
+}
+.rateCaptions{
+    width:100%;
+color:rgb(197, 123, 66);
+font-size: 20px;
+letter-spacing: 5px;
+font-weight: 800;
+padding-top:10px;
+animation: 1s anim-flipX ease infinite;
+    /* animation:  fadeIn 5s, flash 600ms ease infinite alternate; */
+}
+.rateContent{
+    padding:10px;
+    height:40%;
 }
 
+
+  @keyframes anim-flipX {
+    0% {
+      opacity: 0;
+      transform: rotateX(90def);
+    }
+    50% {
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+    100% {
+      /* animate nothing to pause animation at the end */
+      opacity: 1;
+      transform: rotateX(720deg);
+    }
+  }
+@keyframes flash {
+    from { opacity: 1; }	
+    to { opacity: 0.8; }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+} 
+@keyframes fade {
+  from {opacity: .3} 
+  to {opacity: 1}
+}
+@keyframes waviy {
+    0%,40%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
+  }
+
+  .lineUp {
+    animation: 2s anim-lineUp ease-out infinite;
+  }
+  @keyframes anim-lineUp {
+    0% {
+      opacity: 0;
+      transform: translateY(80%);
+    }
+    20% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+/* subtle zoom to attention and then back */
+/* .pop-outin {
+    animation: 2s anim-popoutin ease infinite;
+  } */
+  
+  @keyframes anim-popoutin {
+    0% {
+
+      transform: scale(0);
+      opacity: 0;
+      text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+    25% {
+  
+      transform: scale(0.9);
+      opacity: 1;
+      text-shadow: 3px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+    
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+      /* animate nothing to add pause at the end of animation */
+      transform: scale(1);
+      opacity: 1;
+      text-shadow: 1px 0 0 rgba(0, 0, 0, 0);
+    }
+  }
+
+
+@keyframse elastic{
+    0%{ transform: scale(0.2)};
+    100%{transform:scale(1)};
+}
 .applicationForms:hover{
     background:rgb(236, 236, 236);
+    transform: scale(1.05);
 }
 
 
