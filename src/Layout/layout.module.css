@@ -9,10 +9,10 @@
 }
 
 .header{
-  min-height: 90px;
+  min-height: 100px;
     background:white;
     display: grid;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 40% 60%;
     font-size: 20px;;
     color:rgb(92, 78, 78);
     border-bottom:1px solid rgb(92, 78, 78, 0.3);
@@ -22,10 +22,10 @@
     
 }
 .headerMinimized{
-    min-height: 80px;
+    min-height: 100px;
       background:rgb(244, 242, 242, 0.3);
       display: grid;
-      grid-template-columns: 20% 80%;
+      grid-template-columns: 40% 60%;
       font-size: 20px;;
       color:rgb(92, 78, 78);
       border-bottom:1px solid rgb(92, 78, 78, 0.3);
@@ -35,6 +35,28 @@
       transition: all 2s;
       
   }
+  .logoFrame{
+    display:flex;
+  }
+
+.logoCaption{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.logoCaptionText1{
+
+    color:rgb(218, 96, 9);
+    font-weight: 900;
+    font-size:30px;
+    letter-spacing: 9px;
+}
+.logoCaptionText2{
+
+    font-size:17px;
+}
+
 .main{
 
 display:flex;
@@ -232,51 +254,101 @@ border:1px solid rgba(235, 232, 232, 0.2);
     height:auto;
     background:rgb(49, 49, 55);
     display: flex;
-    justify-content:center;
-    align-items: center;
-    gap:10px;
-    padding: 20px;
-   padding-bottom:5%;
+    flex-direction: column;
+ justify-content: center;
+    align-items:center;
+    padding-left: 120px;
+    padding-right:120px;
    
 }
+.footerUpper{
+    display:flex;
+align-items: center;
+justify-content: space-between;
+padding:50px;
+    width:100%;
+}
+
+.footerLower{
+    display: flex;
+ 
+    justify-content:space-between;
+    align-items: center;
+    gap:10px;
+    
+   padding-bottom:5%;
+}
 .footercards{
-    width:25%;
+    max-width:27%;
     height:100%;
     display:flex;
     flex-direction: column;
+    padding:10px;
+    
    
  
 }
+.footerBundle{
+
+}
+
+.footerSub{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+   color:white;
+   font-size:12px;
+   opacity: 0.7;
+    width:100%;
+    padding-top:15px;
+    padding-bottom:15px;
+    border-top:1px solid rgb(208, 205, 205, 0.5);
+}
 .footercardslarge{
-    width:45%;
+    
     height:100%;
     display:flex;
     flex-direction: column;  
+    
  
 }
 
 .footercardstitle{
-color:white;
+color:rgb(255, 255, 255);
 width:100%;
 padding-bottom:20px;
-font-size:30px;
-text-align: center;
+font-size:25px;
+text-align: left;
 font-weight: 600;
 
 }
 .footercardsbody{
 display: flex;
+line-height: 20px;
 flex-direction: column;
 font-size:13px;
-gap:10px;
+gap:15px;
+
 }
 .footercolumns{
     display: flex;
-    gap:4px;
+    gap:8px;
+    
+}
+
+.footer_infos{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+}
+.footercolumns_infos{
+    display:flex;
+    gap:40px;
 }
 .columndivisions{
     line-height: 30px;
-    font-size:13px;
+    font-size:15px;
+   
 }
 .footerparagraph{
     color:rgb(189, 186, 186);
@@ -290,22 +362,41 @@ gap:10px;
 }
 .square{
     height: 100%;
-    width:130px;
-
+  padding-left:20px; padding-right:20px;
     display:flex;
     align-items: center;
     justify-content: center;
 }
 
+.headerButton{
+    background:rgb(218, 96, 9);
+    border:none;
+    width:200px;
+    height:40px;
+    border-radius: 19px;
+    text-align: center;
+    font-size:17px;
+    font-weight:500;
+   color:white;
+   cursor:pointer;
+
+}
+
+.headerButton:hover{
+    opacity:0.9;
+    background:rgb(218, 96, 9);
+}
 .headerleft{
-    padding-top:10px;
-    padding-left:30px;
+   
+    padding-left:110px;
+    display: flex;
+    align-items:center;
+  
 }
 .headermiddle{
     display: flex;
     align-items:center;
-    justify-content:flex-end;
-
+    /* justify-content:flex-end; */
     gap:1px;
 }
 .headerright{
@@ -421,9 +512,12 @@ color:rgb(97, 171, 183);
 }
 
 .socialmedia a{
-    color:white;
+    color:rgb(159, 157, 157);
     font-size: 30px;
     }
+.socialmedia a:hover{
+    color:rgb(235, 232, 232);
+}
 .socialmedia{
     display: flex;
    gap:15px;
@@ -491,7 +585,186 @@ justify-content: center;
 
 
 .aboutus{
-    padding:20px;
 
 }
 
+.overlay {
+    position: absolute;
+
+    width: 100%;
+    height: 220%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+  
+  
+  }
+
+  .rowContent{
+
+    width:100%;
+    display:flex;
+    padding-left:50px;
+    padding-right:50px;
+    gap:15px;
+  
+  }
+  .rowTitle{
+    font-size: 30px;
+    font-weight:700;
+    color:grey;
+  }
+  .rowParagraph{
+    color:rgb(103, 102, 102);
+  }
+  .rowContentLeft{
+
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .rowHeading{
+    font-size: 30px;
+    font-weight:700;
+    border-bottom: 1px solid rgb(226, 224, 224);
+    color: grey;
+  }
+  .rowContent2{
+
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+    padding-left:50px;
+    padding-right:50px;
+  
+  }
+
+  .contents{
+    display:flex;
+ flex-wrap: wrap;
+    padding-top:30px;
+    padding-bottom: 30px;
+   
+    align-items:center;
+    
+  }
+
+  .services{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:rgb(152, 108, 81);
+    font-size: 20px;
+width:200px;
+height:150px;
+
+
+
+  }
+
+  .services i{
+    font-size: 40px;
+    color:rgb(173, 172, 172);
+    
+  }
+  .textUpper, .textLower{
+    height:50%;
+    display:flex;
+    justify-content: center;
+  }
+  .textLower{
+    color:rgb(118, 77, 27, 0.7);
+   font-weight: 600;
+  }
+
+  .contentRight{
+    width:30%;
+    padding:20px;
+    padding-top:30px;
+    background:rgb(250, 250, 250);
+
+  }
+  .contentLeft{
+    width:60%;
+    padding:20px;
+    padding-top:30px;
+    display:flex;
+    flex-direction: column;
+    gap:10px; 
+  }
+  .rowHeading2{
+    color:rgb(168, 168, 168);
+    font-size: 30px;
+font-weight:500;
+}
+.rowHeading3{
+    color:rgb(168, 168, 168);
+    font-size: 30px;
+font-weight:500;
+border-bottom: 1px dashed rgb(224, 223, 223);
+}
+  .contentLeftContent{
+    display:flex;
+    gap:5px;
+  }
+.applicationForms{
+
+    width:200px;
+    height:110px;
+    background:rgb(253, 253, 253);
+    border:none;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+.applicationForms:hover{
+    background:rgb(236, 236, 236);
+}
+
+
+  /* 5 start ratings */
+
+  .rate {
+    float: left;
+    height: 46px;
+    
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:60px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+}
+
+/* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */

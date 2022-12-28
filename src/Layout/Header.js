@@ -1,11 +1,9 @@
 
 import styles from "./layout.module.css"
 import Square from "./Headercomponents/square"
-import Logo from "./Headercomponents/Logo"
 import { useState } from "react"
 import 'font-awesome/css/font-awesome.min.css';
-import Logo22 from "../resources/logo22.png"
-
+import Logos from "../resources/logo.svg"
 
 export default function Headers(){
 const [navbar, setNavbar]=useState(false)
@@ -25,14 +23,19 @@ else
     return (
         <div className={ navbar? styles.header:styles.headerMinimized}>  
         <div className={styles.headerleft}>
-        <img alt="logo" src={Logo22} style={{width:60, height:60}}/>
-        </div>
-        <div className={styles.headermiddle}>
-        
-        <Square title={"Home"}/>
-  
-     <Square title={"Contact"}/>
-     <Square title={"About"}/>
+            <div className={styles.logoFrame}> 
+            <img alt="logo" src={Logos} style={{width:60, height:60}}/>
+   <div className={styles.logoCaption}>
+    <span className={styles.logoCaptionText1}>JOINT</span>
+    <span className={styles.logoCaptionText2}>HEALTH CARE INC.</span>
+   </div>
+            </div>
+          </div>
+        <div className={styles.headermiddle}>  
+     <Square fa={<i class='fa fa-phone' style={{fontSize:20}}></i>} title={"+(800) 123-4567"}/>
+     <Square fa={<i class='fa fa-map-marker' style={{fontSize:20}}></i>} title={"Our Location"}/>
+     <Square fa={<i class='fa fa-info' style={{fontSize:20}}></i>} title={"About Us"}/>
+     <button className={styles.headerButton}>Book Appointment</button>
     
         </div>
         <div className={styles.menuicon}>
