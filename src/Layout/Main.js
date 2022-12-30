@@ -42,14 +42,14 @@ export default function Main(){
              
                     <img alt="picture" src={Img1} />
                <div className={styles.overlay}>
-                <div className={styles.carouselContent}>
-                <span className={styles.carouselText1}>HIGHLY EXPERIENCED</span>
-                <span className={styles.carouselText2}>PROFESSIONALS</span>
+               <div className={styles.carouselContent}>
+                <span className={styles.carouselText1}>QUALITY SERVICES</span>
+                <span className={styles.carouselText2}>GET THE BEST CARE SERVICE FROM 
+                A GROUP <br/>OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
                 <br/> <br/>
-                <a href="#" className={styles.carouselLinks}>Book Appointment</a>
+                <div className={styles.carouselButton}><button>Call for Referals</button></div>
               
                 </div>
-               
                 </div>
                 </div>
                 <div style={{height:500, overflow:"hidden"}}>
@@ -57,11 +57,11 @@ export default function Main(){
                     <img alt="picture" src={Img3} />
                <div className={styles.overlay}>
                <div className={styles.carouselContent}>
-                {/* <span className={styles.carouselText1}>HIGHLY EXPERIENCED</span> */}
-                <span className={styles.carouselText2}>GET THE BEST CARE SERVICE FROM 
-                A GROUP <br/>OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
+               <span className={styles.carouselText1}>ALWAYS AVAILABLE</span>
+                <span className={styles.carouselText2}>COUNT ON US TO BE THE BEST, WITH<br/>
+ GUARANTEED 24/7 CARE SERVICES</span>
                 <br/> <br/>
-                <a href="#" className={styles.carouselLinks}>Book Appointment</a>
+                <div className={styles.carouselButton}><button>Call for Referals</button></div>
               
                 </div>
                </div>
@@ -71,10 +71,10 @@ export default function Main(){
                     <img alt="picture" src={Img4} />
                    <div className={styles.overlay}>
                    <div className={styles.carouselContent}>
-                {/* <span className={styles.carouselText1}>HIGHLY EXPERIENCED</span> */}
-                <span className={styles.carouselText2}>MAKE AN APPOINTMENT NOW</span>
+                <span className={styles.carouselText1}>REFERALS</span>
+                <span className={styles.carouselText2}>CALL/FAX REFERALS NOW,<br/></span>
                 <br/> <br/>
-              <a href="#" className={styles.carouselLinks}>Book Appointment</a>
+              <div  className={styles.carouselButton}><button>Fax Referals</button></div>
                 </div>
                    </div>
                 </div>
@@ -114,7 +114,11 @@ laboris nisi ut aliquip ex ea commodo consequat.
     <div className={styles.contents}>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-home"></i></span>
-        <span className={styles.textLower}> Home health services</span>
+        <span className={styles.textLower}> Home health agency</span>
+    </button>
+    <button className={styles.services}>
+        <span className={styles.textUpper}><i className="fa fa-user-md"></i></span>
+        <span className={styles.textLower}> Skilled nurse</span>
     </button>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-bicycle"></i></span>
@@ -173,8 +177,8 @@ laboris nisi ut aliquip ex ea commodo consequat.
             </Parallaxword>
                 </Parallaxcard>
                 <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
-            <Parallaxword  icon={ <i className="fa fa-file-text"></i>} wordtitle={"Vacancies"} >
-            Click <span>here</span> to view all  <br/> available vacancies<br/>
+            <Parallaxword  icon={ <i className="fa fa-file-text"></i>} wordtitle={"Application Forms"} >
+            Click <span>here</span> to view all available<br/>  application forms<br/>
             </Parallaxword>
                 </Parallaxcard>
 

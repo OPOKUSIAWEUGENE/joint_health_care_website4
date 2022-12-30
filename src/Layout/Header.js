@@ -27,7 +27,7 @@ else
             <img alt="logo" src={Logos} style={{width:60, height:60}}/>
    <div className={styles.logoCaption}>
     <span className={styles.logoCaptionText1}>JOINT</span>
-    <span className={styles.logoCaptionText2}>HEALTH CARE INC.</span>
+    <span className={styles.logoCaptionText2}>HEALTH CARE SERVICE INC.</span>
    </div>
             </div>
           </div>
@@ -35,7 +35,7 @@ else
      <Square fa={<i class='fa fa-phone' style={{fontSize:20}}></i>} title={"+(800) 123-4567"}/>
      <Square fa={<i class='fa fa-map-marker' style={{fontSize:20}}></i>} title={"Our Location"}/>
      <Square fa={<i class='fa fa-info' style={{fontSize:20}}></i>} title={"About Us"}/>
-     <button className={styles.headerButton}>Book Appointment</button>
+     <button className={styles.headerButton}>Call for Referals</button>
     
         </div>
         <div className={styles.menuicon}>

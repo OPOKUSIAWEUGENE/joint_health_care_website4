@@ -54,7 +54,7 @@
 }
 .logoCaptionText2{
 
-    font-size:17px;
+    font-size:12px;
 }
 
 .main{
@@ -608,6 +608,8 @@ justify-content: center;
     margin-top:100px;
     display:flex;
     flex-direction: column;
+       animation:   flash 600ms ease infinite alternate;
+
 
   }
   .carouselLinks{
@@ -617,16 +619,22 @@ justify-content: center;
   
   
   }
-  .carouselButton{
-    position:inherit;
-    width:100px;
+  .carouselButton button{
+    
+    width:150px;
+    height:40px;
     border-radius: 10px;
     border:none;
     font-size:15px;
-    background:rgb(240, 153, 92);
+    background:rgb(218, 96, 9);
+    color:white;
     text-align: center;
+    cursor:pointer;
 
 
+  }
+  .carouselButton button:hover{
+    opacity:0.8;
   }
 .carouselText1{
     color:white;
@@ -639,7 +647,8 @@ justify-content: center;
 }
 .carouselText2{
     font-family: monospace;
-    font-size:30px;
+    font-size:17px;
+    font-weight: 500;
     color:white;
   
 }
