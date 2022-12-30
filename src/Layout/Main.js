@@ -18,6 +18,10 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'font-awesome/css/font-awesome.min.css';
 import Square from "./Headercomponents/square"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react"
+import Animation1 from "./Maincontentcomponents/Animation1"
 
 export default function Main(){
     // const styles=(image)=>({    
@@ -30,8 +34,20 @@ export default function Main(){
     //     width:"100%",  
         
     //   })
-
-
+    const boxVariant = {
+        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+        hidden: { opacity: 0, scale: 0 }
+      };
+      const control = useAnimation();
+      const [ref, inView] = useInView();
+     useEffect(() => {
+        if (inView) {
+          control.start("visible");
+        } else {
+          control.start("hidden");
+        }
+      }, [control, inView]);
+    
 
     return(
         <div className={styles.main}>   
@@ -44,8 +60,8 @@ export default function Main(){
                <div className={styles.overlay}>
                <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>QUALITY SERVICES</span>
-                <span className={styles.carouselText2}>GET THE BEST CARE SERVICE FROM 
-                A GROUP <br/>OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
+                <span className={styles.carouselText2}>GET THE BEST HEALTH CARE SERVICE FROM 
+                A <br/>GROUP OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
                 <br/> <br/>
                 <div className={styles.carouselButton}><button>Call for Referals</button></div>
               
@@ -85,9 +101,15 @@ export default function Main(){
             <Row>
                 <div className={styles.rowContent}>
           <div className={styles.rowContentLeft}>
-            <span className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care</span></span>
+            <span className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care Service Inc.</span></span>
             <span className={styles.rowParagraph}>
-            <br/>
+            <br/>  <motion.div
+      className="box"
+      ref={ref}
+      variants={boxVariant}
+      initial="hidden"
+      animate={control}
+    >
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
             sed do eiusmod tempor incididunt ut labore et dolore magna 
             aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
@@ -98,7 +120,7 @@ export default function Main(){
 
 Ut enim ad minim veniam, quis nostrud exercitation ullamco 
 laboris nisi ut aliquip ex ea commodo consequat.
-
+</motion.div>
             </span>
           </div>
           <div className={styles.rowContentRight}>
@@ -112,39 +134,53 @@ laboris nisi ut aliquip ex ea commodo consequat.
                 <div className={styles.rowContent2}>
     <div className={styles.rowHeading}>Our Services</div>
     <div className={styles.contents}>
-    <button className={styles.services}>
+        <Animation1>    <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-home"></i></span>
         <span className={styles.textLower}> Home health agency</span>
     </button>
+    </Animation1>
+<Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-user-md"></i></span>
         <span className={styles.textLower}> Skilled nurse</span>
     </button>
+    </Animation1>
+    <Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-bicycle"></i></span>
         <span className={styles.textLower}>Physical Therapy</span>
     </button>
+    </Animation1>
+    <Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa fa-user-md"></i></span>
         <span className={styles.textLower}>Speech Therapy</span>
     </button>
+    </Animation1>
+    <Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-home"></i></span>
         <span className={styles.textLower}>Home health and CNA</span>
     </button>
+    </Animation1>
+    <Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-user-md"></i></span>
         <span className={styles.textLower}>MSW</span>
     </button>
+    </Animation1>
+    <Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-hospital-o"></i></span>
         <span className={styles.textLower}>Hospice care</span>
     </button>
+    </Animation1>
+    <Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa fa-user-md"></i></span>
         <span className={styles.textLower}>Pediatrics consult</span>
     </button>
-   
+    </Animation1>
     </div>
         
           </div>
@@ -187,7 +223,7 @@ laboris nisi ut aliquip ex ea commodo consequat.
           <Row>
           <div className={styles.rowContent}>
           <div className={styles.contentRight}>
-          <div className={styles.rowHeading2}>Rate Us</div>
+          <div className={styles.rowHeading2}>  RATE US</div>
           <div className={styles.rateContent}>
           <div className={styles.rate}>
     <input type="radio" id="star5" name="rate" value="5" />
@@ -204,12 +240,13 @@ laboris nisi ut aliquip ex ea commodo consequat.
   </div>
   <div className={styles.rateCaptions}>
   <i className="fa fa-hand-o-up fa-flip "></i>
-    We need your Feedback 
+Rate Us
   </div>
           </div>
           <div className={styles.contentLeft}>
-          <div className={styles.rowHeading3}>VACANCIES</div>
+          <div className={styles.rowHeading3}>APPLICATION FORMS</div>
           <div className={styles.contentLeftContent}>
+            
             <button className={styles.applicationForms}>
             <span className={styles.textUpper}> <i className="fa fa-files-o"></i>
   </span>
@@ -247,7 +284,7 @@ laboris nisi ut aliquip ex ea commodo consequat.
             <div className={styles.applicationFormElastic}> 
            
            <span className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
-           <span> Click to Open a form</span>
+           <span> Click to Open an application form</span>
            </span>
             </div>
             <div className={styles.elasticBar}>

@@ -49,12 +49,18 @@
 
     color:rgb(218, 96, 9);
     font-weight: 900;
-    font-size:30px;
+    font-size:40px;
     letter-spacing: 9px;
-}
+    animation:  fadeIn 5s, flash 600ms ease infinite alternate;
+  
+ }
 .logoCaptionText2{
 
     font-size:12px;
+
+    font-family: monospace;
+    animation:  fadeIn 5s, flash 600ms ease infinite alternate;
+
 }
 
 .main{
@@ -378,7 +384,8 @@ gap:15px;
     font-weight:500;
    color:white;
    cursor:pointer;
-
+   animation:  fadeIn 5s, flash 600ms ease infinite alternate;
+   /* transition: transform .2s; */
 }
 
 .headerButton:hover{
@@ -659,10 +666,11 @@ justify-content: center;
     padding-left:50px;
     padding-right:50px;
     gap:15px;
+   
   
   }
   .rowTitle{
-    font-size: 30px;
+    font-size: 22px;
     font-weight:700;
     color:grey;
   }
@@ -675,13 +683,30 @@ justify-content: center;
     flex-direction: column;
     justify-content: center;
     /* align-items: center; */
+    /* animation:  fadeIn 5s; */
+   /* animation properties */
+  
+ 
+   /* animation: my-animation 5s ; */
+    transition: transform .2s;
   }
+
+  @keyframes fadeIn {
+    0% { opacity: 0;
+    
+    }
+    100% { opacity: 1; 
+     }
+  }
+
+
 
   .rowHeading{
     font-size: 30px;
     font-weight:700;
     border-bottom: 1px solid rgb(226, 224, 224);
     color: grey;
+    /* animation: my-animation 5s ; */
   }
   .rowContent2{
 
@@ -701,6 +726,7 @@ justify-content: center;
     padding-bottom: 30px;
     align-items:center; 
     gap:5px;
+    /* animation: my-animation 5s ; */
   }
 
   .services{
@@ -968,3 +994,28 @@ animation: 1s anim-flipX ease infinite;
 }
 
 /* Modified from: https://github.com/mukulkant/Star-rating-using-pure-css */
+
+
+
+@keyframes my-animation {
+  from {
+    opacity: 0;
+    -moz-transform: translateY(20%);
+    -webkit-transform: translateY(20%);
+    transform: translateY(20%);
+ 
+  }
+  to {
+    -moz-transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1; 
+  }
+}
+
+.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  display: flex; 
+}

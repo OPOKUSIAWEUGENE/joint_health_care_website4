@@ -9,10 +9,10 @@ export default function Footer(){
         <div className={styles.footer} >
             <div className={styles.footerUpper}>
             <div className={styles.logoFrame}> 
-            <img alt="logo" src={Logo} style={{width:60, height:60}}/>
+            <img alt="logo" src={Logo} style={{width:140, height:140}}/>
    <div className={styles.logoCaption}>
     <span className={styles.logoCaptionText1}>JOINT</span>
-    <span className={styles.logoCaptionText2} style={{color:'white'}}>HEALTH CARE INC.</span>
+    <span className={styles.logoCaptionText2} style={{color:'white'}}>HEALTH CARE SERVICE INC.</span>
    </div>
             </div>
             	<div class={styles.socialmedia}>
@@ -40,17 +40,17 @@ export default function Footer(){
     <div className={styles.footercolumns}>
 
     <div className={styles.columndivisions}>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>  Physical Therapy</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Physical Therapy</Footerparagraph>
         <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Speech Therapy</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Home health and CNA</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> MSW</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Home health and CNA</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Skilled Nurse</Footerparagraph>
      
           </div>
         <div className={styles.columndivisions}>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Home health</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Hospice care</Footerparagraph>
-        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/> Pediatrics consult</Footerparagraph>
-   
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Home health</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Hospice care</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>Pediatrics consult</Footerparagraph>
+        <Footerparagraph><Electricity height={15} width={35} fill={"rgb(189, 175, 175)"}/>MSW</Footerparagraph>
          </div>
         </div>
     </Footercards>
