@@ -4,12 +4,12 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react"
 
 
-export default function Animation1(props)
+export default function HeaderAnimation(props)
 {
 
     const boxVariant = {
-        visible: { opacity: 1, scale: 1, y:0, transition: { duration: 1.5 } },
-        hidden: { opacity: 0.7, scale: 0.7, y: 10  }
+        visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+        hidden: { opacity: 0, x: -50 }
       };
       const control = useAnimation();
       const [ref, inView] = useInView();

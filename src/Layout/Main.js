@@ -22,6 +22,8 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react"
 import Animation1 from "./Maincontentcomponents/Animation1"
+import Animation2 from "./Maincontentcomponents/Animation2"
+import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
 
 export default function Main(){
     // const styles=(image)=>({    
@@ -35,8 +37,8 @@ export default function Main(){
         
     //   })
     const boxVariant = {
-        visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
-        hidden: { opacity: 0, scale: 0 }
+        visible: { opacity: 1,  y: 0, transition: { duration: 2 } },
+        hidden: { opacity: 0.2,  y: 20  }
       };
       const control = useAnimation();
       const [ref, inView] = useInView();
@@ -101,7 +103,9 @@ export default function Main(){
             <Row>
                 <div className={styles.rowContent}>
           <div className={styles.rowContentLeft}>
+            <HeaderAnimation>
             <span className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care Service Inc.</span></span>
+            </HeaderAnimation>
             <span className={styles.rowParagraph}>
             <br/>  <motion.div
       className="box"
@@ -132,7 +136,9 @@ laboris nisi ut aliquip ex ea commodo consequat.
 
                 <Row>
                 <div className={styles.rowContent2}>
+                    <HeaderAnimation>
     <div className={styles.rowHeading}>Our Services</div>
+    </HeaderAnimation>
     <div className={styles.contents}>
         <Animation1>    <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-home"></i></span>
@@ -188,7 +194,8 @@ laboris nisi ut aliquip ex ea commodo consequat.
             <Parallaxrow >
       
 <Row>
-            <Parallaxcard height={"350px"} width={"340px"} background={"rgb(255, 255, 255)"}>
+    <Animation2>
+            <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
             <Parallaxword icon={<i className="fa fa-thin fa-check fa-fade animate"></i>} wordtitle={"Quality Services"} >
            
            Get the best health care services <br/> from  
@@ -196,6 +203,8 @@ laboris nisi ut aliquip ex ea commodo consequat.
             professionals
             </Parallaxword>
             </Parallaxcard>
+            </Animation2>
+            <Animation2>
             <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
             <Parallaxword icon={ <span class='fa-stack '>
         <i className='fa fa-circle fa-stack-2x'></i>
@@ -207,16 +216,21 @@ laboris nisi ut aliquip ex ea commodo consequat.
             with guaranteed  24/7 <br/> care services
             </Parallaxword>
                 </Parallaxcard>
+                </Animation2>
+                <Animation2>
             <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
             <Parallaxword  icon={ <i className="fa fa-diamond fa-spin"></i>} wordtitle={"Certified"} >
             Fully certified by the <br/>....................<br/>
             </Parallaxword>
                 </Parallaxcard>
+                </Animation2>
+                <Animation2>
                 <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
             <Parallaxword  icon={ <i className="fa fa-file-text"></i>} wordtitle={"Application Forms"} >
             Click <span>here</span> to view all available<br/>  application forms<br/>
             </Parallaxword>
                 </Parallaxcard>
+                </Animation2>
 
             </Row>
             </Parallaxrow >
