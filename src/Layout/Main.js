@@ -23,6 +23,7 @@ import { useInView } from "react-intersection-observer";
 import { useEffect } from "react"
 import Animation1 from "./Maincontentcomponents/Animation1"
 import Animation2 from "./Maincontentcomponents/Animation2"
+import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
 
 export default function Main(){
@@ -60,6 +61,7 @@ export default function Main(){
              
                     <img alt="picture" src={Img1} />
                <div className={styles.overlay}>
+                <Animation3>
                <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>QUALITY SERVICES</span>
                 <span className={styles.carouselText2}>GET THE BEST HEALTH CARE SERVICE FROM 
@@ -68,12 +70,14 @@ export default function Main(){
                 <div className={styles.carouselButton}><button>Call for Referals</button></div>
               
                 </div>
+                </Animation3>
                 </div>
                 </div>
                 <div style={{height:500, overflow:"hidden"}}>
              
                     <img alt="picture" src={Img3} />
                <div className={styles.overlay}>
+                <Animation3>
                <div className={styles.carouselContent}>
                <span className={styles.carouselText1}>ALWAYS AVAILABLE</span>
                 <span className={styles.carouselText2}>COUNT ON US TO BE THE BEST, WITH<br/>
@@ -82,18 +86,21 @@ export default function Main(){
                 <div className={styles.carouselButton}><button>Call for Referals</button></div>
               
                 </div>
+                </Animation3>
                </div>
                 </div>
                 <div style={{height:500, overflow:"hidden"}}>
                  
                     <img alt="picture" src={Img4} />
                    <div className={styles.overlay}>
+                    <Animation3>
                    <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>REFERALS</span>
                 <span className={styles.carouselText2}>CALL/FAX REFERALS NOW,<br/></span>
                 <br/> <br/>
               <div  className={styles.carouselButton}><button>Fax Referals</button></div>
                 </div>
+                </Animation3>
                    </div>
                 </div>
             </Carousel>
@@ -237,7 +244,9 @@ laboris nisi ut aliquip ex ea commodo consequat.
           <Row>
           <div className={styles.rowContent}>
           <div className={styles.contentRight}>
+          <HeaderAnimation>
           <div className={styles.rowHeading2}>  RATE US</div>
+          </HeaderAnimation>
           <div className={styles.rateContent}>
           <div className={styles.rate}>
     <input type="radio" id="star5" name="rate" value="5" />
@@ -258,7 +267,9 @@ Rate Us
   </div>
           </div>
           <div className={styles.contentLeft}>
+          <HeaderAnimation>
           <div className={styles.rowHeading3}>APPLICATION FORMS</div>
+          </HeaderAnimation>
           <div className={styles.contentLeftContent}>
             
             <button className={styles.applicationForms}>
