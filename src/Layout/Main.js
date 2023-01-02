@@ -204,7 +204,7 @@ laboris nisi ut aliquip ex ea commodo consequat.
             <Parallaxword icon={<i className="fa fa-thin fa-check fa-fade animate"></i>} wordtitle={"Quality Services"} >
            
            Get the best health care services <br/> from  
-           a group of dedicated  <br/>
+           this group of dedicated  <br/>
             professionals
             </Parallaxword>
             </Parallaxcard>
