@@ -57,7 +57,7 @@ export default function Main(){
 
 <div className="carousel-wrapper" >
             <Carousel  infiniteLoop useKeyboardArrows autoPlay showThumbs={false} stopOnHover={false} interval={7000} transitionTime={500}>
-                <div style={{height:500, overflow:"hidden"}}>
+                <div className={styles.carousel}>
              
                     <img alt="picture" src={Img1} />
                <div className={styles.overlay}>
@@ -73,8 +73,7 @@ export default function Main(){
                 </Animation3>
                 </div>
                 </div>
-                <div style={{height:500, overflow:"hidden"}}>
-             
+                <div className={styles.carousel}>
                     <img alt="picture" src={Img3} />
                <div className={styles.overlay}>
                 <Animation3>
@@ -89,8 +88,7 @@ export default function Main(){
                 </Animation3>
                </div>
                 </div>
-                <div style={{height:500, overflow:"hidden"}}>
-                 
+                <div className={styles.carousel}>      
                     <img alt="picture" src={Img4} />
                    <div className={styles.overlay}>
                     <Animation3>
@@ -111,7 +109,7 @@ export default function Main(){
                 <div className={styles.rowContent}>
           <div className={styles.rowContentLeft}>
             <HeaderAnimation>
-            <span className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care Service Inc.</span></span>
+            <div className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care </span>Service Inc.</div>
             </HeaderAnimation>
             <span className={styles.rowParagraph}>
             <br/>  <motion.div
@@ -245,7 +243,7 @@ laboris nisi ut aliquip ex ea commodo consequat.
           <div className={styles.rowContent}>
           <div className={styles.contentRight}>
           <HeaderAnimation>
-          <div className={styles.rowHeading2}>  RATE US</div>
+          <div className={styles.rowHeading3}>  RATE US</div>
           </HeaderAnimation>
           <div className={styles.rateContent}>
           <div className={styles.rate}>
@@ -308,9 +306,9 @@ Rate Us
             </div>
             <div className={styles.applicationFormElastic}> 
            
-           <span className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
+           <div className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
            <span> Click to Open an application form</span>
-           </span>
+           </div>
             </div>
             <div className={styles.elasticBar}>
 

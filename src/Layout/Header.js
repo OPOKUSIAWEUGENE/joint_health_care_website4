@@ -24,7 +24,7 @@ else
         <div className={ navbar? styles.header:styles.headerMinimized}>  
         <div className={styles.headerleft}>
             <div className={styles.logoFrame}> 
-            <img alt="logo" src={Logos} style={{width:80, height:80}}/>
+            <img alt="logo" src={Logos} />
    <div className={styles.logoCaption}>
     <span className={styles.logoCaptionText1}>JOINT</span>
     <span className={styles.logoCaptionText2}>HEALTH CARE SERVICE INC.</span>
