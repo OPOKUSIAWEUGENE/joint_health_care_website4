@@ -65,7 +65,7 @@ export default function Main(){
                <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>QUALITY SERVICES</span>
                 <span className={styles.carouselText2}>GET THE BEST HEALTH CARE SERVICE FROM 
-                A <br/>GROUP OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
+                THIS <br/>GROUP OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
                 <br/> <br/>
                 <div className={styles.carouselButton}><button>Call for Referals</button></div>
               
