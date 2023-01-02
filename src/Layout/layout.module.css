@@ -66,7 +66,54 @@
     animation:  fadeIn 5s, flash 600ms ease infinite alternate;
 
 }
+.hide a, .dropdownmenu a{
+  text-decoration: none;
+  color:white;
 
+}
+
+.headermenu:hover, .hide a:hover, .dropdownmenu a:hover{
+cursor: pointer;
+color:rgb(250, 167, 148);
+}
+.hide{
+  display:flex;
+
+
+}
+.dropdownmenu{
+
+  /* display:block; */
+  position: absolute;
+  height:auto;
+  background: rgb(50, 49, 64);
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+right:0;
+top:70px;
+padding:10px;
+
+}
+
+.menuicon button{
+  height:40px;
+  width:40px;
+  font-size:30px;
+  background: none;
+  border: none;
+  color:rgb(83, 83, 83);
+}
+.dropdown span{
+  font-size:16px;
+}
+.dropdown{
+  display:flex;
+  flex-direction: column;
+  color:rgb(230, 227, 227);
+  gap:10px;
+}
 .main{
 
 display:flex;

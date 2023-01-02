@@ -20,6 +20,21 @@ else
 }
 
     window.addEventListener("scroll", modifyHeader)
+    const [ display, setDisplay ] = useState( 'none' )
+
+    function handleClick() {
+
+        if ( display === 'none' ) {
+
+            setDisplay( 'block' )
+
+        } else {
+
+            setDisplay( 'none' )
+
+        }
+
+    }
     return (
         <div className={ navbar? styles.header:styles.headerMinimized}>  
         <div className={styles.headerleft}>
@@ -39,14 +54,18 @@ else
     
         </div>
         <div className={styles.menuicon}>
-       
-        <i className="fa fa-bars" aria-hidden="true"></i>
-        </div>
-        {/* <div className={styles.headerright}>
-        <button className={styles.button}>Contact Us</button>
-        </div>
-    */}
-        
+            <button onClick={handleClick}> <i className="fa fa-bars" aria-hidden="true"></i></button>
+            <div className={styles.dropdownmenu} style={{display:display}}>
+            <div className={styles.dropdown}>
+                <span><i class='fa fa-phone' style={{fontSize:20}}></i>&nbsp;+(800) 123-4567</span>
+                <span><i class='fa fa-map-marker' style={{fontSize:20}}></i>&nbsp;Our Location</span>
+                <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span>
+
+   
+            </div>
+     </div>
+            </div>
+     
         </div>
     )
     
