@@ -67,7 +67,7 @@ export default function Main(){
                 <span className={styles.carouselText2}>GET THE BEST HEALTH CARE SERVICE FROM 
                 THIS <br/>GROUP OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
                 <br/> <br/>
-                <div className={styles.carouselButton}><button>Call for Referals</button></div>
+                <div className={styles.carouselButton}><button>Call for Referrals</button></div>
               
                 </div>
                 </Animation3>
@@ -82,7 +82,7 @@ export default function Main(){
                 <span className={styles.carouselText2}>COUNT ON US TO BE THE BEST, WITH<br/>
  GUARANTEED 24/7 CARE SERVICES</span>
                 <br/> <br/>
-                <div className={styles.carouselButton}><button>Call for Referals</button></div>
+                <div className={styles.carouselButton}><button>Call for Referrals</button></div>
               
                 </div>
                 </Animation3>
@@ -96,7 +96,7 @@ export default function Main(){
                 <span className={styles.carouselText1}>REFERALS</span>
                 <span className={styles.carouselText2}>CALL/FAX REFERALS NOW,<br/></span>
                 <br/> <br/>
-              <div  className={styles.carouselButton}><button>Fax Referals</button></div>
+              <div  className={styles.carouselButton}><button>Fax Referrals</button></div>
                 </div>
                 </Animation3>
                    </div>

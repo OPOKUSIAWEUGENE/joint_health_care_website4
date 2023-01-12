@@ -50,7 +50,7 @@ else
      <Square fa={<i class='fa fa-phone' style={{fontSize:20}}></i>} title={"+(800) 123-4567"}/>
      <Square fa={<i class='fa fa-map-marker' style={{fontSize:20}}></i>} title={"Our Location"}/>
      <Square fa={<i class='fa fa-info' style={{fontSize:20}}></i>} title={"About Us"}/>
-     <button className={styles.headerButton}>Call for Referals</button>
+     <button className={styles.headerButton}>Call for Referrals</button>
     
         </div>
         <div className={styles.menuicon}>
