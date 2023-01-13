@@ -94,7 +94,7 @@ export default function Main(){
                     <Animation3>
                    <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>REFERALS</span>
-                <span className={styles.carouselText2}>CALL/FAX REFERALS NOW,<br/></span>
+                <span className={styles.carouselText2}>CALL/FAX REFERRALS NOW,<br/></span>
                 <br/> <br/>
               <div  className={styles.carouselButton}><button>Fax Referrals</button></div>
                 </div>
