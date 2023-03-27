@@ -14,6 +14,7 @@ import Img3 from '../resources/images/jhcimg2.webp'
 import Img4 from '../resources/images/jhcimg1.webp'
 import Logo from '../resources/logo.svg'
 import BackgroundLessImage from "../resources/images/BackgroundlessImage.png"
+import BackgroundLessImage2 from "../resources/images/bgless4.png"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'font-awesome/css/font-awesome.min.css';
 import Square from "./Headercomponents/square"
@@ -25,6 +26,7 @@ import Animation1 from "./Maincontentcomponents/Animation1"
 import Animation2 from "./Maincontentcomponents/Animation2"
 import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
+import Logos from "../resources/logo.svg"
 
 export default function Main(){
     // const styles=(image)=>({    
@@ -61,44 +63,58 @@ export default function Main(){
              
                     <img alt="picture" src={Img1} />
                <div className={styles.overlay}>
-                <Animation3>
+               <HeaderAnimation>
                <div className={styles.carouselContent}>
+               <HeaderAnimation>
                 <span className={styles.carouselText1}>QUALITY SERVICES</span>
+               </HeaderAnimation>
+               <Animation2>
                 <span className={styles.carouselText2}>GET THE BEST HEALTH CARE SERVICE FROM 
                 THIS <br/>GROUP OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
+                </Animation2>
                 <br/> <br/>
-                <div className={styles.carouselButton}><button>Call for Referrals</button></div>
-              
+                <Animation2>
+                <div className={styles.carouselButton}>   <a href="tel:713 592 8955"><button>Call for Referrals</button></a></div>
+                </Animation2>
                 </div>
-                </Animation3>
+                </HeaderAnimation>
                 </div>
                 </div>
                 <div className={styles.carousel}>
                     <img alt="picture" src={Img3} />
                <div className={styles.overlay}>
-                <Animation3>
+                <Animation2>
                <div className={styles.carouselContent}>
+               <HeaderAnimation>
                <span className={styles.carouselText1}>ALWAYS AVAILABLE</span>
+               </HeaderAnimation>
+               <HeaderAnimation>
                 <span className={styles.carouselText2}>COUNT ON US TO BE THE BEST, WITH<br/>
  GUARANTEED 24/7 CARE SERVICES</span>
+ </HeaderAnimation>
                 <br/> <br/>
-                <div className={styles.carouselButton}><button>Call for Referrals</button></div>
-              
+                <Animation2>
+                <div className={styles.carouselButton}>   <a href="tel:713 592 8955"><button>Call for Referrals</button></a></div>
+                </Animation2>
                 </div>
-                </Animation3>
+                </Animation2>
                </div>
                 </div>
                 <div className={styles.carousel}>      
                     <img alt="picture" src={Img4} />
                    <div className={styles.overlay}>
-                    <Animation3>
+                   <HeaderAnimation>
                    <div className={styles.carouselContent}>
-                <span className={styles.carouselText1}>REFERALS</span>
+                   <HeaderAnimation>
+                <span className={styles.carouselText1}>REFERRALS</span>
+                </HeaderAnimation>
+                <Animation2>
                 <span className={styles.carouselText2}>CALL/FAX REFERRALS NOW,<br/></span>
                 <br/> <br/>
-              <div  className={styles.carouselButton}><button>Fax Referrals</button></div>
+              <div  className={styles.carouselButton}>   <a href="tel:713 592 8955"><button>Fax Referrals</button></a></div>
+              </Animation2>
                 </div>
-                </Animation3>
+                </HeaderAnimation>
                    </div>
                 </div>
             </Carousel>
@@ -109,7 +125,7 @@ export default function Main(){
                 <div className={styles.rowContent}>
           <div className={styles.rowContentLeft}>
             <HeaderAnimation>
-            <div className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care </span>Service Inc.</div>
+            <div className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care Service Inc.</span></div>
             </HeaderAnimation>
             <span className={styles.rowParagraph}>
             <br/>  <motion.div
@@ -119,18 +135,31 @@ export default function Main(){
       initial="hidden"
       animate={control}
     >
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, 
-            sed do eiusmod tempor incididunt ut labore et dolore magna 
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            <span className={styles.rowContentSpan}>Our Mission</span>
+             <br/>
+            To promote high quality and holistic care that meets and exceeds the expectation of our clients in the confort of their homes
             <br/><br/>
-            Duis aute irure dolor in reprehenderit in voluptate velit 
-            esse cillum dolore eu fugiat nulla pariatur.
-
-Ut enim ad minim veniam, quis nostrud exercitation ullamco 
-laboris nisi ut aliquip ex ea commodo consequat.
+        <span className={styles.rowContentSpan}>Objectives  </span>
+        <br/>
+        To provide quality care that exceeds the expectation of our client and provide
+            coordinated approach to home healthcare through our network providers: Skilled Nurs, Physical Therapy, 
+            Social Workers, Home Health Aids. We also include family, primary physicians to create better care plan for individual treatmemnt to gain better understanding to desease process, better medication management and deit management.
+            Our home care personnel are highly trained, skilled and compassionate staff that will result in effective outcome towards patient regaining optimum health            
+      
 </motion.div>
+
+
             </span>
+            <Animation1> 
+            <div className={styles.slogan}>
+
+<div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
+
+<div className={styles.sloganText}> PROVIDING CONFORT CARE IN YOUR HOMES</div>
+
+
+                    </div>
+                    </Animation1> 
           </div>
           <div className={styles.rowContentRight}>
 
@@ -138,13 +167,17 @@ laboris nisi ut aliquip ex ea commodo consequat.
           </div>
           </div>
                 </Row>
-
+              
                 <Row>
                 <div className={styles.rowContent2}>
+
+               
+                  
                     <HeaderAnimation>
-    <div className={styles.rowHeading}>Our Services</div>
-    </HeaderAnimation>
-    <div className={styles.contents}>
+                    <div className={styles.rowHeading}>Our Services</div>
+                    </HeaderAnimation>
+                    <div className={styles.contentDivide}>
+                    <div className={styles.contents}>
         <Animation1>    <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-home"></i></span>
         <span className={styles.textLower}> Home health agency</span>
@@ -168,6 +201,8 @@ laboris nisi ut aliquip ex ea commodo consequat.
         <span className={styles.textLower}>Speech Therapy</span>
     </button>
     </Animation1>
+    </div>
+    <div className={styles.contents}>
     <Animation1>
     <button className={styles.services}>
         <span className={styles.textUpper}><i className="fa fa-home"></i></span>
@@ -193,58 +228,71 @@ laboris nisi ut aliquip ex ea commodo consequat.
     </button>
     </Animation1>
     </div>
+    </div>
+             
+               
+                  
+   
         
           </div>
-                </Row>
-            <Parallaxrow >
-      
-<Row>
-    <Animation2>
-            <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
-            <Parallaxword icon={<i className="fa fa-thin fa-check fa-fade animate"></i>} wordtitle={"Quality Services"} >
+              
+                <div className={styles.rowContent2}>
+                    <HeaderAnimation>
+                    <div className={styles.rowHeading}>Why Us?</div>
+                    </HeaderAnimation>
+                    <div className={styles.why_us_contents}>
+                    <Parallaxword 
+                    icon={ <span class='fa-stack '>
+                    <i className='fa fa-circle fa-stack-2x'></i>
+                    <i className='fa fa-thin fa-check fa-stack-1x fa-inverse'></i>
+                </span>}  
+                    
+                    wordtitle={"Quality Services"} >
            
-           Get the best health care services <br/> from  
-           this group of dedicated  <br/>
-            professionals
+           Get the best health care services from this group of dedicated professionals
             </Parallaxword>
-            </Parallaxcard>
-            </Animation2>
-            <Animation2>
-            <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
             <Parallaxword icon={ <span class='fa-stack '>
         <i className='fa fa-circle fa-stack-2x'></i>
         <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
     </span>}   wordtitle={"Always Available"} >
-            Count on us
-          
-              to be the best,<br/> 
-            with guaranteed  24/7 <br/> care services
+            Count on us to be the best, with guaranteed  24/7 care services
             </Parallaxword>
-                </Parallaxcard>
-                </Animation2>
-                <Animation2>
-            <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
-            <Parallaxword  icon={ <i className="fa fa-diamond fa-spin"></i>} wordtitle={"Certified"} >
-            Fully certified by the <br/>....................<br/>
+            <Parallaxword 
+              icon={ <span class='fa-stack '>
+              <i className='fa fa-circle fa-stack-2x'></i>
+              <i className='fa fa-diamond fa-spin fa-stack-1x fa-inverse'></i>
+          </span>} 
+            
+             wordtitle={"Certified"} >
+            Fully certified and accredited by the State of Taxas
             </Parallaxword>
-                </Parallaxcard>
-                </Animation2>
-                <Animation2>
-                <Parallaxcard height={"350px"} width={"300px"} background={"rgb(255, 255, 255)"}>
-            <Parallaxword  icon={ <i className="fa fa-file-text"></i>} wordtitle={"Application Forms"} >
-            Click <span>here</span> to view all available<br/>  application forms<br/>
-            </Parallaxword>
-                </Parallaxcard>
-                </Animation2>
+                        </div>
+                    </div>
 
-            </Row>
-            </Parallaxrow >
-          <Row>
-          <div className={styles.rowContent}>
-          <div className={styles.contentRight}>
-          <HeaderAnimation>
-          <div className={styles.rowHeading3}>  RATE US</div>
-          </HeaderAnimation>
+                </Row>
+            <Parallaxrow >
+      
+<Row>
+ <div className={styles.parallaxRowContents}>
+                <Parallaxcard height={"350px"} width={"28%"} >
+                <Animation1>
+    <button className={styles.referrals}>
+    <button className={styles.applicationButton}><i class="fa fa-user-plus" aria-hidden="true"></i> Referrals</button>
+       
+        <div className={styles.applicationFormElastic}> 
+           
+           <div className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
+           <span>  Click to open Referral form</span>
+         
+           </div>
+            </div>
+    </button>
+
+    </Animation1>
+          
+          <div className={styles.rating}>
+          <div className={styles.rateHeading}>  RATE US</div>
+      
           <div className={styles.rateContent}>
           <div className={styles.rate}>
     <input type="radio" id="star5" name="rate" value="5" />
@@ -263,59 +311,71 @@ laboris nisi ut aliquip ex ea commodo consequat.
   <i className="fa fa-hand-o-up fa-flip "></i>
 Rate Us
   </div>
-          </div>
-          <div className={styles.contentLeft}>
-          <HeaderAnimation>
-          <div className={styles.rowHeading3}>APPLICATION FORMS</div>
-          </HeaderAnimation>
-          <div className={styles.contentLeftContent}>
+  </div>
+            </Parallaxcard>
+          
+            <Parallaxcard height={"350px"} width={"50%"} >
+            <img src={BackgroundLessImage2} alt="logo"/>
+                </Parallaxcard>
+              
+            <Parallaxcard height={"350px"} width={"25%"} >
+                <div className={styles.application}>
+            <div className={styles.applicationFormHeading}>APPLICATION FORMS</div>
+            <div className={styles.contentLeftContent}>
             
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}> <i className="fa fa-files-o"></i>
+            <span className={styles.textupper}> <i className="fa fa-files-o"></i>
   </span>
         <span className={styles.textLower2}>Registered Nurse (RN)</span>
             </button>
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}>  <i className="fa fa-file-text "></i></span>
+            <span className={styles.textupper}>  <i className="fa fa-file-text "></i></span>
         <span className={styles.textLower2}> LVN/LPN</span>
             </button>
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}><i className="fa fa-file "></i></span>
+            <span className={styles.textupper}><i className="fa fa-file "></i></span>
         <span className={styles.textLower2}> CNA</span>
             </button>
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}><i className="fa fa-file-text-o "></i></span>
+            <span className={styles.textupper}><i className="fa fa-file-text-o "></i></span>
         <span className={styles.textLower2}>Home Health Aid</span>
             </button>
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}><i className="fa fa-files-o "></i></span>
+            <span className={styles.textupper}><i className="fa fa-files-o "></i></span>
         <span className={styles.textLower2}>Physical Therapy</span>
             </button>
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}><i className="fa fa-file-text "></i></span>
+            <span className={styles.textupper}><i className="fa fa-file-text "></i></span>
         <span className={styles.textLower2}>Occupational Therapy</span>
             </button>
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}><i className="fa fa-file "></i></span>
+            <span className={styles.textupper}><i className="fa fa-file "></i></span>
         <span className={styles.textLower2}>Speech Therapy</span>
             </button>
             <button className={styles.applicationForms}>
-            <span className={styles.textUpper}><i className="fa fa-file-text-o "></i></span>
+            <span className={styles.textupper}><i className="fa fa-file-text-o "></i></span>
         <span className={styles.textLower2}>MSW</span>
             </button>
             </div>
+            <div className={styles.applicationButtonContainer}>
+            <button className={styles.applicationButton}>Apply</button>
             <div className={styles.applicationFormElastic}> 
            
            <div className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
-           <span> Click to Open an application form</span>
+           <span>  Open an application form</span>
+         
            </div>
             </div>
-            <div className={styles.elasticBar}>
+            </div>
+            </div>
+                </Parallaxcard>
+              
+             
+                </div>
 
-            </div>
-          </div>
-            </div>
-          </Row>
+            </Row>
+            </Parallaxrow >
+ 
         </div>
     )
 }

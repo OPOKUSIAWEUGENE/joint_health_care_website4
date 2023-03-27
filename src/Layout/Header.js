@@ -35,8 +35,25 @@ else
         }
 
     }
-    return (
-        <div className={ navbar? styles.header:styles.headerMinimized}>  
+    return (<>  <div className={styles.headerTop}>
+        <div class={styles.headerTopleft}>
+       <span>Joint Health Care Services - Providing confort care in your home</span>
+      
+        </div>
+
+        <div class={styles.headerTopright}>
+        <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; <a href="mailto:jointhealthcare@yahoo.com"> jointhealthcare@yahoo.com</a></span>
+     <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; <a href="tel:713 592 8955"> 713 592 8955</a></span>
+        &nbsp;
+	 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+  <a href="#" class="google"><i class="fa fa-instagram"></i></a>
+   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+
+        </div>
+         </div>  
+        <div className={ navbar? styles.header:styles.headerMinimized}>
+  
         <div className={styles.headerleft}>
             <div className={styles.logoFrame}> 
             <img alt="logo" src={Logos} />
@@ -46,20 +63,26 @@ else
    </div>
             </div>
           </div>
-        <div className={styles.headermiddle}>  
-     <Square fa={<i class='fa fa-phone' style={{fontSize:20}}></i>} title={"+(800) 123-4567"}/>
-     <Square fa={<i class='fa fa-map-marker' style={{fontSize:20}}></i>} title={"Our Location"}/>
-     <Square fa={<i class='fa fa-info' style={{fontSize:20}}></i>} title={"About Us"}/>
-     <button className={styles.headerButton}>Call for Referrals</button>
+        <div className={styles.headermiddle}> 
+        {/* <Square fa={<i class='fa fa-info' style={{fontSize:20}}></i>} title={"About Us"}/> */}
+        <Square fa={<i class='fa fa-wrench' style={{fontSize:20}}></i>} title={"Our Services"}/> 
+        <Square fa={<i class='fa fa-map-marker' style={{fontSize:20}}></i>} title={"Our Location"}/>
+     <Square fa={<i class='fa fa-phone' style={{fontSize:20}}></i>} title={"Contacts"}/>
+
+  
+     <a href="tel:713 592 8955">  <button className={styles.headerButton}>Call for Referrals</button></a>
     
         </div>
         <div className={styles.menuicon}>
             <button onClick={handleClick}> <i className="fa fa-bars" aria-hidden="true"></i></button>
             <div className={styles.dropdownmenu} style={{display:display}}>
             <div className={styles.dropdown}>
-                <span><i class='fa fa-phone' style={{fontSize:20}}></i>&nbsp;+(800) 123-4567</span>
-                <span><i class='fa fa-map-marker' style={{fontSize:20}}></i>&nbsp;Our Location</span>
-                <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span>
+            {/* <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span> */}
+            <span><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Our Services</span>
+            <span><i class='fa fa-map-marker' style={{fontSize:20}}></i>&nbsp;Our Location</span>
+                <span><i class='fa fa-phone' style={{fontSize:20}}></i>&nbsp;Contacts</span>
+               
+     
 
    
             </div>
@@ -67,6 +90,7 @@ else
             </div>
      
         </div>
+        </>
     )
     
 }

@@ -15,11 +15,45 @@
     grid-template-columns: 40% 60%;
     font-size: 20px;;
     color:rgb(92, 78, 78);
-    border-bottom:1px solid rgb(92, 78, 78, 0.3);
+    border-bottom:5px solid rgb(218, 108, 29);
     position: sticky;
     top: 0;
-    z-index:10;
+    z-index:30;
     
+}
+.headerTop{
+  width:100%;
+  background:rgb(234, 234, 234);
+  display: flex;
+  justify-content: space-between;
+  padding-top:10px;
+  padding-bottom: 10px;
+  color:rgb(82, 113, 131);
+
+}
+.headerTopleft{
+  padding-left:50px;
+}
+.headerTopright{
+  padding-right:50px;
+}
+.headerTopright a{
+  color:rgb(159, 157, 157);
+  font-size: 20px;
+  }
+  .headerTopright a:hover{
+  color:rgb(235, 232, 232);
+}
+.headerTopright{
+  display: flex;
+ gap:15px;
+}
+@media only screen and (max-width: 780px) {  
+  .headerTop{ justify-content: center;}
+  .headerTopleft{ display:none;}
+   .headerTopright span{
+    display:none;
+   }
 }
 .headerMinimized{
     min-height: 100px;
@@ -28,7 +62,7 @@
       grid-template-columns: 40% 60%;
       font-size: 20px;;
       color:rgb(92, 78, 78);
-      border-bottom:1px solid rgb(92, 78, 78, 0.3);
+      border-bottom:5px solid rgb(218, 108, 29, 0.7);
       position: sticky;
       top: 0;
       z-index:10;
@@ -60,8 +94,9 @@
  }
 .logoCaptionText2{
 
-    font-size:12px;
-
+    font-size:14px;
+    font-weight: 600;
+color:rgb(53, 84, 95);
     font-family: monospace;
     animation:  fadeIn 5s, flash 600ms ease infinite alternate;
 
@@ -146,7 +181,7 @@ gap:2px;
     gap:120px;
 
     background-image:
-    linear-gradient( rgba(245, 246, 252, 0.88), rgba(241, 240, 245, 0.88)),url("../resources/images/reminder.png");
+    linear-gradient( rgba(245, 246, 252, 0.99), rgba(241, 240, 245, 0.99)),url("../resources/images/reminder.png");
     background-color: #473232;
     background-attachment: fixed;
     background-position: center;
@@ -176,12 +211,66 @@ gap:2px;
 border:1px solid rgba(235, 232, 232, 0.2);
 }
 .parallaxcard{
-    height:500px;
+    height:auto;
     width: 49%;
  border:none;
+ display:flex;
+ flex-direction: column;
+ gap:45px;
+}
+
+.referrals{
+  border:none;
+  display:flex;
+  flex-direction: column;
+
+  align-items: center;
+padding:50px;
+  border:1px solid rgb(168, 180, 191,0.3);
+  border-radius: 150px 30px 150px 5px;
+  background:transparent;
+  box-shadow: 0px 0px 15px 0px #d5d3d3;
+}
+.referralsText{
+  display:flex;
+  align-items: center;
+  gap:5px;
+  width:90%;
+}
+
+
+.referrals button:hover{
+  opacity:o.4;
+  background:rgb(82, 104, 119);
+}
+
+.referralsText .textupper{
+
+  font-size: 30px;
+  color:rgb(69, 119, 163);
+  animation: 3s anim-flipX ease infinite;
+
+}
+.referralsText .textLower{
+
+ font-size: 32px;
+ font-weight: 700;
+ color:rgb(104, 127, 147);
+ animation: 4s anim-flipX ease infinite;
+
+}
+.rating{
+  display: flex;
+  flex-direction: column;
+}
+
+.rateHeading{
+  color:rgb(140, 140, 140);
+  font-size: 30px;
+  font-weight: 600;
 }
 .parallaxcard:hover{
-    opacity: 0.9;
+    /* opacity: 0.9; */
 
 }
 .carousel{
@@ -208,25 +297,34 @@ border:1px solid rgba(235, 232, 232, 0.2);
 
 
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     gap:10px;
     height:100%;
    animation: flash 600ms ease infinite alternate;
 }
+
+.parallaxtextcontent
+{
+  /* width:500px; */
+  display:flex;
+  flex-direction: column;
+  
+  
+}
 .parallaxwordtitle{
-    font-family: Georgia, serif;
+  font-family:'Times New Roman', Times, serif;
     font-size: 25px;
     font-weight: 600;
-    color:rgb(56, 66, 80);
+    color:rgb(67, 45, 17);
 }
 .parallaxwordcontent{
-    font-family: Verdana, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     font-size: 16px;
     font-weight: 400;
     color:rgb(57, 59, 80); 
-    text-align: center;
+    /* text-align: center; */
     line-height: 27px;
 
 }
@@ -238,13 +336,18 @@ border:1px solid rgba(235, 232, 232, 0.2);
     color:#b98a3a;
   
    height:100px;
-   width:100%;
+   width:20%;
    display: flex;
    justify-content: center;
    align-items: center;
    animation: pulse 2s infinite ease-in-out alternate, flash 500ms ease infinite alternate;
 }
 
+.parallaxRowContents
+{
+  width:90vw;
+  display:flex;
+}
 
   @keyframes flash {
       from { opacity: 1; }	
@@ -641,19 +744,22 @@ color:rgb(97, 171, 183);
     opacity:0.8;
   }
 .carouselText1{
+  font-family: monospace;
     color:white;
-    font-size:50px;
-    font-weight:800;
-    font-family: Lucida Sans;
+    font-size:100px;
+    font-weight:900;
+    font-style:bold;
+   
+    /* font-family: Lucida Sans; */
 
 
 
 }
 .carouselText2{
     font-family: monospace;
-    font-size:17px;
-    font-weight: 500;
-    color:white;
+    font-size:25px;
+    font-weight: 600;
+    color:rgb(255, 255, 255);
   
 }
   .rowContent{
@@ -662,17 +768,21 @@ color:rgb(97, 171, 183);
     display:flex;
   overflow: hidden;
 
+
    /* background:blue; */
   
   }
   .rowTitle{
     font-size: 22px;
+   
     font-weight:700;
     color:grey;
     text-align: center;
   }
   .rowParagraph{
     color:rgb(103, 102, 102);
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
   }
   .rowContentLeft{
 
@@ -683,11 +793,55 @@ padding-left: 1.5%;
     transition: transform .2s;
   }
 
+  .rowContentSpan{
+    font-style:bold;
+    font-weight: 700;
+    font-size: 18px;
+    padding-top:5px;
+  }
   .rowContentRight{
     width:60%;
     /* overflow: hidden; */
   }
+.slogan{
+  display:flex;
+align-items: center;
+justify-content: center;
+  height:auto;
+  padding:10px 0 10px 0;
+  width:100%;
+  margin-top: 5px;
 
+
+}
+
+.sloganLogo{
+  width:30px;
+}
+
+.sloganText{
+  font-size:17px;
+  font-weight: 700;
+  border-top:1px solid rgb(93, 143, 166, 0.5);
+  border-bottom:1px solid rgb(93, 143, 166,0.5);
+  color:rgb(37, 145, 164);
+
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+padding:10px;
+  padding-right:10px;
+}
+
+.sloganTextEdge{
+  height:100%;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 40px solid rgb(206, 223, 239);
+  
+
+}
   @keyframes fadeIn {
     0% { opacity: 0;
     
@@ -699,6 +853,8 @@ padding-left: 1.5%;
 
 
   .rowHeading{
+  
+    padding-top:20px;
     font-size: 30px;
     font-weight:700;
     border-bottom: 1px solid rgb(226, 224, 224);
@@ -716,31 +872,55 @@ padding-left: 1.5%;
   
   }
 
+ .rowContent2Right{
+
+  }
+
+  .rowContent2Left{
+  
+    /* flex-direction: column; */
+
+  }
   .contents{
-    display:flex;
-    flex-wrap: wrap;
+
     padding-top:30px;
     padding-bottom: 30px;
-    align-items:center; 
+    align-items:flex-start; 
+    display: flex;
+    flex-direction: column;
     gap:5px;
     /* animation: my-animation 5s ; */
   }
 
+  .why_us_contents{
+    width:100%;
+   
+    display:flex;
+    justify-content: space-around;
+    gap:50px;
+    padding:50px 0 50px 0;
+  }
   .services{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+
+    justify-content:flex-start;
     align-items: center;
     color:rgb(87, 62, 47);
     font-size: 15px;
-    width:180px;
-    height:130px;
+    gap:15px;
+    width:350px;
+    height:50px;
     border:none;
-    background:rgb(253, 253, 253);
+    background:rgb(245, 245, 245);
     cursor:pointer;
     border-radius: 5px;
     animation:  fadeIn 5s, flash 600ms ease infinite alternate;
     transition: transform .2s;
+  }
+
+  .contentDivide{
+    display: flex;
+    gap:10px;
   }
   .services:hover{
     background:rgb(236, 236, 236);
@@ -753,15 +933,17 @@ padding-left: 1.5%;
     
   }
   .textUpper, .textLower{
-    height:50%;
+  
     display:flex;
     justify-content: center;
+    align-items: flex-end;
+
   }
 
   .textUpper i{
     font-size:34px;
     text-align: center;
-   
+   color:rgb(248, 248, 248);
 
   }
 
@@ -770,9 +952,11 @@ padding-left: 1.5%;
     justify-content: center;
     align-items: center;
     color:rgb(154, 139, 127);
+    background:rgb(218, 123, 73);
+    width:15%;
   }
   .textLower{
-    color:rgb(118, 77, 27);
+    color:rgb(67, 45, 17);
  
    font-size:16px;
    font-style:bold;
@@ -806,6 +990,7 @@ padding-left: 1.5%;
     color:rgb(168, 168, 168);
     font-size: 25px;
 font-weight:500;
+text-align: center;
 }
 .rowHeading3{
     color:rgb(168, 168, 168);
@@ -815,35 +1000,86 @@ border-bottom: 1px dashed rgb(224, 223, 223);
 }
   .contentLeftContent{
     display:flex;
-    gap:5px;
-  flex-wrap:wrap;
-  justify-content: center;
-  align-items: center;
+    flex-direction: column;
+  justify-content: flex-start;
+  align-items:flex-start;
   }
 .applicationForms{
 
-    width:90px;
-    height:110px;
-    background:rgb(246, 246, 246);
+    width:100%;
+    display:flex;
+    justify-content: flex-start;
+ 
+    background:transparent;
     border:none;
     border-radius: 5px;
-    cursor:pointer;
+    /* cursor:pointer; */
     animation:  fadeIn 5s, flash 600ms ease infinite alternate;
     transition: transform .2s;
+  
+}
+.applicationFormHeading{
+  font-size: 25px;
+  font-weight: 700;
+  color:rgb(81, 97, 130);
+  padding: 10px 0 10px 30px;
+ 
+
+}
+.application{
+  display: flex;
+  flex-direction: column;
+}
+.applicationForms .textlower2{
+  width:60%;
+ font-size: 15px;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.applicationForms .textupper{
+  width:10%;
+  padding:5px;
+  font-size: 15px;
+  color:rgb(63, 143, 180);
+ 
 }
 .applicationFormElastic{
-    width:100%;
-    background:rgb(197, 123, 66);
+  
+    /* background:rgb(255, 255, 255); */
     padding:5px;
-    color:white;
-    letter-spacing: 7px;
-    font-weight: 600;
+    color:rgb(96, 75, 75);
+    /* letter-spacing: 7px; */
+    font-weight: 800;
     /* animation:  fadeIn 5s, flash 600ms ease infinite alternate; */
     animation:  fadeIn 5s, flash 600ms,  anim-popoutin 8s ease infinite;
 
 }
+.applicationButtonContainer{
+  border: 1px solid rgb(69, 105, 159,0.2);
+  border-radius: 2px 2px 30px 30px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:10px;
+}
+.applicationButton{
+  border:none;
+  box-shadow: 0px 0px 5px 0px #888888;
+  background: rgb(69, 105, 159);
+  width:300px;
+  height:40px;
+  cursor:pointer;
+  font-size: 20px;
+  font-weight: 700;
+  color:white;
+
+}
 .rateCaptions{
-    width:100%;
+    width:90%;
+  
 color:rgb(197, 123, 66);
 font-size: 20px;
 letter-spacing: 5px;
@@ -951,8 +1187,8 @@ animation: 1s anim-flipX ease infinite;
     100%{transform:scale(1)};
 }
 .applicationForms:hover{
-    background:rgb(236, 236, 236);
-    transform: scale(1.05);
+    /* background:rgb(236, 236, 236); */
+    /* transform: scale(1.05); */
 }
 
 
@@ -1024,6 +1260,7 @@ animation: 1s anim-flipX ease infinite;
 .carousel{
 
   height:500px;
+  border-bottom:5px solid rgb(218, 108, 29);
   overflow: hidden;
 }
 
@@ -1076,11 +1313,11 @@ justify-content: center;
 }
 .carouselText1{
   font-size:30px;
-  font-weight:400;
+  font-weight:900;
 }
 .carouselText2{
   font-size:10px;
-  font-weight:200;
+  font-weight:700;
 }
 
 .rowTitle{
@@ -1096,7 +1333,8 @@ justify-content: center;
   margin-top:30px;
 }
 .carousel{
-  height:220px;
+  height:210px;
+    border-bottom:5px solid rgb(218, 108, 29);
 }
 
 .headerleft{
