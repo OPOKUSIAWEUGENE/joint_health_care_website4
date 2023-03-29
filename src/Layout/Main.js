@@ -27,6 +27,7 @@ import Animation2 from "./Maincontentcomponents/Animation2"
 import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
 import Logos from "../resources/logo.svg"
+import Electricity from "./Headercomponents/electricity"
 
 export default function Main(){
     // const styles=(image)=>({    
@@ -169,65 +170,188 @@ export default function Main(){
                 </Row>
               
                 <Row>
-                <div className={styles.rowContent2}>
-
-               
-                  
+                <Parallaxrow >
+                <div className={styles.rowContent2}>     
                     <HeaderAnimation>
-                    <div className={styles.rowHeading}>Our Services</div>
+                    <div className={styles.rowHeadingCase}>
+                    <div className={styles.rowHeading}>  Our Services</div>
+                    </div>
                     </HeaderAnimation>
                     <div className={styles.contentDivide}>
-                    <div className={styles.contents}>
-        <Animation1>    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa-home"></i></span>
-        <span className={styles.textLower}> Home health agency</span>
-    </button>
-    </Animation1>
-<Animation1>
-    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa-user-md"></i></span>
-        <span className={styles.textLower}> Skilled nurse</span>
-    </button>
-    </Animation1>
-    <Animation1>
-    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa-bicycle"></i></span>
-        <span className={styles.textLower}>Physical Therapy</span>
-    </button>
-    </Animation1>
-    <Animation1>
-    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa fa-user-md"></i></span>
-        <span className={styles.textLower}>Speech Therapy</span>
-    </button>
-    </Animation1>
+                   
+                    <div className={styles.ServiceRowContents}>
+       
+    <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa-user-md"></i>Skilled nurse</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Injection </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Wound care </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Tube feeding </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Bowel regimen </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Catheter care </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Nutritional instructions </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Respiratory/Tracheostomy </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Medication administration and Education </span>
+             </span>
+
+</div>
+    
     </div>
-    <div className={styles.contents}>
-    <Animation1>
-    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa-home"></i></span>
-        <span className={styles.textLower}>Home health and CNA</span>
-    </button>
-    </Animation1>
-    <Animation1>
-    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa-user-md"></i></span>
-        <span className={styles.textLower}>MSW</span>
-    </button>
-    </Animation1>
-    <Animation1>
-    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa-hospital-o"></i></span>
-        <span className={styles.textLower}>Hospice care</span>
-    </button>
-    </Animation1>
-    <Animation1>
-    <button className={styles.services}>
-        <span className={styles.textUpper}><i className="fa fa fa-user-md"></i></span>
-        <span className={styles.textLower}>Pediatrics consult</span>
-    </button>
-    </Animation1>
+       <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa-home"></i>Non-skilled</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Home-health aid </span>
+            <span>Bath </span>
+            <span>Dressing </span>
+            <span>Personal lining change </span>
+            <span>Light house duties </span>
+             </span>
+
+</div>
+    
     </div>
+     <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa-bicycle"></i>Physical Therapy</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Reforming optimal level of functioning </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Gait training </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Range of motion </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Muscle strengthening </span>
+             </span>
+
+</div>
+    
+    </div>
+     <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Occupational Therapy</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Improving fine motor skill </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Independents with activities of daily living </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Adequate use of equipment </span>
+             </span>
+
+</div>  
+    </div>
+
+    </div>
+
+    <div className={styles.ServiceRowContents}>    
+         <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Speech Therapy</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Swallowing disorders </span>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Improved delayed or post illness speech disorder </span>
+             </span>
+
+</div>  
+    </div>
+
+           <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Healthcare Social Worker</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Help in need of assistance </span>
+            
+          </span>
+
+</div>  
+    </div>
+
+           <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Medical Supply Equipment</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Joint healthcare will coordinate with medical Supply
+            companies with equipment supply necessary to meet your treatment goal. These items include Walker Wheelchair,
+            Clutches, Hospital Bed, Wound Care Supplies, Foley Catheter, Breathin Equipment, Commode, Diapers, Underpaid Etc. </span>
+            
+          </span>
+
+</div>  
+    </div>
+
+            <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Medical Supply Equipment</span>
+        <span className={styles.serviceContentText}>
+            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Transportation to doctor's visit </span>
+            
+          </span>
+
+</div>  
+    </div>
+    </div>
+
+    
+    
+    <div className={styles.ServiceRowContents}>
+     <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa-home"></i>Home health and CNA</span>
+        <span className={styles.serviceContentText}>
+            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+          
+             </span>
+
+</div>
+    
+    </div>
+      <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa-user-md"></i>MSW</span>
+        <span className={styles.serviceContentText}>
+            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+        
+             </span>
+
+</div>
+    
+    </div>
+      <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa-hospital-o"></i>Hospice care</span>
+        <span className={styles.serviceContentText}>
+            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+           
+             </span>
+
+</div>
+    
+    </div>
+    <div className={styles.services}>
+<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Pediatrics consult</span>
+        <span className={styles.serviceContentText}>
+            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+            
+             </span>
+
+</div>
+    
+    </div>
+ 
+  
+  
+   
+    </div>
+
     </div>
              
                
@@ -235,10 +359,13 @@ export default function Main(){
    
         
           </div>
+          </Parallaxrow >
               
                 <div className={styles.rowContent2}>
                     <HeaderAnimation>
+                        <div className={styles.rowHeadingCase}>
                     <div className={styles.rowHeading}>Why Us?</div>
+                    </div>
                     </HeaderAnimation>
                     <div className={styles.why_us_contents}>
                     <Parallaxword 
@@ -270,6 +397,7 @@ export default function Main(){
                     </div>
 
                 </Row>
+               
             <Parallaxrow >
       
 <Row>
