@@ -125,10 +125,10 @@ export default function Main(){
             <Row>
                 <div className={styles.rowContent}>
           <div className={styles.rowContentLeft}>
-            <HeaderAnimation>
+            {/* <HeaderAnimation>
             <div className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care Service Inc.</span></div>
-            </HeaderAnimation>
-            <span className={styles.rowParagraph}>
+            </HeaderAnimation> */}
+            {/* <span className={styles.rowParagraph}>
             <br/>  <motion.div
       className="box"
       ref={ref}
@@ -150,8 +150,35 @@ export default function Main(){
 </motion.div>
 
 
-            </span>
-            <Animation1> 
+            </span> */}
+              <div className={styles.why_us_contents}>
+                    <Parallaxword 
+                    icon={ <span class='fa-stack '>
+                    <i className='fa fa-circle fa-stack-2x'></i>
+                    <i className='fa fa-thin fa-check fa-stack-1x fa-inverse'></i>
+                </span>}  
+                    
+                    wordtitle={"Quality Services"} >
+           
+           Get the best health care services from this group of dedicated professionals
+            </Parallaxword>
+            <Parallaxword icon={ <span class='fa-stack '>
+        <i className='fa fa-circle fa-stack-2x'></i>
+        <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
+    </span>}   wordtitle={"Always Available"} >
+            Count on us to be the best, with guaranteed  24/7 care services
+            </Parallaxword>
+            <Parallaxword 
+              icon={ <span class='fa-stack '>
+              <i className='fa fa-circle fa-stack-2x'></i>
+              <i className='fa fa-diamond fa-spin fa-stack-1x fa-inverse'></i>
+          </span>} 
+            
+             wordtitle={"Certified"} >
+            Fully certified and accredited by the State of Taxas
+            </Parallaxword>
+                        </div>
+            {/* <Animation1> 
             <div className={styles.slogan}>
 
 <div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
@@ -160,12 +187,13 @@ export default function Main(){
 
 
                     </div>
-                    </Animation1> 
+                    </Animation1>  */}
+
           </div>
-          <div className={styles.rowContentRight}>
+          {/* <div className={styles.rowContentRight}>
 
             <img src={BackgroundLessImage} alt="logo"/>
-          </div>
+          </div> */}
           </div>
                 </Row>
               
@@ -182,60 +210,66 @@ export default function Main(){
                     <div className={styles.ServiceRowContents}>
        
     <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+{/* <div className={styles.serviceImageContainer}><i className="fa fa-user-md"></i></div> */}
+
+<div className={styles.fa_icons}><i className="fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa-user-md"></i>Skilled nurse</span>
+<span className={styles.serviceContentHeader}>Skilled nurse</span>
         <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Injection </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Wound care </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Tube feeding </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Bowel regimen </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Catheter care </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Nutritional instructions </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Respiratory/Tracheostomy </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Medication administration and Education </span>
+           <strong>*</strong>Injection
+           <strong>*</strong>Wound care 
+           <strong>*</strong>Tube feeding
+           <strong>*</strong>Bowel regimen 
+           <strong>*</strong>Catheter care
+           <strong>*</strong>Nutritional instructions
+           <strong>*</strong>Respiratory/Tracheostomy
+
+           <strong>*</strong>Medication administration and Education
              </span>
 
 </div>
     
     </div>
        <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+<div className={styles.fa_icons}><i className="fa fa-home"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa-home"></i>Non-skilled</span>
+<span className={styles.serviceContentHeader}>Non-skilled</span>
         <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Home-health aid </span>
-            <span>Bath </span>
-            <span>Dressing </span>
-            <span>Personal lining change </span>
-            <span>Light house duties </span>
+          Home-health aid;
+          <strong>*</strong>Bath 
+          <strong>*</strong>Dressing 
+          <strong>*</strong>Personal lining change 
+          <strong>*</strong>Light house duties 
+         </span>
+
+</div>
+    
+    </div>
+     <div className={styles.services}>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+<div className={styles.fa_icons}><i className="fa fa-bicycle"></i></div>
+<div className={styles.serviceContent}>
+<span className={styles.serviceContentHeader}>Physical Therapy</span>
+        <span className={styles.serviceContentText}>
+        <strong>*</strong>Reforming optimal level of functioning 
+        <strong>*</strong>Gait training
+        <strong>*</strong>Range of motion 
+        <strong>*</strong>Muscle strengthening 
              </span>
 
 </div>
     
     </div>
      <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+<div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa-bicycle"></i>Physical Therapy</span>
+<span className={styles.serviceContentHeader}>Occupational Therapy</span>
         <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Reforming optimal level of functioning </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Gait training </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Range of motion </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Muscle strengthening </span>
-             </span>
-
-</div>
-    
-    </div>
-     <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
-<div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Occupational Therapy</span>
-        <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Improving fine motor skill </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Independents with activities of daily living </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Adequate use of equipment </span>
+        <strong>*</strong>Improving fine motor skill
+        <strong>*</strong>Independents with activities of daily living
+        <strong>*</strong>Adequate use of equipment
              </span>
 
 </div>  
@@ -245,12 +279,13 @@ export default function Main(){
 
     <div className={styles.ServiceRowContents}>    
          <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+<div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Speech Therapy</span>
+<span className={styles.serviceContentHeader}>Speech Therapy</span>
         <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Swallowing disorders </span>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Improved delayed or post illness speech disorder </span>
+        <strong>*</strong>Swallowing disorders 
+        <strong>*</strong>Improved delayed or post illness speech disorder 
              </span>
 
 </div>  

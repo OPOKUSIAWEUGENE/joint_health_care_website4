@@ -789,6 +789,7 @@ color:rgb(97, 171, 183);
     display:flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 padding-left: 1.5%;
     transition: transform .2s;
   }
@@ -872,13 +873,10 @@ padding:10px;
     align-items: center;
   }
   .rowContent2{
-
     width:100%;
     display:flex;
     flex-direction: column;
     gap:20px;
-  
-  
   }
 
  .rowContent2Right{
@@ -902,11 +900,10 @@ padding:10px;
   }
 
   .why_us_contents{
-    width:100%;
-   
+    width:90%;
     display:flex;
     justify-content: space-around;
-    gap:50px;
+    gap:10px;
     padding:50px 0 50px 0;
   }
   .services{
@@ -953,9 +950,7 @@ height:330px;
 .serviceContentHeader{
   /* width:100%; */
 
-  display:flex;
-  justify-content: flex-start;
-  gap:5px;
+ text-align: center;
   font-weight: 600;
 
   font-size:18px;
@@ -975,10 +970,9 @@ gap:50px;
   gap:50px;
 }
 .serviceContentText{
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding-left: 15px;
+text-align: center;
+width:100%;
+word-wrap: break-word;
   font-size:14px;
 }
  
@@ -986,7 +980,11 @@ gap:50px;
     background:rgb(251, 251, 251,0.3);
     transform: scale(1.02);
   }
-
+.fa_icons{
+  width:100%;
+  font-size: 70px;
+  text-align: center;
+}
   .services i{
    
     color:rgb(173, 172, 172);
