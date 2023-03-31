@@ -24,19 +24,21 @@ export default function Footer(){
  </div>
             </div>
             <div className={styles.footerLower}>
-            <Footercards title={"About Us"} >
+            <Footercards title={"Aims and Objectives"} >
      
          <div className={styles.aboutus}>
              {/* <img alt="logo" src={Logo} style={{width:100, height:100}}/>     */}
             <div className={styles.footerdescription}>
-            Joint health CareJoint health CareJoint health CareJoint health CareJoint health 
-            CareJoint health CareJoint health CarevJoint health CareJoint health Care
-            Joint health CareJoint health CareJoint health CareJoint health Care
+            To provide quality care that exceeds the expectation of our client and provide
+            coordinated approach to home healthcare through our network providers: Skilled Nurs, Physical Therapy, 
+            Social Workers, Home Health Aids. We also include family, primary physicians to create better care plan for individual treatmemnt to gain better understanding to desease process, better medication management and deit management.
+            Our home care personnel are highly trained, skilled and compassionate staff that will result in effective outcome towards patient regaining optimum health            
+
                
             </div>
             </div>
 </Footercards>
-<Footercards title={"Our Services"} large={true}>
+<Footercards title={"Our Services"} >
     <div className={styles.footercolumns}>
 
     <div className={styles.columndivisions}>

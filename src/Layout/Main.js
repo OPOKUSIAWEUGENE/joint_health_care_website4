@@ -196,7 +196,34 @@ export default function Main(){
           </div> */}
           </div>
                 </Row>
-              
+                <Row>
+<div className={styles.frame}>
+    <div className={styles.frameLeft}>
+    <img className={styles.frameLeftImg} src={BackgroundLessImage2} alt="logo"/>
+    </div>
+    <div className={styles.frameRight}>
+    <Animation2>
+        <span className={styles.frame_text}>We provide high quality and holistic care that meets and exceeds
+         the expectation of our clients in the confort of their homes
+        </span>
+        </Animation2>
+    <Animation1>  
+    <span className={styles.fa_container}>
+        <span className={styles.fa}><a href="mailto:jointhealthcare@yahoo.com"> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; jointhealthcare@yahoo.com</a></span>
+     <span className={styles.fa}><a href="tel:713 592 8955"> <i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 713 592 8955</a></span>
+     </span>
+     </Animation1>
+         <Animation2> 
+            <div className={styles.slogan}>
+<div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
+<div className={styles.sloganText}> PROVIDING CONFORT CARE IN YOUR HOMES</div>
+                    </div>
+                    </Animation2> 
+    </div>
+
+</div>
+
+                </Row>
                 <Row>
                 <Parallaxrow >
                 <div className={styles.rowContent2}>     
@@ -292,25 +319,32 @@ export default function Main(){
     </div>
 
            <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+<div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Healthcare Social Worker</span>
+<span className={styles.serviceContentHeader}>Healthcare Social Worker</span>
         <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Help in need of assistance </span>
-            
+            <strong>*</strong>Help in need of assistance       
           </span>
 
 </div>  
     </div>
 
            <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+<div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Medical Supply Equipment</span>
+<span className={styles.serviceContentHeader}>Medical Supply Equipment</span>
         <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Joint healthcare will coordinate with medical Supply
-            companies with equipment supply necessary to meet your treatment goal. These items include Walker Wheelchair,
-            Clutches, Hospital Bed, Wound Care Supplies, Foley Catheter, Breathin Equipment, Commode, Diapers, Underpaid Etc. </span>
+            {/* <strong>*</strong>Walker Wheelchair
+            <strong>*</strong> Clutches
+             <strong>*</strong>Hospital Bed
+              <strong>*</strong>Wound Care Supplies
+               <strong>*</strong>Foley Catheter
+                <strong>*</strong>Breathin Equipment
+                 <strong>*</strong>Commode
+                  <strong>*</strong>Diapers
+                   <strong>*</strong>Underpaid Etc. */}
             
           </span>
 
@@ -318,11 +352,12 @@ export default function Main(){
     </div>
 
             <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+<div className={styles.fa_icons}><i class="fa fa-ambulance" aria-hidden="true"></i></div>
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Medical Supply Equipment</span>
+<span className={styles.serviceContentHeader}>Transportation to doctor's visit </span>
         <span className={styles.serviceContentText}>
-            <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>Transportation to doctor's visit </span>
+     
             
           </span>
 
@@ -334,9 +369,10 @@ export default function Main(){
     
     <div className={styles.ServiceRowContents}>
      <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+   <div className={styles.fa_icons}><i className="fa fa-home"></i></div>     
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa-home"></i>Home health and CNA</span>
+<span className={styles.serviceContentHeader}>Home health and CNA</span>
         <span className={styles.serviceContentText}>
             {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
           
@@ -346,9 +382,10 @@ export default function Main(){
     
     </div>
       <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+        <div className={styles.fa_icons}><i className="fa fa-user-md" aria-hidden="true"></i></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa-user-md"></i>MSW</span>
+<span className={styles.serviceContentHeader}>MSW</span>
         <span className={styles.serviceContentText}>
             {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
         
@@ -358,9 +395,10 @@ export default function Main(){
     
     </div>
       <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+        <div className={styles.fa_icons}><i class="fa fa-hospital-o" aria-hidden="true"></i></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa-hospital-o"></i>Hospice care</span>
+<span className={styles.serviceContentHeader}>Hospice care</span>
         <span className={styles.serviceContentText}>
             {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
            
@@ -370,9 +408,10 @@ export default function Main(){
     
     </div>
     <div className={styles.services}>
-<div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div>
+        <div className={styles.fa_icons}><i class="fa fa fa-user-md" aria-hidden="true"></i></div>
+{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
 <div className={styles.serviceContent}>
-<span className={styles.serviceContentHeader}><i className="fa fa fa-user-md"></i>Pediatrics consult</span>
+<span className={styles.serviceContentHeader}>Pediatrics consult</span>
         <span className={styles.serviceContentText}>
             {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
             
