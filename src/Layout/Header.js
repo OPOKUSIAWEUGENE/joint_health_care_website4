@@ -43,13 +43,14 @@ else
 
         <div class={styles.headerTopright}>
         <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; <a href="mailto:jointhealthcare@yahoo.com"> jointhealthcare@yahoo.com</a></span>
-     <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; <a href="tel:713 592 8955"> 713 592 8955</a></span>
-        &nbsp;
-	 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="google"><i class="fa fa-instagram"></i></a>
-   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-
+         <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; <a href="tel:713 592 8955"> 713 592 8955</a></span>
+        
+        <span className={styles.headertop_fa}>
+<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
+  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+  <a href="#" class="google"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;
+   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+   </span>
         </div>
          </div>  
         <div className={ navbar? styles.header:styles.headerMinimized}>
