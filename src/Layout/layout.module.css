@@ -1648,9 +1648,14 @@ gap:50px;
   text-align: center;
   padding:0;
 }
-
+.aboutus{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .footerdescription{
   text-align: center;
+  width:95%;
 
 }
 .footerSub{
@@ -1788,6 +1793,12 @@ text-align: center;
 
   width:100%;
 
+}
+.parallaxrow{
+
+  padding:0;
+  gap:0;
+  width:100%;
 }
 .parallaxRowContents{
   flex-direction: column;
