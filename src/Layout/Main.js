@@ -517,7 +517,7 @@ Rate Us
             </Parallaxcard>
           
             <Parallaxcard height={"350px"} width={"50%"} >
-            <img src={BackgroundLessImage2} alt="logo"/>
+            <img className={styles.parallaxCardImg} src={BackgroundLessImage2} alt="logo"/>
                 </Parallaxcard>
               
             <Parallaxcard height={"350px"} width={"25%"} >
