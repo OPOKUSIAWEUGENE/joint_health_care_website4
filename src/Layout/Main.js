@@ -28,6 +28,7 @@ import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
 import Logos from "../resources/logo.svg"
 import Electricity from "./Headercomponents/electricity"
+import { useNavigate } from "react-router-dom"
 
 export default function Main(){
     // const styles=(image)=>({    
@@ -40,6 +41,14 @@ export default function Main(){
     //     width:"100%",  
         
     //   })
+
+    const navigate=useNavigate();
+
+
+    function Apply()
+    {
+        navigate('/new-application');
+    }
     const boxVariant = {
         visible: { opacity: 1,  y: 0, transition: { duration: 2 } },
         hidden: { opacity: 0.2,  y: 20  }
@@ -477,7 +486,7 @@ export default function Main(){
 <Row>
  <div className={styles.parallaxRowContents}>
                 <Parallaxcard height={"350px"} width={"28%"} >
-                <Animation1>
+      
     <button className={styles.referrals}>
     <button className={styles.applicationButton}><i class="fa fa-user-plus" aria-hidden="true"></i> Referrals</button>
        
@@ -490,7 +499,7 @@ export default function Main(){
             </div>
     </button>
 
-    </Animation1>
+ 
           
           <div className={styles.rating}>
           <div className={styles.rateHeading}>  RATE US</div>
@@ -560,7 +569,7 @@ Rate Us
             </button>
             </div>
             <div className={styles.applicationButtonContainer}>
-            <button className={styles.applicationButton}>Apply</button>
+            <button onClick={Apply} className={styles.applicationButton}>Apply</button>
             <div className={styles.applicationFormElastic}> 
            
            <div className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>

@@ -1,0 +1,43 @@
+.form{
+    height:auto;
+    width:auto;
+display:flex;
+flex-direction: column;
+row-gap:10px;
+justify-content: center;
+align-items: center;
+padding:10px;
+}
+.inputContainer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+align-items:flex-start;
+  
+   
+}
+.input{
+    border:1px solid rgb(238, 238, 238);
+}
+.input:focus{
+
+    outline:none;
+}
+.errors{
+    color:red;
+    font-size:14px;
+    height:13px;
+    text-align: left;
+    width:100%;
+}
+.submitbutton{
+   
+    outline: none;
+    cursor:pointer;
+    color:white;
+    background: rgb(62, 63, 73);
+}
+.submitbutton:hover{
+    opacity: 0.8;
+    
+}

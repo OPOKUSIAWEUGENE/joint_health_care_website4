@@ -155,7 +155,7 @@ display:flex;
 flex-direction: column;
 height:auto;
 gap:2px;
-
+min-height: 100%;
     
 }
 .row{
@@ -1389,7 +1389,51 @@ animation: 1s anim-flipX ease infinite;
 }
 
 
+.formHeight{
+  height:80vh;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.form{
+  height:auto;
+  width:auto;
+  padding:15px;
+ border-top:1px solid rgb(225, 222, 222,0.6);
+ border-bottom:1px solid rgb(225, 222, 222,0.6);
+}
 
+.sent_application_detail{
+
+  padding:40px;
+  text-align: center;
+  font-size:40px;
+  font-weight: 400;
+  color:rgb(74, 211, 74);
+}
+.sent_application_button{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+}
+
+.sent_application_button button{
+width:200px;
+padding:10px;
+background:transparent;
+
+color:rgb(72, 126, 161);
+font-size: 20px;
+border:1px solid grey;
+border:none;
+cursor: pointer;
+}
+
+.sent_application_button button:hover{
+  background:rgb(200, 201, 202,0.2);
+}
 
 /* mobile view */
 
