@@ -167,7 +167,64 @@ export default function Application(){
                      //   defaultvalue:true           
                }
        },
-        
+       {
+        input:{
+          label:"Name and location of high school attended ", type:"textarea", placeholder:"Enter name and location of high school attended ",name:"hight_school_attended", value:"",
+                validation:{required:true,  pattern:/[0-9]$/}
+              }
+      },
+       {
+        select:{
+         label:"High school level attained",
+               type:"select",name:"hight_school_level_attained", defaultvalue:"12",
+               validation:{required:false,  Min:8 },
+               options:[ 
+                         {value:"9", label:"9"},
+                         {value:"10", label:"10"},  
+                         {value:"11", label:"11"},
+                         {value:"12", label:"12"},      
+                      ],
+                   //   defaultvalue:true           
+             }
+     },
+     {
+      input:{
+        label:"Name and location of college attended ", type:"textarea", placeholder:"Enter name and location of college attended ",name:"college_attended", value:"",
+              validation:{required:true,  pattern:/[0-9]$/}
+            }
+    },
+     {
+      select:{
+       label:"College level attained",
+             type:"select",name:"college_level_attained", defaultvalue:"4",
+             validation:{required:false,  Min:8 },
+             options:[ 
+                       {value:"1", label:"1"},
+                       {value:"2", label:"2"},  
+                       {value:"3", label:"3"},
+                       {value:"4", label:"4"},      
+                    ],
+                 //   defaultvalue:true           
+           }
+   },
+   {
+    input:{
+      label:"List professional licenses you posses, Indicate type of license, the number and the state ", type:"textarea", placeholder:"Enter details of licenses ",name:"details_of_licenses", value:"",
+            validation:{required:true,  pattern:/[0-9]$/}
+          }
+  },
+  {
+    input:{
+      label:"List any languages spoken other than English ", type:"textarea", placeholder:"Enter details of languages spoken",name:"languages_spoken", value:"",
+            validation:{required:true,  pattern:/[0-9]$/}
+          }
+  },
+  {
+    input:{
+      label:"List other skills applicable to the position you are applying for ", type:"textarea", placeholder:"Enter skills",name:"skills", value:"",
+            validation:{required:true,  pattern:/[0-9]$/}
+          }
+  },
           {
             submit:{
                     type:"submit", value:loading?"Loading...":"Apply"
