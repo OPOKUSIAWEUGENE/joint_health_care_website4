@@ -213,7 +213,7 @@ export default function Main(){
     <div className={styles.frameRight}>
     <Animation2>
         <span className={styles.frame_text}>We provide high quality and holistic care that meets and exceeds
-         the expectation of our clients in the confort of their homes
+         the expectation of our clients in the comfort of their homes
         </span>
         </Animation2>
     <Animation1>  
@@ -225,7 +225,7 @@ export default function Main(){
          <Animation2> 
             <div className={styles.slogan}>
 <div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
-<div className={styles.sloganText}> PROVIDING CONFORT CARE IN YOUR HOMES</div>
+<div className={styles.sloganText}> PROVIDING COMFORT CARE IN YOUR HOMES</div>
                     </div>
                     </Animation2> 
     </div>
