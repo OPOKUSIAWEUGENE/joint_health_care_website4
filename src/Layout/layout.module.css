@@ -1435,6 +1435,31 @@ cursor: pointer;
   background:rgb(200, 201, 202,0.2);
 }
 
+
+
+
+.formHeight{
+  padding-top:20px;
+  padding-bottom: 20px;
+  height:auto;
+}
+.form{
+background:rgb(244, 244, 244);
+padding:40px;
+width:30%;
+text-align: center;
+}
+
+.formHeader{
+  color:rgb(204, 133, 75);
+  font-weight:600;
+  font-size:30px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 30px;
+  text-decoration: underline;
+}
+
 /* mobile view */
 
 @media only screen and (max-width: 780px) {    
@@ -1910,26 +1935,12 @@ text-align: center;
   padding:0;
   padding-top:10px;
 }
-}
-
-
-.formHeight{
-  padding-top:20px;
-  padding-bottom: 20px;
-  height:auto;
-}
 .form{
-background:rgb(244, 244, 244);
-padding:40px;
-width:30%;
-text-align: center;
+  width:90%;
+  padding:0;
+}
+.formHeader{
+
+}
 }
 
-.formHeader{
-  color:rgb(204, 133, 75);
-  font-weight:600;
-  font-size:30px;
-  width: 100%;
-  padding-bottom: 30px;
-  text-decoration: underline;
-}
