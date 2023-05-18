@@ -1460,42 +1460,111 @@ text-align: center;
   text-decoration: underline;
 }
 
-/* mobile view */
+
+
+
+.comment{
+  display:flex;
+  flex-direction: column;
+
+
+  height:200px;
+  width:300px;
+  gap:10px;
+}
+.commentTitle{
+  color:grey;
+  font-weight: 500;
+  font-size: 20px;
+}
+.commentForm{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.commentForm textarea{
+height:100px;
+width:100%;
+outline: none;
+}
+
+
+.form{
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+.form form{
+  width:100%;
+
+  gap:10px;
+}
+form .inputGroup{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:12px;
+}
+.inputGroup label{
+
+width: 100%;
+text-align: left;
+font-size: 20px;
+}
+.inputGroup input, .inputGroup select, .inputGroup textarea{
+  width:400px;
+  height:34px;
+  outline: none;
+  border:1px solid rgb(198, 195, 195);
+}
+
+
+.inputGroup textarea{
+  height:150px;
+}
+
+.inputGroup button{
+
+  width:200px;
+  height:34px;
+  outline: none;
+  background:rgb(147, 83, 19);
+  color:white;
+  font-weight: 700;
+  font-size: 20px;
+  border:none;
+  cursor: pointernn;
+}
 
 @media only screen and (max-width: 780px) {    
-  /* .row{ 
-   flex-direction: column;
-}
 
-.socialmedia{
-justify-content: center;
-}
 
-.footer{
-   flex-direction: column;
-   gap:50px;
-   padding: 10px;
-  padding-bottom:10%;  
+  .inputGroup input, .inputGroup select, .inputGroup textarea, .inputGroup button, .inputGroup label{
+    width:270px;
+  }
+  .inputGroup input{
+    width:100%;
+  }
+.commentTitle{
+  width:1px;
+  text-align: center;
 }
-.footercards, .footercardslarge{
-   width:100%;
-  
+.commentForm{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
 }
-.footercolumns{
-   flex-direction: column;
-}
-.footeraddress{
-   text-align:center;
-}
-.rowparagraphtitle{
-   text-align: center;
-   font-size: 25px;
-   font-weight: 300;
-}
-.contentbuttons{
-   flex-direction: column;
-}
-*/
+.comment{
+  background:black;
+  width:100%;
+}n
 
 .rateCaptions{
   text-align: center;
@@ -1943,4 +2012,5 @@ text-align: center;
 
 }
 }
+
 

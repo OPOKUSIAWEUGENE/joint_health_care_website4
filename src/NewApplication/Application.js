@@ -18,10 +18,7 @@ async function storeApplicant(credentials) {
    }
   
 export default function Application(){
-
-
-  
-    const [count, setCount]=useState(1);
+      const [count, setCount]=useState(1);
     const [loading, setLoading] = useState(false);
   
   const navigate=useNavigate();
@@ -231,17 +228,163 @@ export default function Application(){
                   }
           }
         ]
-    return(
-      <div className={styles.applicationPage} >
+
+
+
+       function handleSubmit(event) {
+          event.preventDefault();
+          const data = new FormData(event.target);
+      alert('this is workding');
+          console.log(data); // Reference by form input's `name` tag
+      
+          // fetch('/api/form-submit-url', {
+          //   method: 'POST',
+          //   body: data,
+          // });
+        }
+      
+      
+          return (
+            <div className={styles.applicationPage} >
         <div className={styles.formHeight}> 
        
         <div className={styles.form}>  
         <div className={styles.formHeader}>APPLICATION FORM</div>
- <InputForm  data={data} onSubmit={Onsubmit}  />
-        </div>
-        </div>
-        </div>
-    )
+            <form  className={styles.form} onSubmit={handleSubmit}>
+
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="firstanme">Enter firstanme</label>
+              <input id="firstname" name="firsrtname" type="text" />
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="lastname">Enter lastname</label>
+              <input id="lastname" name="lastname" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="email">Enter email</label>
+              <input id="email" name="email" type="email" />
+              </div>
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="telephone">Enter phnone number</label>
+              <input id="telephone" name="telephone" type="text" />
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="address">Enter Address</label>
+              <input id="address" name="address" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="email">Enter email</label>
+              <input id="email" name="email" type="email" />
+              </div>
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="state_city_region">Enter State/City/Region</label>
+              <input id="state_city_region" name="state_city_region" type="text" />
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="email">Are you above 18 years?</label>
+              <select id="above_10yrs" name="above_10yrs" type="text" >
+              <option value="1">Yes</option>
+             <option value="0">No</option>
+        </select>
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="position">Job Position</label>
+              <select id="position" name="position" type="text" >
+              <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+</select>
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="position">Job Type</label>
+              <select id="type" name="type" type="text" >
+              <option value="full-time">Full Time</option>
+  <option value="part-time">Part Time</option>
+  <option value="weekend">weekend</option>
+  <option value="week days">week days</option>
+</select>
+              </div>
+          
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="citizen">If you are not a US citizen, do you have the legal rights to remain permanentlly in the US?"r</label>
+              <select id="citizen" name="citizen" type="text" >
+              <option value="1">Yes</option>
+             <option value="0">No</option>
+
+              </select>
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="salary_enquirement">Enter Salary Expectation</label>
+              <input id="salary_enquirement" namne="salary_enquirement" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="date_available"nn>Enter Date Available</label>
+              <input id="date_available" name="date_available" type="date" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="adequate_transpoertation">Do you have adequate transportation to get to  work on time each day and when called on short notice during normal working hours?</label>
+              <select id="adequate_transportation" namne="adequate_transportation" type="text" >
+              <option value="1">Yes</option>
+             <option value="0">No</option>
+
+                </select>
+              </div>
+             
+              <div className={styles.inputGroup}>
+              <label htmlFor="high_school_name"nn>Enter High school's Name</label>
+              <input id="high_school_name" name="hight_school_name" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="high_school_level">Select High school level</label>
+              <select id="high_school_level" namne="high_school_level" type="text" >
+              <option value="9">9</option>
+             <option value="10">10</option>
+             <option value="11">11</option>
+             <option value="12">12</option>
+
+                </select>
+              </div>
+
+              <div className={styles.inputGroup}>
+              <label htmlFor="colledge_name"nn>Enter Colledge Name</label>
+              <input id="colledge_name" name="colledge_name" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="colledge_level">Select Colledge level</label>
+              <select id="colledge_level" namne="colledge_level" type="text" >
+              <option value="1">1</option>
+             <option value="0">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+
+                </select>
+              </div>
+
+              <div className={styles.inputGroup}>
+              <label htmlFor="professional_license">Provide professional license</label>
+              <input id="professional_license" name="professional_license" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="language">List any languages spoken other than English</label>
+              <textarea id="language" name="language" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="skills">List other skills applicable to the position you are applying for</label>
+              <textarea id="skills" name="skills" type="textarea" />
+              </div>
+
+              <div className={styles.inputGroup}>
+              <label htmlFor="skills">Upload CV</label>
+              <input id="cv" name="cv" type="file" />
+              </div>
+              <div className={styles.inputGroup}>
+              <button>Submit</button>
+              </div>
+            </form>
+            </div>
+            </div>
+            </div>
+          )
+        
 }
 
 

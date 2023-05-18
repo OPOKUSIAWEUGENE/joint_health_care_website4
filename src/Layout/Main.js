@@ -487,18 +487,7 @@ export default function Main(){
  <div className={styles.parallaxRowContents}>
                 <Parallaxcard height={"350px"} width={"28%"} >
       
-    <button className={styles.referrals}>
-    <button className={styles.applicationButton}><i class="fa fa-user-plus" aria-hidden="true"></i> Referrals</button>
-       
-        <div className={styles.applicationFormElastic}> 
-           
-           <div className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
-           <span>  Click to open Referral form</span>
-         
-           </div>
-            </div>
-    </button>
-
+ 
  
           
           <div className={styles.rating}>
@@ -522,6 +511,18 @@ export default function Main(){
   <i className="fa fa-hand-o-up fa-flip "></i>
 Rate Us
   </div>
+  </div>
+
+  <div className={styles.comment}>
+    <div className={styles.commentTitle}>Leave a Comment</div>
+    <div>
+        <form className={styles.commentForm}>
+            <textarea>
+
+            </textarea>
+            <button  className={styles.applicationButton}>Submit</button>
+        </form>
+    </div>
   </div>
             </Parallaxcard>
           
