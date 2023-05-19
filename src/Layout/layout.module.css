@@ -1514,7 +1514,8 @@ form .inputGroup{
 
 width: 100%;
 text-align: left;
-font-size: 20px;
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
 }
 .inputGroup input, .inputGroup select, .inputGroup textarea{
   width:400px;
@@ -1541,9 +1542,67 @@ font-size: 20px;
   cursor: pointernn;
 }
 
+.response{
+  display:flex;
+  flex-direction: column;
+  height:40vh;
+  width:40vw;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+
+  border:1px solid rgb(172, 238, 172);
+}
+.response_fa{
+  font-size:100px;
+  color:green;
+}
+.response_message1{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color:green;
+}
+.response_message2{
+  font-size:17px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.return_button{
+display: flex;
+justify-content: center;
+align-items: center;
+  margin-top: 40px;
+
+  }
+
+  .return_button button{
+    color: rgb(138, 73, 7);
+    background:none;
+    border-radius:5px;
+    box-shadow: none;
+    font-family: 'Times New Roman', Times, serifnn;
+  }
+  .return_button button:hover{
+background:rgb(238, 237, 237);
+  }
 @media only screen and (max-width: 780px) {    
 
+  .return_button{
+    width:100%;
+    
+  }
+  .response{
+    width:90%;
+  }
+  .response_message1{
+    font-size: 18px;
+    text-align: center;
+  }
 
+  .response_message2{
+    font-size:14px;
+  }
   .inputGroup input, .inputGroup select, .inputGroup textarea, .inputGroup button, .inputGroup label{
     width:270px;
   }
