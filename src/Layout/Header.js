@@ -37,7 +37,7 @@ else
     }
     return (<>  <div className={styles.headerTop}>
         <div class={styles.headerTopleft}>
-       <span>Joint Health Care Services - Providing confort care in your home</span>
+       <span>Joint Health Care Services - Providing comfort care in your home</span>
       
         </div>
 

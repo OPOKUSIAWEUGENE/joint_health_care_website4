@@ -19,9 +19,9 @@ async function storeApplicant(credentials) {
   
 export default function Application(){
 
+ 
 
-  
-    const [count, setCount]=useState(1);
+      const [count, setCount]=useState(1);
     const [loading, setLoading] = useState(false);
   
   const navigate=useNavigate();
@@ -46,202 +46,177 @@ export default function Application(){
       window.scrollTo(0, 0)
     }, [])
   
-      const data=[
-          {
-            input:{
-                    label:"Applicant's First Name",type:"text", placeholder:"Enter Firstname",name:"firstname", value:"",
-                    validation:{required:true,  maxLength:50, pattern:/[a-zA-Z]$/}
-                  }
-          },
-          {
-            input:{
-              label:"Applicant's Last Name", type:"text", placeholder:"Enter Lastname",name:"lastname", value:"",
-                    validation:{required:true,  maxLength:50, pattern:/[a-zA-Z]$/}
-                  }
-          },
-          {
-            input:{
-              label:"Email", type:"text", placeholder:"Enter Email",name:"email", value:"",
-                    validation:{required:true,  maxLength:50, pattern:/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/}
-                  }
-          },
-          {
-            input:{
-              label:"Present Address", type:"text", placeholder:"Enter Present Address",name:"address", value:"",
-                    validation:{required:true,  maxLength:50, pattern:/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/}
-                  }
-          },
-          {
-            input:{
-              label:"City/Region/State", type:"text", placeholder:"Enter City/State/Region ",name:"city_state_region", value:"",
-                    validation:{required:true,  maxLength:50, pattern:/[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/}
-                  }
-          },
-          {
-            input:{
-              label:"Phone", type:"telephone", placeholder:"Enter Phone Number ",name:"phonennnnnn", value:"",
-                    validation:{required:true,  maxLength:50, pattern:/[0-9]$/}
-                  }
-          },
-          {
-            select:{
-              label:"Are you above 18 years?",
-                    type:"select",name:"is_eighteen", defaultvalue:"yes",
-                    validation:{required:false,  Min:8 },
-                    options:[ 
-                              {value:"yes", label:"YES"},
-                              {value:"no", label:"NO"},      
-                           ],
-                        //   defaultvalue:true           
-                  }
-          },
-          {
-            select:{
-              label:"Business type?",
-                    type:"type",name:"type", defaultvalue:"full_time",
-                    validation:{required:false,  Min:8 },
-                    options:[ 
-                              {value:"full_time", label:"Full Time"},
-                              {value:"part_time", label:"PART TIME"}, 
-                              {value:"day", label:"DAY"},
-                              {value:"night", label:"NIGHT"},       
-                           ],
-                        //   defaultvalue:true           
-                  }
-          },
+    
 
-          {
-            select:{
-             label:"Positionn",
-                   type:"select",name:"is_eighteen", defaultvalue:"yes",
-                   validation:{required:false,  Min:8 },
-                   options:[ 
-                             {value:"yes", label:"YES"},
-                             {value:"no", label:"NO"},      
-                          ],
-                       //   defaultvalue:true           
-                 }
-         },
-         {
-          select:{
-           label:"If you are not a US citizen, do you have the legal rights to remain permanentlly in the US?",
-                 type:"select",name:"is_eighteen", defaultvalue:"yes",
-                 validation:{required:false,  Min:8 },
-                 options:[ 
-                           {value:"yes", label:"YES"},
-                           {value:"no", label:"NO"},      
-                        ],
-                     //   defaultvalue:true           
-               }
-       },
-         
-        {
-          input:{
-            label:"Salary Requirement ", type:"text", placeholder:"Enter Salary ",name:"salary_requirement", value:"",
-                  validation:{required:true,  pattern:/[0-9]$/}
-                }
-        },
-          {
-            input:{
-              label:"Date Available", type:"date", placeholder:"Enter Date ",name:"date", value:"",
-                    validation:{required:true,  pattern:/[0-9]$/}
-                  }
-          },
+
+      async function handleSubmit(event) {
+          event.preventDefault();
+
+        
+          const data = new FormData(event.target);
+          console.log(data)
+          const requestOptions = {
+            method: 'POST',
+            // headers: { 'Content-Type': 'application/json' },
+            body: data
+        };
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}add-applicant`,requestOptions);
+    
+        const datas = await response.json();
+        console.log(data);
+       if(response.ok)
+       { 
+        // navigate('/sent-application');
+       }
+     else{
+      alert('application not sent. please try sending the application again')
+     }
+        }
       
-        {
-          input:{
-            label:"Date Available ", type:"select", placeholder:"Enter Age ",name:"city_state_region", value:"",
-                  validation:{required:true,  pattern:/[0-9]$/}
-                }
-        },
       
-        {
-          select:{
-           label:"Do you have adequate transportation to get to <br> work on time each day and when called on short notice during normal working hours?",
-                 type:"select",name:"have_adequate_transport", defaultvalue:"yes",
-                 validation:{required:false,  Min:8 },
-                 options:[ 
-                           {value:"yes", label:"YES"},
-                           {value:"no", label:"NO"},      
-                        ],
-                     //   defaultvalue:true           
-               }
-       },
-       {
-        input:{
-          label:"Name and location of high school attended ", type:"textarea", placeholder:"Enter name and location of high school attended ",name:"hight_school_attended", value:"",
-                validation:{required:true,  pattern:/[0-9]$/}
-              }
-      },
-       {
-        select:{
-         label:"High school level attained",
-               type:"select",name:"hight_school_level_attained", defaultvalue:"12",
-               validation:{required:false,  Min:8 },
-               options:[ 
-                         {value:"9", label:"9"},
-                         {value:"10", label:"10"},  
-                         {value:"11", label:"11"},
-                         {value:"12", label:"12"},      
-                      ],
-                   //   defaultvalue:true           
-             }
-     },
-     {
-      input:{
-        label:"Name and location of college attended ", type:"textarea", placeholder:"Enter name and location of college attended ",name:"college_attended", value:"",
-              validation:{required:true,  pattern:/[0-9]$/}
-            }
-    },
-     {
-      select:{
-       label:"College level attained",
-             type:"select",name:"college_level_attained", defaultvalue:"4",
-             validation:{required:false,  Min:8 },
-             options:[ 
-                       {value:"1", label:"1"},
-                       {value:"2", label:"2"},  
-                       {value:"3", label:"3"},
-                       {value:"4", label:"4"},      
-                    ],
-                 //   defaultvalue:true           
-           }
-   },
-   {
-    input:{
-      label:"List professional licenses you posses, Indicate type of license, the number and the state ", type:"textarea", placeholder:"Enter details of licenses ",name:"details_of_licenses", value:"",
-            validation:{required:true,  pattern:/[0-9]$/}
-          }
-  },
-  {
-    input:{
-      label:"List any languages spoken other than English ", type:"textarea", placeholder:"Enter details of languages spoken",name:"languages_spoken", value:"",
-            validation:{required:true,  pattern:/[0-9]$/}
-          }
-  },
-  {
-    input:{
-      label:"List other skills applicable to the position you are applying for ", type:"textarea", placeholder:"Enter skills",name:"skills", value:"",
-            validation:{required:true,  pattern:/[0-9]$/}
-          }
-  },
-          {
-            submit:{
-                    type:"submit", value:loading?"Loading...":"Apply"
-                  }
-          }
-        ]
-    return(
-      <div className={styles.applicationPage} >
+          return (
+            <div className={styles.applicationPage} >
         <div className={styles.formHeight}> 
        
         <div className={styles.form}>  
         <div className={styles.formHeader}>APPLICATION FORM</div>
- <InputForm  data={data} onSubmit={Onsubmit}  />
-        </div>
-        </div>
-        </div>
-    )
+            <form  className={styles.form} onSubmit={handleSubmit}>
+
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="firstanme">Enter firstanme</label>
+              <input required id="firstname" name="firstname" type="text" />
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="lastname">Enter lastname</label>
+              <input required id="lastname" name="lastname" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="email">Enter email</label>
+              <input required id="email" name="email" type="email" />
+              </div>
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="phone">Enter phnone number</label>
+              <input required id="phone" name="phone" type="text" />
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="address">Enter Address</label>
+              <input required id="address" name="address" type="text" />
+              </div>
+             
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="state_city_region">Enter State/City/Region</label>
+              <input required id="state_city_region" name="state_city_region" type="text" />
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="email">Are you above 18 years?</label>
+              <select id="above_10yrs" name="above_10yrs" type="text" >
+              <option value="Yes">Yes</option>
+             <option value="No">No</option>
+        </select>
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="position">Job Position</label>
+              <select id="position" name="position" type="text" >
+              <option value="RN">RN</option>
+              <option value="LVN">LVN</option>
+              <option value="aide">AIDE</option>
+              <option value="HOME HEALTH AIDE">HOME HEALTH AIDE</option>
+              <option value="PT">PT</option>
+              <option value="OT">OT</option>
+              <option value="MSW">MSW</option>
+</select>
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="position">Job Type</label>
+              <select id="type" name="type" type="text" >
+              <option value="Full Time">Full Time</option>
+  <option value="Part Time">Part Time</option>
+  <option value="Weekend">weekend</option>
+  <option value="Week Days">week days</option>
+</select>
+              </div>
+          
+              <dniv className={styles.inputGroup}>
+              <label htmlFor="citizen">If you are not a US citizen, do you have the legal rights to remain permanentlly in the US?"r</label>
+              <select id="citizen" name="citizen" type="text" >
+              <option value="Yes">Yes</option>
+             <option value="No">No</option>
+
+              </select>
+              </dniv>
+              <div className={styles.inputGroup}>
+              <label htmlFor="salary_expectation">Enter Salary Expectation</label>
+              <input required id="salary_expectation" namne="salary_expectation" type="number" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="date_available"nn>Enter Date Available</label>
+              <input required id="date_available" name="date_available" type="date" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="adequate_transpoertation">Do you have adequate transportation to get to  work on time each day and when called on short notice during normal working hours?</label>
+              <select id="adequate_transportation" namne="adequate_transportation" type="text" >
+              <option value="Yes">Yes</option>
+             <option value="No">No</option>
+
+                </select>
+              </div>
+             
+              <div className={styles.inputGroup}>
+              <label htmlFor="high_school_name"nn>Enter High school's Name</label>
+              <input required id="high_school_name" name="hight_school_name" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="high_school_level">Select High school level</label>
+              <select id="high_school_level" namne="high_school_level" type="text" >
+              <option value="9">9</option>
+             <option value="10">10</option>
+             <option value="11">11</option>
+             <option value="12">12</option>
+
+                </select>
+              </div>
+
+              <div className={styles.inputGroup}>
+              <label htmlFor="college_name"nn>Enter College Name</label>
+              <input required id="college_name" name="college_name" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="college_level">Select College level</label>
+              <select id="college_level" namne="college_level" type="text" >
+              <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+
+                </select>
+              </div>
+
+              <div className={styles.inputGroup}>
+              <label htmlFor="professional_licence">Provide professional licence</label>
+              <input required id="professional_licence" name="professional_licence" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="language">List any languages spoken other than English</label>
+              <textarea required id="language" name="language" type="text" />
+              </div>
+              <div className={styles.inputGroup}>
+              <label htmlFor="skills">List other skills applicable to the position you are applying for</label>
+              <textarea required id="skills" name="skills" type="textarea required" />
+              </div>
+
+              <div className={styles.inputGroup}>
+              <label htmlFor="cv">Upload CV (pdf)</label>
+              <input required id="cv" name="cv" type="file" accept="application/pdf"/>
+              </div>
+              <div className={styles.inputGroup}>
+              <button  className={styles.applicationButton}>Submit</button>
+              </div>
+            </form>
+            </div>
+            </div>
+            </div>
+          )
+        
 }
 
 

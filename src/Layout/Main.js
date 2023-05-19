@@ -213,7 +213,7 @@ export default function Main(){
     <div className={styles.frameRight}>
     <Animation2>
         <span className={styles.frame_text}>We provide high quality and holistic care that meets and exceeds
-         the expectation of our clients in the confort of their homes
+         the expectation of our clients in the comfort of their homes
         </span>
         </Animation2>
     <Animation1>  
@@ -225,7 +225,7 @@ export default function Main(){
          <Animation2> 
             <div className={styles.slogan}>
 <div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
-<div className={styles.sloganText}> PROVIDING CONFORT CARE IN YOUR HOMES</div>
+<div className={styles.sloganText}> PROVIDING COMFORT CARE IN YOUR HOMES</div>
                     </div>
                     </Animation2> 
     </div>
@@ -487,18 +487,7 @@ export default function Main(){
  <div className={styles.parallaxRowContents}>
                 <Parallaxcard height={"350px"} width={"28%"} >
       
-    <button className={styles.referrals}>
-    <button className={styles.applicationButton}><i class="fa fa-user-plus" aria-hidden="true"></i> Referrals</button>
-       
-        <div className={styles.applicationFormElastic}> 
-           
-           <div className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
-           <span>  Click to open Referral form</span>
-         
-           </div>
-            </div>
-    </button>
-
+ 
  
           
           <div className={styles.rating}>
@@ -522,6 +511,18 @@ export default function Main(){
   <i className="fa fa-hand-o-up fa-flip "></i>
 Rate Us
   </div>
+  </div>
+
+  <div className={styles.comment}>
+    <div className={styles.commentTitle}>Leave a Comment</div>
+    <div>
+        <form className={styles.commentForm}>
+            <textarea>
+
+            </textarea>
+            <button  className={styles.applicationButton}>Submit</button>
+        </form>
+    </div>
   </div>
             </Parallaxcard>
           

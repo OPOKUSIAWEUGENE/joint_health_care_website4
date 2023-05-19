@@ -780,6 +780,7 @@ color:rgb(97, 171, 183);
     display:flex;
     flex-direction: column;
        animation:   flash 600ms ease infinite alternate;
+       font-family: 'Times New Roman', Times, serif;
 
 
   }
@@ -808,23 +809,23 @@ color:rgb(97, 171, 183);
     opacity:0.8;
   }
 .carouselText1{
-  font-family: monospace;
+ 
     color:white;
     font-size:100px;
     font-weight:900;
     font-style:bold;
-   
+    font-family: 'Times New Roman', Times, serif;
     /* font-family: Lucida Sans; */
 
 
 
 }
 .carouselText2{
-    font-family: monospace;
+ 
     font-size:25px;
     font-weight: 600;
     color:rgb(255, 255, 255);
-  
+    font-family: 'Times New Roman', Times, serif;
 }
   .rowContent{
 
@@ -1435,42 +1436,195 @@ cursor: pointer;
   background:rgb(200, 201, 202,0.2);
 }
 
-/* mobile view */
 
-@media only screen and (max-width: 780px) {    
-  /* .row{ 
-   flex-direction: column;
+
+
+.formHeight{
+  padding-top:20px;
+  padding-bottom: 20px;
+  height:auto;
+}
+.form{
+background:rgb(244, 244, 244);
+padding:40px;
+width:30%;
+text-align: center;
 }
 
-.socialmedia{
+.formHeader{
+  color:rgb(204, 133, 75);
+  font-weight:600;
+  font-size:30px;
+  text-align: center;
+  width: 100%;
+  padding-bottom: 30px;
+  text-decoration: underline;
+}
+
+
+
+
+.comment{
+  display:flex;
+  flex-direction: column;
+
+
+  height:200px;
+  width:300px;
+  gap:10px;
+}
+.commentTitle{
+  color:grey;
+  font-weight: 500;
+  font-size: 20px;
+}
+.commentForm{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+.commentForm textarea{
+height:100px;
+width:100%;
+outline: none;
+}
+
+
+.form{
+
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+}
+.form form{
+  width:100%;
+
+  gap:10px;
+}
+form .inputGroup{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:12px;
+}
+.inputGroup label{
+
+width: 100%;
+text-align: left;
+font-size: 18px;
+font-family: 'Times New Roman', Times, serif;
+}
+.inputGroup input, .inputGroup select, .inputGroup textarea{
+  width:400px;
+  height:34px;
+  outline: none;
+  border:1px solid rgb(198, 195, 195);
+}
+
+
+.inputGroup textarea{
+  height:150px;
+}
+
+.inputGroup button{
+
+  width:200px;
+  height:34px;
+  outline: none;
+  background:rgb(147, 83, 19);
+  color:white;
+  font-weight: 700;
+  font-size: 20px;
+  border:none;
+  cursor: pointernn;
+}
+
+.response{
+  display:flex;
+  flex-direction: column;
+  height:40vh;
+  width:40vw;
+  justify-content: center;
+  align-items: center;
+  gap:5px;
+
+  border:1px solid rgb(172, 238, 172);
+}
+.response_fa{
+  font-size:100px;
+  color:green;
+}
+.response_message1{
+  font-size: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 600;
+  color:green;
+}
+.response_message2{
+  font-size:17px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.return_button{
+display: flex;
 justify-content: center;
-}
+align-items: center;
+  margin-top: 40px;
 
-.footer{
-   flex-direction: column;
-   gap:50px;
-   padding: 10px;
-  padding-bottom:10%;  
+  }
+
+  .return_button button{
+    color: rgb(138, 73, 7);
+    background:none;
+    border-radius:5px;
+    box-shadow: none;
+    font-family: 'Times New Roman', Times, serifnn;
+  }
+  .return_button button:hover{
+background:rgb(238, 237, 237);
+  }
+@media only screen and (max-width: 780px) {    
+
+  .return_button{
+    width:100%;
+    
+  }
+  .response{
+    width:90%;
+  }
+  .response_message1{
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .response_message2{
+    font-size:14px;
+  }
+  .inputGroup input, .inputGroup select, .inputGroup textarea, .inputGroup button, .inputGroup label{
+    width:270px;
+  }
+  .inputGroup input{
+    width:100%;
+  }
+.commentTitle{
+  width:1px;
+  text-align: center;
 }
-.footercards, .footercardslarge{
-   width:100%;
-  
+.commentForm{
+  width:100%;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+align-items: center;
 }
-.footercolumns{
-   flex-direction: column;
-}
-.footeraddress{
-   text-align:center;
-}
-.rowparagraphtitle{
-   text-align: center;
-   font-size: 25px;
-   font-weight: 300;
-}
-.contentbuttons{
-   flex-direction: column;
-}
-*/
+.comment{
+  background:black;
+  width:100%;
+}n
 
 .rateCaptions{
   text-align: center;
@@ -1910,26 +2064,13 @@ text-align: center;
   padding:0;
   padding-top:10px;
 }
-}
-
-
-.formHeight{
-  padding-top:20px;
-  padding-bottom: 20px;
-  height:auto;
-}
 .form{
-background:rgb(244, 244, 244);
-padding:40px;
-width:30%;
-text-align: center;
+  width:90%;
+  padding:0;
+}
+.formHeader{
+
+}
 }
 
-.formHeader{
-  color:rgb(204, 133, 75);
-  font-weight:600;
-  font-size:30px;
-  width: 100%;
-  padding-bottom: 30px;
-  text-decoration: underline;
-}
+
