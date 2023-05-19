@@ -780,6 +780,7 @@ color:rgb(97, 171, 183);
     display:flex;
     flex-direction: column;
        animation:   flash 600ms ease infinite alternate;
+       font-family: 'Times New Roman', Times, serif;
 
 
   }
@@ -808,23 +809,23 @@ color:rgb(97, 171, 183);
     opacity:0.8;
   }
 .carouselText1{
-  font-family: monospace;
+ 
     color:white;
     font-size:100px;
     font-weight:900;
     font-style:bold;
-   
+    font-family: 'Times New Roman', Times, serif;
     /* font-family: Lucida Sans; */
 
 
 
 }
 .carouselText2{
-    font-family: monospace;
+ 
     font-size:25px;
     font-weight: 600;
     color:rgb(255, 255, 255);
-  
+    font-family: 'Times New Roman', Times, serif;
 }
   .rowContent{
 

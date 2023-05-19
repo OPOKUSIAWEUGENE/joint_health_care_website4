@@ -52,20 +52,21 @@ export default function Application(){
       async function handleSubmit(event) {
           event.preventDefault();
 
-          alert("the")
+        
           const data = new FormData(event.target);
+          console.log(data)
           const requestOptions = {
-            method: 'GET',
-            headers: { 'Content-Type': 'application/json' },
+            method: 'POST',
+            // headers: { 'Content-Type': 'application/json' },
             body: data
         };
-        const response = await fetch('https://dummyjson.com/products/1');
+        const response = await fetch(`${process.env.REACT_APP_BASE_URL}add-applicant`,requestOptions);
     
         const datas = await response.json();
         console.log(data);
        if(response.ok)
        { 
-        navigate('/sent-application');
+        // navigate('/sent-application');
        }
      else{
       alert('application not sent. please try sending the application again')
@@ -94,17 +95,14 @@ export default function Application(){
               <input required id="email" name="email" type="email" />
               </div>
               <dniv className={styles.inputGroup}>
-              <label htmlFor="telephone">Enter phnone number</label>
-              <input required id="telephone" name="telephone" type="text" />
+              <label htmlFor="phone">Enter phnone number</label>
+              <input required id="phone" name="phone" type="text" />
               </dniv>
               <div className={styles.inputGroup}>
               <label htmlFor="address">Enter Address</label>
               <input required id="address" name="address" type="text" />
               </div>
-              <div className={styles.inputGroup}>
-              <label htmlFor="email">Enter email</label>
-              <input required id="email" name="email" type="email" />
-              </div>
+             
               <dniv className={styles.inputGroup}>
               <label htmlFor="state_city_region">Enter State/City/Region</label>
               <input required id="state_city_region" name="state_city_region" type="text" />
@@ -112,38 +110,43 @@ export default function Application(){
               <div className={styles.inputGroup}>
               <label htmlFor="email">Are you above 18 years?</label>
               <select id="above_10yrs" name="above_10yrs" type="text" >
-              <option value="1">Yes</option>
-             <option value="0">No</option>
+              <option value="Yes">Yes</option>
+             <option value="No">No</option>
         </select>
               </div>
               <div className={styles.inputGroup}>
               <label htmlFor="position">Job Position</label>
               <select id="position" name="position" type="text" >
-              <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
+              <option value="RN">RN</option>
+              <option value="LVN">LVN</option>
+              <option value="aide">AIDE</option>
+              <option value="HOME HEALTH AIDE">HOME HEALTH AIDE</option>
+              <option value="PT">PT</option>
+              <option value="OT">OT</option>
+              <option value="MSW">MSW</option>
 </select>
               </div>
               <div className={styles.inputGroup}>
               <label htmlFor="position">Job Type</label>
               <select id="type" name="type" type="text" >
-              <option value="full-time">Full Time</option>
-  <option value="part-time">Part Time</option>
-  <option value="weekend">weekend</option>
-  <option value="week days">week days</option>
+              <option value="Full Time">Full Time</option>
+  <option value="Part Time">Part Time</option>
+  <option value="Weekend">weekend</option>
+  <option value="Week Days">week days</option>
 </select>
               </div>
           
               <dniv className={styles.inputGroup}>
               <label htmlFor="citizen">If you are not a US citizen, do you have the legal rights to remain permanentlly in the US?"r</label>
               <select id="citizen" name="citizen" type="text" >
-              <option value="1">Yes</option>
-             <option value="0">No</option>
+              <option value="Yes">Yes</option>
+             <option value="No">No</option>
 
               </select>
               </dniv>
               <div className={styles.inputGroup}>
-              <label htmlFor="salary_enquirement">Enter Salary Expectation</label>
-              <input required id="salary_enquirement" namne="salary_enquirement" type="text" />
+              <label htmlFor="salary_expectation">Enter Salary Expectation</label>
+              <input required id="salary_expectation" namne="salary_expectation" type="number" />
               </div>
               <div className={styles.inputGroup}>
               <label htmlFor="date_available"nn>Enter Date Available</label>
@@ -152,8 +155,8 @@ export default function Application(){
               <div className={styles.inputGroup}>
               <label htmlFor="adequate_transpoertation">Do you have adequate transportation to get to  work on time each day and when called on short notice during normal working hours?</label>
               <select id="adequate_transportation" namne="adequate_transportation" type="text" >
-              <option value="1">Yes</option>
-             <option value="0">No</option>
+              <option value="Yes">Yes</option>
+             <option value="No">No</option>
 
                 </select>
               </div>
@@ -174,14 +177,14 @@ export default function Application(){
               </div>
 
               <div className={styles.inputGroup}>
-              <label htmlFor="colledge_name"nn>Enter Colledge Name</label>
-              <input required id="colledge_name" name="colledge_name" type="text" />
+              <label htmlFor="college_name"nn>Enter College Name</label>
+              <input required id="college_name" name="college_name" type="text" />
               </div>
               <div className={styles.inputGroup}>
-              <label htmlFor="colledge_level">Select Colledge level</label>
-              <select id="colledge_level" namne="colledge_level" type="text" >
+              <label htmlFor="college_level">Select College level</label>
+              <select id="college_level" namne="college_level" type="text" >
               <option value="1">1</option>
-             <option value="0">2</option>
+             <option value="2">2</option>
              <option value="3">3</option>
              <option value="4">4</option>
 
@@ -189,8 +192,8 @@ export default function Application(){
               </div>
 
               <div className={styles.inputGroup}>
-              <label htmlFor="professional_license">Provide professional license</label>
-              <input required id="professional_license" name="professional_license" type="text" />
+              <label htmlFor="professional_licence">Provide professional licence</label>
+              <input required id="professional_licence" name="professional_licence" type="text" />
               </div>
               <div className={styles.inputGroup}>
               <label htmlFor="language">List any languages spoken other than English</label>
@@ -202,7 +205,7 @@ export default function Application(){
               </div>
 
               <div className={styles.inputGroup}>
-              <label htmlFor="skills">Upload CV (pdf)</label>
+              <label htmlFor="cv">Upload CV (pdf)</label>
               <input required id="cv" name="cv" type="file" accept="application/pdf"/>
               </div>
               <div className={styles.inputGroup}>
