@@ -5,15 +5,21 @@ import Application from "./Application";
 import styles from "../Layout/layout.module.css";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios'
+import { useEffect } from "react";
 
 export default function SentApplication(){
     const navigate=useNavigate();
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 function returnBack()
 {
     navigate('/');
 
 }
 const handleExcelExport=async()=>{
+  
     axios.get(`${process.env.REACT_APP_BASE_URL}generate-vote-excel`, {
         method: 'GET',
         headers: {

@@ -66,7 +66,7 @@ export default function Application(){
         console.log(data);
        if(response.ok)
        { 
-        // navigate('/sent-application');
+        navigate('/sent-application');
        }
      else{
       alert('application not sent. please try sending the application again')
@@ -146,15 +146,15 @@ export default function Application(){
               </dniv>
               <div className={styles.inputGroup}>
               <label htmlFor="salary_expectation">Enter Salary Expectation</label>
-              <input required id="salary_expectation" namne="salary_expectation" type="number" />
+              <input required id="salary_expectation" name="salary_expectation" type="number" />
               </div>
               <div className={styles.inputGroup}>
               <label htmlFor="date_available"nn>Enter Date Available</label>
               <input required id="date_available" name="date_available" type="date" />
               </div>
               <div className={styles.inputGroup}>
-              <label htmlFor="adequate_transpoertation">Do you have adequate transportation to get to  work on time each day and when called on short notice during normal working hours?</label>
-              <select id="adequate_transportation" namne="adequate_transportation" type="text" >
+              <label htmlFor="adequate_transportation">Do you have adequate transportation to get to  work on time each day and when called on short notice during normal working hours?</label>
+              <select id="adequate_transportation" name="adequate_transportation" type="text" >
               <option value="Yes">Yes</option>
              <option value="No">No</option>
 
@@ -163,16 +163,15 @@ export default function Application(){
              
               <div className={styles.inputGroup}>
               <label htmlFor="high_school_name"nn>Enter High school's Name</label>
-              <input required id="high_school_name" name="hight_school_name" type="text" />
+              <input required id="high_school_name" name="high_school_name" type="text" />
               </div>
               <div className={styles.inputGroup}>
               <label htmlFor="high_school_level">Select High school level</label>
-              <select id="high_school_level" namne="high_school_level" type="text" >
+              <select id="high_school_level" name="high_school_level" type="text" >
               <option value="9">9</option>
              <option value="10">10</option>
              <option value="11">11</option>
              <option value="12">12</option>
-
                 </select>
               </div>
 
@@ -182,7 +181,7 @@ export default function Application(){
               </div>
               <div className={styles.inputGroup}>
               <label htmlFor="college_level">Select College level</label>
-              <select id="college_level" namne="college_level" type="text" >
+              <select id="college_level" name="college_level" type="text" >
               <option value="1">1</option>
              <option value="2">2</option>
              <option value="3">3</option>
