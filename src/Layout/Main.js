@@ -490,7 +490,7 @@ export default function Main(){
  
  
           
-          <div className={styles.rating}>
+          {/* <div className={styles.rating}>
           <div className={styles.rateHeading}>  RATE US</div>
       
           <div className={styles.rateContent}>
@@ -511,7 +511,7 @@ export default function Main(){
   <i className="fa fa-hand-o-up fa-flip "></i>
 Rate Us
   </div>
-  </div>
+  </div> */}
 
   <div className={styles.comment}>
     <div className={styles.commentTitle}>Leave a Comment</div>
