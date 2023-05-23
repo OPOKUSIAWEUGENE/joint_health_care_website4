@@ -54,16 +54,14 @@ export default function Application(){
 
         
           const data = new FormData(event.target);
-          console.log(data)
+        
           const requestOptions = {
             method: 'POST',
             // headers: { 'Content-Type': 'application/json' },
             body: data
         };
         const response = await fetch(`${process.env.REACT_APP_BASE_URL}add-applicant`,requestOptions);
-    
         const datas = await response.json();
-        console.log(data);
        if(response.ok)
        { 
         navigate('/sent-application');

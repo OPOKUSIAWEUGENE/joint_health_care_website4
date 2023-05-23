@@ -116,7 +116,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
         event.preventDefault();
     
         const data = new FormData(event.target);
-        console.log(data)
+       
         const requestOptions = {
           method: 'POST',
           // headers: { 'Content-Type': 'application/json' },
@@ -125,7 +125,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
       const response = await fetch(`${process.env.REACT_APP_BASE_URL}add-comment`,requestOptions);
   
       const datas = await response.json();
-      console.log(data);
+     
      if(response.ok)
      { 
         setfeedbackTab(afterFeedback)
