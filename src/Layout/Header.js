@@ -5,7 +5,7 @@ import { useState } from "react"
 import 'font-awesome/css/font-awesome.min.css';
 import Logos from "../resources/logo.svg"
 
-export default function Headers(){
+export default function Headers(props){
 const [navbar, setNavbar]=useState(false)
 const modifyHeader=()=>{
     // console.log(window.scrollY);
@@ -38,7 +38,6 @@ else
     return (<>  <div className={styles.headerTop}>
         <div class={styles.headerTopleft}>
        <span>Joint Health Care Services - Providing comfort care in your home</span>
-      
         </div>
 
         <div class={styles.headerTopright}>
@@ -66,8 +65,8 @@ else
           </div>
         <div className={styles.headermiddle}> 
         {/* <Square fa={<i class='fa fa-info' style={{fontSize:20}}></i>} title={"About Us"}/> */}
-        <Square fa={<i class='fa fa-wrench' style={{fontSize:20}}></i>} title={"Our Services"}/> 
-        <Square fa={<i class='fa fa-map-marker' style={{fontSize:20}}></i>} title={"Our Location"}/>
+        <Square fa={<i class='fa fa-wrench' style={{fontSize:20}}></i>} title={"Our Services"} onClick={props.ouServices}/> 
+        <Square fa={<i class='fa fa-map-marker' style={{fontSize:20}}></i>} title={"Our Location"} />
      <Square fa={<i class='fa fa-phone' style={{fontSize:20}}></i>} title={"Contacts"}/>
 
   
@@ -79,8 +78,8 @@ else
             <div className={styles.dropdownmenu} style={{display:display}}>
             <div className={styles.dropdown}>
             {/* <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span> */}
-            <span><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Our Services</span>
-            <span><i class='fa fa-map-marker' style={{fontSize:20}}></i>&nbsp;Our Location</span>
+            <span ><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Our Services</span>
+            <span ><i class='fa fa-map-marker' style={{fontSize:20}}></i>&nbsp;Our Location</span>
                 <span><i class='fa fa-phone' style={{fontSize:20}}></i>&nbsp;Contacts</span>
                
      
