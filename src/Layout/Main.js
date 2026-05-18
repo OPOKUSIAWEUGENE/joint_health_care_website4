@@ -136,69 +136,93 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
       }
     
 
+    const slides = [
+      {
+        image: Img1,
+        eyebrow: "Skilled, compassionate support",
+        title: "Trusted Care. Responsive Teams.",
+        subtitle:
+          "Home health care designed to feel reassuring, consistent, and easy to coordinate.",
+        body:
+          "Get reliable home health services from a dedicated team that balances clinical expertise with respectful, day-to-day support. We focus on clear communication, smooth coordination, and dependable follow-through for families and referral partners.",
+        action: "Call for Referrals",
+        details: ["Skilled nurses", "Home health aides", "Care coordination"],
+      },
+      {
+        image: Img3,
+        eyebrow: "Coverage that never stops",
+        title: "Always Available, Day or Night.",
+        subtitle:
+          "A steady point of contact when families need guidance, answers, or timely follow-up.",
+        body:
+          "Count on 24/7 care coordination, timely communication, and a team that can respond when families need help most. Our process is built to reduce delays and keep the transition from referral to care simple.",
+        action: "Call for Referrals",
+        details: ["24/7 response", "Fast intake", "Family support"],
+      },
+      {
+        image: Img4,
+        eyebrow: "Fast intake and coordination",
+        title: "Referral Ready for Your Next Step.",
+        subtitle:
+          "Clear intake, quick response times, and practical support from the first call.",
+        body:
+          "Submit referrals by phone or fax and let our team move quickly from first contact to care planning. We keep the next step clear so patients, families, and partners always know what comes next.",
+        action: "Fax Referrals",
+        details: ["Phone or fax", "Quick follow-up", "Simple next steps"],
+      },
+    ];
+
+    const renderSlide = (slide, index) => (
+      <div className={styles.carousel} key={slide.title}>
+        <img alt="healthcare support scene" src={slide.image} />
+        <div className={styles.overlay}>
+          <div className={styles.carouselContent}>
+            <div className={styles.carouselCopy}>
+              <HeaderAnimation>
+                <span className={styles.carouselEyebrow}>
+                  {slide.eyebrow}
+                </span>
+              </HeaderAnimation>
+              <HeaderAnimation>
+                <span className={styles.carouselText1}>{slide.title}</span>
+              </HeaderAnimation>
+              <Animation2>
+                <span className={styles.carouselSubtitle}>{slide.subtitle}</span>
+              </Animation2>
+              <Animation2>
+                <span className={styles.carouselText2}>{slide.body}</span>
+              </Animation2>
+              <Animation2>
+                <div className={styles.carouselActions}>
+                  <a href="tel:713 592 8955" className={styles.carouselButton}>
+                    <button>{slide.action}</button>
+                  </a>
+                  <div className={styles.carouselDetails}>
+                    {slide.details.map((detail) => (
+                      <span className={styles.carouselDetail} key={detail}>
+                        {detail}
+                      </span>
+                    ))}
+                  </div>
+                  {index === 0 && (
+                    <span className={styles.carouselNote}>
+                      Licensed support for families, care managers, and referral partners
+                    </span>
+                  )}
+                </div>
+              </Animation2>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+
     return(
         <div className={styles.main}>   
 
 <div className="carousel-wrapper" >
             <Carousel  infiniteLoop useKeyboardArrows autoPlay showThumbs={false} stopOnHover={false} interval={7000} transitionTime={500}>
-                <div className={styles.carousel}>
-             
-                    <img alt="picture" src={Img1} />
-               <div className={styles.overlay}>
-               <HeaderAnimation>
-               <div className={styles.carouselContent}>
-               <HeaderAnimation>
-                <span className={styles.carouselText1}>QUALITY SERVICES</span>
-               </HeaderAnimation>
-               <Animation2>
-                <span className={styles.carouselText2}>GET THE BEST HEALTH CARE SERVICE FROM 
-                THIS <br/>GROUP OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
-                </Animation2>
-                <br/> <br/>
-                <Animation2>
-                <div className={styles.carouselButton}>   <a href="tel:713 592 8955"><button>Call for Referrals</button></a></div>
-                </Animation2>
-                </div>
-                </HeaderAnimation>
-                </div>
-                </div>
-                <div className={styles.carousel}>
-                    <img alt="picture" src={Img3} />
-               <div className={styles.overlay}>
-                <Animation2>
-               <div className={styles.carouselContent}>
-               <HeaderAnimation>
-               <span className={styles.carouselText1}>ALWAYS AVAILABLE</span>
-               </HeaderAnimation>
-               <HeaderAnimation>
-                <span className={styles.carouselText2}>COUNT ON US TO BE THE BEST, WITH<br/>
- GUARANTEED 24/7 CARE SERVICES</span>
- </HeaderAnimation>
-                <br/> <br/>
-                <Animation2>
-                <div className={styles.carouselButton}>   <a href="tel:713 592 8955"><button>Call for Referrals</button></a></div>
-                </Animation2>
-                </div>
-                </Animation2>
-               </div>
-                </div>
-                <div className={styles.carousel}>      
-                    <img alt="picture" src={Img4} />
-                   <div className={styles.overlay}>
-                   <HeaderAnimation>
-                   <div className={styles.carouselContent}>
-                   <HeaderAnimation>
-                <span className={styles.carouselText1}>REFERRALS</span>
-                </HeaderAnimation>
-                <Animation2>
-                <span className={styles.carouselText2}>CALL/FAX REFERRALS NOW,<br/></span>
-                <br/> <br/>
-              <div  className={styles.carouselButton}>   <a href="tel:713 592 8955"><button>Fax Referrals</button></a></div>
-              </Animation2>
-                </div>
-                </HeaderAnimation>
-                   </div>
-                </div>
+              {slides.map((slide, index) => renderSlide(slide, index))}
             </Carousel>
         </div>
 
@@ -627,5 +651,3 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
         </div>
     )
 }
-
-

@@ -15,13 +15,12 @@ export default function Footer(){
     <span className={styles.logoCaptionText2} style={{color:'white'}}>HEALTH CARE SERVICE INC.</span>
    </div>
             </div>
-            	<div class={styles.socialmedia}>
-	 <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-  <a href="#" class="google"><i class="fa fa-instagram"></i></a>
-   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-
- </div>
+            <div className={styles.socialmedia}>
+              <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
+              <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
+              <a href="#" className="google"><i className="fa fa-instagram"></i></a>
+              <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a>
+            </div>
             </div>
             <div className={styles.footerLower}>
             <Footercards title={"Aims and Objectives"} >
@@ -90,8 +89,13 @@ export default function Footer(){
     </Footercards>
     </div>
     <div className={styles.footerSub}>
-        <span>Copyright 2022 <span style={{color:"rgb(218, 96, 9)"}}>Joint Health Care Inc.</span> All Rights Reserved  </span>
-        <span><a>Privacy Policy</a></span>
+        <div className={styles.footerSubLeft}>
+          <span className={styles.footerSubLabel}>Joint Health Care Service Inc.</span>
+          <span className={styles.footerSubCopy}>Copyright 2026 All Rights Reserved</span>
+        </div>
+        <div className={styles.footerSubRight}>
+          <a href="#" className={styles.footerPolicyLink}>Privacy Policy</a>
+        </div>
     </div>
 
         </div>
