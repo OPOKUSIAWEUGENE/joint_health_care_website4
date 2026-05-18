@@ -139,34 +139,34 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     const slides = [
       {
         image: Img1,
-        eyebrow: "Skilled, compassionate support",
-        title: "Trusted Care. Responsive Teams.",
+        eyebrow: "Compassionate care at home",
+        title: "Expert Care From a Team You Can Trust.",
         subtitle:
-          "Home health care designed to feel reassuring, consistent, and easy to coordinate.",
+          "Reliable home health services delivered with compassion, consistency, and attention to detail.",
         body:
-          "Get reliable home health services from a dedicated team that balances clinical expertise with respectful, day-to-day support. We focus on clear communication, smooth coordination, and dependable follow-through for families and referral partners.",
+          "Get the highest standard of home health support from a dedicated team of experienced professionals who understand the importance of comfort, dignity, and dependable follow-through. We focus on clear communication, thoughtful coordination, and care that adapts to each patient's needs.",
         action: "Call for Referrals",
-        details: ["Skilled nurses", "Home health aides", "Care coordination"],
+        details: ["Experienced professionals", "Patient-centered care", "Clear coordination"],
       },
       {
         image: Img3,
-        eyebrow: "Coverage that never stops",
-        title: "Always Available, Day or Night.",
+        eyebrow: "Around-the-clock coverage",
+        title: "Always Ready When You Need Us.",
         subtitle:
-          "A steady point of contact when families need guidance, answers, or timely follow-up.",
+          "A dependable point of contact for families, caregivers, and referral partners.",
         body:
-          "Count on 24/7 care coordination, timely communication, and a team that can respond when families need help most. Our process is built to reduce delays and keep the transition from referral to care simple.",
+          "We stay available 24/7 to answer questions, respond to changes, and keep care moving without unnecessary delays. That means faster support and fewer handoff issues for the people who rely on us.",
         action: "Call for Referrals",
         details: ["24/7 response", "Fast intake", "Family support"],
       },
       {
         image: Img4,
-        eyebrow: "Fast intake and coordination",
-        title: "Referral Ready for Your Next Step.",
+        eyebrow: "Fast referral handling",
+        title: "Ready for the Next Step.",
         subtitle:
-          "Clear intake, quick response times, and practical support from the first call.",
+          "Simple intake, prompt response, and practical support from the first call.",
         body:
-          "Submit referrals by phone or fax and let our team move quickly from first contact to care planning. We keep the next step clear so patients, families, and partners always know what comes next.",
+          "Submit referrals by phone or fax and let our team move quickly from first contact to care planning. We keep the process clear so patients, families, and partners always know what comes next.",
         action: "Fax Referrals",
         details: ["Phone or fax", "Quick follow-up", "Simple next steps"],
       },
@@ -206,7 +206,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                   </div>
                   {index === 0 && (
                     <span className={styles.carouselNote}>
-                      Licensed support for families, care managers, and referral partners
+                      Licensed support for families, care managers, and referral partners across every stage of care.
                     </span>
                   )}
                 </div>
@@ -265,13 +265,13 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                     
                     wordtitle={"Quality Services"} >
            
-           Get the best health care services from this group of dedicated professionals
+           We deliver attentive home health services with skilled clinicians, dependable follow-through, and a care plan that is built around the needs of each patient and family.
             </Parallaxword>
             <Parallaxword icon={ <span class='fa-stack '>
         <i className='fa fa-circle fa-stack-2x'></i>
         <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
     </span>}   wordtitle={"Always Available"} >
-            Count on us to be the best, with guaranteed  24/7 care services
+            Our team remains available day and night to answer questions, respond to changes, and keep care moving without delay when families need support most.
             </Parallaxword>
             <Parallaxword 
               icon={ <span class='fa-stack '>
@@ -280,7 +280,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
           </span>} 
             
              wordtitle={"Certified"} >
-            Fully certified and accredited by the State of Taxas
+            We are fully certified and committed to maintaining the standards, accountability, and professionalism families expect from trusted home care.
             </Parallaxword>
                         </div>
             {/* <Animation1> 

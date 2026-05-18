@@ -1724,13 +1724,17 @@ padding:0;
      font-size: 18px;;   
  }
 
-.menuicon{
+  .menuicon{
    display:flex;
    justify-content:flex-end;
    align-items: center;
    font-size: 30px;
    margin-right:10px;
    cursor: pointer;
+}
+.menuicon button {
+  width: 44px;
+  height: 44px;
 }
 .headermiddle{
    display:none;
@@ -1751,6 +1755,13 @@ padding:0;
   align-items: center;
   padding-bottom:25px;
   padding-top:25px;
+}
+
+.headerButton {
+  min-width: 180px;
+  height: 44px;
+  font-size: 0.75rem;
+  padding: 0 18px;
 }
 
 .headerTopright span{
@@ -2249,25 +2260,66 @@ text-align: center;
 .headerButton {
   width: auto;
   min-width: 188px;
-  padding: 0 22px;
-  height: 46px;
+  padding: 0 24px;
+  height: 48px;
   border-radius: 999px;
   background: linear-gradient(135deg, #0e6e90, #175b84 55%, #c58b36);
-  box-shadow: 0 14px 30px rgba(17, 93, 129, 0.22);
-  letter-spacing: 0.02em;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow:
+    0 14px 30px rgba(17, 93, 129, 0.22),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
-    opacity 180ms ease;
+    opacity 180ms ease,
+    filter 180ms ease;
 }
 
 .headerButton:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 18px 40px rgba(17, 93, 129, 0.3);
+  transform: translateY(-2px);
+  filter: brightness(1.03) saturate(1.05);
+  box-shadow:
+    0 18px 40px rgba(17, 93, 129, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.headerButton:focus-visible,
+.menuicon button:focus-visible {
+  outline: 3px solid rgba(240, 194, 122, 0.55);
+  outline-offset: 3px;
 }
 
 .menuicon button {
   color: #17324a;
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  background: rgba(13, 87, 124, 0.08);
+  border: 1px solid rgba(13, 87, 124, 0.12);
+  box-shadow: 0 10px 18px rgba(17, 93, 129, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease,
+    color 180ms ease;
+}
+
+.menuicon button:hover {
+  transform: translateY(-1px);
+  background: rgba(13, 87, 124, 0.12);
+  color: #0f6b8d;
+  box-shadow: 0 14px 24px rgba(17, 93, 129, 0.14);
 }
 
 .dropdownmenu {
@@ -2486,40 +2538,49 @@ text-align: center;
 }
 
 .why_us_contents {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   padding: 32px 0 60px;
-  gap: 22px;
-  flex-wrap: wrap;
+  gap: 18px;
+  align-items: stretch;
 }
 
 .parallaxwordcontainer {
-  width: min(340px, 100%);
-  padding: 24px;
-  border-radius: 24px;
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 30px 28px;
+  border-radius: 28px;
   background: rgba(255, 255, 255, 0.74);
   border: 1px solid rgba(25, 83, 118, 0.1);
   box-shadow: 0 18px 45px rgba(16, 57, 84, 0.08);
   align-items: flex-start;
-  gap: 14px;
+  gap: 18px;
   animation: none;
 }
 
 .parallaxfonticon {
-  width: 64px;
-  height: 64px;
-  border-radius: 20px;
+  width: 72px;
+  height: 72px;
+  border-radius: 22px;
   background: linear-gradient(135deg, rgba(13, 102, 141, 0.12), rgba(206, 145, 61, 0.16));
   color: #0d6a8e;
-  font-size: 28px;
+  font-size: 32px;
   animation: none;
 }
 
 .parallaxtextcontent {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 10px;
 }
 
 .parallaxwordtitle {
   font-family: "Cormorant Garamond", serif;
-  font-size: 30px;
+  font-size: 2rem;
   color: #183d55;
 }
 
@@ -2527,6 +2588,8 @@ text-align: center;
   font-family: "Manrope", sans-serif;
   line-height: 1.75;
   color: #52697b;
+  font-size: 0.98rem;
+  flex: 1;
 }
 
 .frame {
@@ -2997,6 +3060,7 @@ text-align: center;
 
   .why_us_contents {
     padding: 18px 0 34px;
+    grid-template-columns: 1fr;
   }
 
   .services {
@@ -3033,7 +3097,9 @@ text-align: center;
   }
 
   .headerButton {
-    min-width: 160px;
+    min-width: 166px;
+    height: 44px;
+    font-size: 0.76rem;
   }
 
   .carousel {
@@ -3073,12 +3139,12 @@ text-align: center;
   }
 
   .why_us_contents {
-    justify-content: space-between;
-    gap: 18px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
   }
 
   .parallaxwordcontainer {
-    width: calc(50% - 12px);
+    width: 100%;
   }
 
   .services {
