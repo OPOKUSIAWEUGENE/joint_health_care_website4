@@ -2051,11 +2051,11 @@ text-align: center;
   padding:0;
   gap:10px;
 }
-.parallaxcard{
-  /* width:100% !important; */
-  /* background:yellow; */
-  width:100% !important;
-  padding:0;
+  .parallaxcard{
+    /* width:100% !important; */
+    /* background:yellow; */
+    width:100% !important;
+    padding:0;
 
   height:auto !important;
 }
@@ -2115,7 +2115,664 @@ text-align: center;
 }
 .formHeader{
 
-}
+  }
 }
 
+/* Design refresh overrides */
+.layout {
+  background:
+    radial-gradient(circle at top left, rgba(12, 92, 128, 0.08), transparent 28%),
+    radial-gradient(circle at top right, rgba(196, 149, 63, 0.1), transparent 25%),
+    linear-gradient(180deg, #f6f8fc 0%, #eef3f8 48%, #f6f8fc 100%);
+}
+
+.headerTop {
+  padding: 12px 5vw;
+  background: rgba(245, 249, 252, 0.86);
+  color: #5a7387;
+  border-bottom: 1px solid rgba(24, 88, 120, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.headerTopleft {
+  padding-left: 0;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.headerTopright {
+  padding-right: 0;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.headerTopright a {
+  color: #3f6b86;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.headerTopright a:hover {
+  color: #0f6b8d;
+}
+
+.header,
+.headerMinimized {
+  min-height: 92px;
+  border-bottom: 1px solid rgba(18, 82, 116, 0.12);
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(20px);
+  box-shadow: 0 14px 30px rgba(19, 64, 92, 0.08);
+}
+
+.headerleft {
+  padding-left: 5vw;
+}
+
+.logoFrame {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logoFrame img {
+  width: 84px;
+  height: 84px;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 20px rgba(18, 60, 88, 0.18));
+}
+
+.headermiddle {
+  justify-content: flex-end;
+  gap: 10px;
+  padding-right: 5vw;
+}
+
+.square {
+  padding: 0 16px;
+  height: 56px;
+  border-radius: 999px;
+  background: rgba(13, 87, 124, 0.06);
+  color: #38556d;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    color 180ms ease;
+}
+
+.square:hover {
+  transform: translateY(-2px);
+  background: rgba(13, 87, 124, 0.12);
+  color: #0f6b8d;
+}
+
+.headerButton {
+  width: auto;
+  min-width: 188px;
+  padding: 0 22px;
+  height: 46px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0e6e90, #175b84 55%, #c58b36);
+  box-shadow: 0 14px 30px rgba(17, 93, 129, 0.22);
+  letter-spacing: 0.02em;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    opacity 180ms ease;
+}
+
+.headerButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 18px 40px rgba(17, 93, 129, 0.3);
+}
+
+.menuicon button {
+  color: #17324a;
+}
+
+.dropdownmenu {
+  right: 5vw;
+  top: 82px;
+  min-width: 220px;
+  border-radius: 18px;
+  background: rgba(14, 26, 36, 0.94);
+  padding: 14px;
+  box-shadow: 0 20px 45px rgba(10, 20, 30, 0.25);
+}
+
+.dropdown {
+  gap: 14px;
+}
+
+.dropdown span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  transition: background 160ms ease;
+}
+
+.dropdown span:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.main {
+  gap: 28px;
+}
+
+.carousel {
+  height: min(78vh, 820px);
+  overflow: hidden;
+  border-bottom: 1px solid rgba(18, 82, 116, 0.08);
+}
+
+.carousel :global(img) {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.96) contrast(1.02);
+}
+
+.overlay {
+  height: 100%;
+  background:
+    linear-gradient(90deg, rgba(5, 15, 26, 0.72) 0%, rgba(5, 15, 26, 0.42) 55%, rgba(5, 15, 26, 0.08) 100%),
+    linear-gradient(180deg, rgba(6, 22, 35, 0.08), rgba(6, 22, 35, 0.22));
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.carouselContent {
+  width: min(1120px, 90vw);
+  margin-top: 0;
+  padding: 120px 0 0;
+  gap: 18px;
+  animation: none;
+}
+
+.carouselText1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.9rem, 6vw, 6.6rem);
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+}
+
+.carouselText2 {
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1rem, 1.55vw, 1.5rem);
+  line-height: 1.8;
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.carouselButton button {
+  width: auto;
+  min-width: 170px;
+  height: 50px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #db8d2f, #c66f23);
+  box-shadow: 0 18px 30px rgba(215, 131, 48, 0.3);
+  font-weight: 700;
+}
+
+.row,
+.rowContent,
+.rowContent2,
+.parallaxrow,
+.footerLower,
+.footerUpper {
+  width: min(1200px, 92vw);
+  margin-inline: auto;
+}
+
+.rowContent {
+  gap: 28px;
+  align-items: center;
+}
+
+.rowContentLeft {
+  padding: 42px 0 18px;
+}
+
+.why_us_contents {
+  padding: 32px 0 60px;
+  gap: 22px;
+  flex-wrap: wrap;
+}
+
+.parallaxwordcontainer {
+  width: min(340px, 100%);
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(25, 83, 118, 0.1);
+  box-shadow: 0 18px 45px rgba(16, 57, 84, 0.08);
+  align-items: flex-start;
+  gap: 14px;
+  animation: none;
+}
+
+.parallaxfonticon {
+  width: 64px;
+  height: 64px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(13, 102, 141, 0.12), rgba(206, 145, 61, 0.16));
+  color: #0d6a8e;
+  font-size: 28px;
+  animation: none;
+}
+
+.parallaxtextcontent {
+  width: 100%;
+}
+
+.parallaxwordtitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  color: #183d55;
+}
+
+.parallaxwordcontent {
+  font-family: "Manrope", sans-serif;
+  line-height: 1.75;
+  color: #52697b;
+}
+
+.frame {
+  width: min(1180px, 92vw);
+  min-height: 440px;
+  height: auto;
+  margin: 18px auto 8px;
+  gap: 0;
+  border-radius: 34px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 22px 60px rgba(18, 60, 88, 0.1);
+}
+
+.frameLeft,
+.frameRight {
+  width: 50%;
+}
+
+.frameLeftImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frameRight {
+  padding: 34px;
+  gap: 22px;
+  justify-content: center;
+}
+
+.frame_text {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  line-height: 1.35;
+  color: #153a50;
+  padding: 0;
+}
+
+.fa_container {
+  width: 100%;
+  padding: 16px 18px;
+  border-radius: 22px;
+  background: rgba(13, 102, 141, 0.08);
+}
+
+.fa a {
+  color: #0d6a8e;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.rowHeading {
+  width: auto;
+  border-bottom: none;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 3vw, 3rem);
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.rowHeading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 84px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0e6e90, #c98b36);
+  transform: translateX(-50%);
+}
+
+.rowHeadingCase {
+  padding-top: 10px;
+}
+
+.ServiceRowContents {
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.services {
+  width: min(270px, 100%);
+  padding: 22px 20px 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(20, 73, 106, 0.1);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 16px 40px rgba(18, 60, 88, 0.08);
+}
+
+.services:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.fa_icons {
+  font-size: 42px;
+  color: #0d6a8e;
+}
+
+.serviceContent {
+  padding-left: 0;
+  gap: 8px;
+}
+
+.serviceContentHeader {
+  font-size: 1.02rem;
+  color: #183d55;
+}
+
+.serviceContentText {
+  font-size: 0.95rem;
+  color: #587082;
+  line-height: 1.7;
+}
+
+.parallaxrow {
+  width: 100%;
+  padding: 48px 0;
+  gap: 36px;
+  border-radius: 0;
+  background:
+    linear-gradient(180deg, rgba(11, 44, 66, 0.94), rgba(14, 72, 98, 0.94)),
+    url("../resources/images/reminder.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallaxRowContents {
+  width: 100%;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.parallaxcard {
+  padding: 0;
+  border-radius: 28px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 24px 60px rgba(4, 18, 32, 0.18);
+}
+
+.referrals {
+  border: none;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 20px 50px rgba(4, 18, 32, 0.12);
+}
+
+.rateHeading {
+  color: #183d55;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+
+.rateCaptions {
+  color: #0d6a8e;
+  letter-spacing: 0.16em;
+  font-size: 0.9rem;
+}
+
+.application {
+  gap: 14px;
+}
+
+.applicationFormHeading {
+  padding: 18px 22px 0;
+  color: #183d55;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+}
+
+.applicationForms {
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  border-radius: 18px;
+  text-align: left;
+  transition:
+    transform 160ms ease,
+    background 160ms ease;
+}
+
+.applicationForms:hover {
+  background: rgba(13, 102, 141, 0.08);
+  transform: translateX(4px);
+}
+
+.applicationForms .textupper {
+  width: 40px;
+  color: #0d6a8e;
+}
+
+.applicationButtonContainer {
+  margin-top: 8px;
+  padding: 18px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(13, 102, 141, 0.05), rgba(13, 102, 141, 0.1));
+}
+
+.applicationButton {
+  width: min(100%, 280px);
+  height: 50px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0e6e90, #134f73);
+  box-shadow: 0 18px 35px rgba(13, 102, 141, 0.24);
+}
+
+.applicationFormElastic {
+  color: #4f6b7d;
+  font-weight: 700;
+}
+
+.footer {
+  width: 100%;
+  margin-top: 18px;
+  padding: 28px 0 0;
+  background:
+    linear-gradient(180deg, rgba(10, 28, 40, 0.98), rgba(10, 28, 40, 0.96)),
+    radial-gradient(circle at top left, rgba(13, 102, 141, 0.2), transparent 26%);
+  color: #d9e5ed;
+}
+
+.footerUpper,
+.footerLower,
+.footerSub {
+  width: min(1200px, 92vw);
+}
+
+.footerUpper {
+  padding: 10px 0 26px;
+}
+
+.footerLower {
+  align-items: flex-start;
+  gap: 26px;
+  padding-bottom: 28px;
+}
+
+.footercards {
+  max-width: none;
+  flex: 1;
+  padding: 0;
+}
+
+.footercardstitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+.footercardsbody {
+  color: #b9cad8;
+  line-height: 1.8;
+}
+
+.footerdescription,
+.footeraddress,
+.footerparagraph,
+.textBundle {
+  color: #b9cad8;
+}
+
+.socialmedia a {
+  color: #d7e3ea;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.socialmedia a:hover {
+  color: #f0c27a;
+  transform: translateY(-2px);
+}
+
+.footerSub {
+  padding: 18px 0 24px;
+  border-top: 1px solid rgba(233, 240, 246, 0.12);
+  color: #96adbc;
+}
+
+.formHeight {
+  min-height: 72vh;
+}
+
+.response {
+  border-radius: 28px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(33, 122, 74, 0.14);
+  box-shadow: 0 20px 50px rgba(9, 33, 47, 0.08);
+}
+
+.feedbackTab {
+  gap: 18px;
+}
+
+.commentForm textarea {
+  min-height: 110px;
+  border-radius: 16px;
+  padding: 14px;
+  border: 1px solid rgba(20, 73, 106, 0.16);
+  background: rgba(255, 255, 255, 0.94);
+}
+
+.afterfeedbackTab {
+  font-family: "Cormorant Garamond", serif;
+  color: #0d6a8e;
+}
+
+@media only screen and (max-width: 780px) {
+  .headerTop {
+    padding: 10px 16px;
+  }
+
+  .headerleft {
+    width: 100%;
+    padding: 0;
+  }
+
+  .logoFrame {
+    justify-content: center;
+  }
+
+  .logoFrame img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .header,
+  .headerMinimized {
+    padding: 14px 0 18px;
+    gap: 8px;
+  }
+
+  .carousel {
+    height: 430px;
+  }
+
+  .carouselContent {
+    padding-top: 72px;
+  }
+
+  .carouselText1 {
+    font-size: 2.4rem;
+  }
+
+  .carouselText2 {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .row,
+  .rowContent,
+  .rowContent2,
+  .parallaxrow,
+  .footerLower,
+  .footerUpper {
+    width: min(94vw, 94vw);
+  }
+
+  .frame {
+    width: 94vw;
+  }
+
+  .frameRight {
+    padding: 24px 18px 28px;
+  }
+
+  .why_us_contents {
+    padding: 18px 0 34px;
+  }
+
+  .services {
+    width: 100%;
+  }
+
+  .footerLower {
+    gap: 22px;
+  }
+
+  .footerSub {
+    gap: 8px;
+  }
+
+  .response {
+    width: 92%;
+  }
+}
 
