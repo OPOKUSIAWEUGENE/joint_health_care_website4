@@ -433,6 +433,32 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
 
                 </Row>
                 <Row>
+                  <div className={styles.rowContent2}>
+                    <HeaderAnimation>
+                      <div className={styles.rowHeadingCase}>
+                        <div className={styles.rowHeading}>Our Disciplines</div>
+                      </div>
+                    </HeaderAnimation>
+                    <div className={styles.disciplineGrid}>
+                      <div className={styles.disciplineCard}>
+                        <span className={styles.disciplineIndex}>01</span>
+                        <div className={styles.disciplineTitle}>All-Hope Pediatric Home Health Service Inc.</div>
+                        <div className={styles.disciplineText}>Supportive home health care for children, built around family needs.</div>
+                      </div>
+                      <div className={styles.disciplineCard}>
+                        <span className={styles.disciplineIndex}>02</span>
+                        <div className={styles.disciplineTitle}>All-Hope Palliative Care at Home Services Inc.</div>
+                        <div className={styles.disciplineText}>Comfort-focused care that helps families move through each stage with dignity.</div>
+                      </div>
+                      <div className={styles.disciplineCard}>
+                        <span className={styles.disciplineIndex}>03</span>
+                        <div className={styles.disciplineTitle}>All-Hope Home Health Services Inc.</div>
+                        <div className={styles.disciplineText}>General home health support with dependable clinical follow-through.</div>
+                      </div>
+                    </div>
+                  </div>
+                </Row>
+                <Row>
                 <Parallaxrow >
                 <div ref={service} className={styles.rowContent2}>     
                     <HeaderAnimation>

@@ -2849,6 +2849,93 @@ text-align: center;
   box-shadow: 0 10px 18px rgba(18, 60, 88, 0.05);
 }
 
+.frameDisciplines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(20, 73, 106, 0.08);
+  box-shadow: 0 12px 24px rgba(18, 60, 88, 0.05);
+}
+
+.frameDisciplinesLabel {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #6a8397;
+}
+
+.frameDisciplineList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.frameDisciplineItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(13, 102, 141, 0.08);
+  border: 1px solid rgba(13, 102, 141, 0.12);
+  color: #153a50;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.disciplineGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.disciplineCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 22px 20px;
+  border-radius: 24px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(247, 250, 253, 0.98));
+  border: 1px solid rgba(20, 73, 106, 0.1);
+  box-shadow: 0 16px 40px rgba(18, 60, 88, 0.08);
+}
+
+.disciplineIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  min-width: 44px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(13, 102, 141, 0.08);
+  color: #0d6a8e;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.disciplineTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  line-height: 1.1;
+  color: #153a50;
+}
+
+.disciplineText {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #587082;
+}
+
 .fa_container {
   width: 100%;
   padding: 14px;
@@ -3408,6 +3495,19 @@ text-align: center;
     font-size: 0.78rem;
   }
 
+  .disciplineGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .disciplineCard {
+    padding: 18px 16px;
+  }
+
+  .disciplineTitle {
+    font-size: 1.2rem;
+  }
+
   .fa_container {
     grid-template-columns: 1fr;
     padding: 12px;
@@ -3457,6 +3557,10 @@ text-align: center;
 
   .services {
     width: 100%;
+  }
+
+  .disciplineGrid {
+    grid-template-columns: 1fr;
   }
 
   .footerLower {
