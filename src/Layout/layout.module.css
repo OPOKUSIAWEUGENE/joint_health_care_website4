@@ -2381,15 +2381,15 @@ text-align: center;
 }
 
 .carouselContent {
-  width: min(1240px, 94vw);
+  width: min(1320px, 96vw);
   margin-top: 0;
   padding: clamp(28px, 3.6vw, 46px);
   animation: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  max-width: 840px;
-  margin-left: clamp(28px, 7.5vw, 110px);
+  max-width: 940px;
+  margin-left: clamp(32px, 8vw, 140px);
   margin-right: auto;
   transform: translateY(6px);
   border-radius: 28px;
@@ -3220,7 +3220,8 @@ text-align: center;
   }
 
   .carouselContent {
-    width: min(820px, 84vw);
+    width: min(920px, 90vw);
+    max-width: 920px;
   }
 
   .carouselText1 {
