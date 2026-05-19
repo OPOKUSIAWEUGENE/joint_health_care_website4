@@ -250,11 +250,10 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                <HeaderAnimation>
                <div className={styles.carouselContent}>
                <HeaderAnimation>
-                <span className={styles.carouselText1}>QUALITY SERVICES</span>
+                <span className={styles.carouselText1}>EXPERIENCED CARE, DELIVERED WITH HEART.</span>
                </HeaderAnimation>
                <Animation2>
-                <span className={styles.carouselText2}>GET THE BEST HEALTH CARE SERVICE FROM 
-                THIS <br/>GROUP OF DEDICATED AND EXPERIENCED <br/>PROFESSIONALS</span>
+                <span className={styles.carouselText2}>High-quality home health support designed to bring comfort, confidence, and clarity to every visit. Choose a team of dedicated professionals who bring skill, compassion, and dependable follow-through to every plan of care.</span>
                 </Animation2>
                 <br/> <br/>
                 <Animation2>
@@ -270,11 +269,10 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                 <Animation2>
                <div className={styles.carouselContent}>
                <HeaderAnimation>
-               <span className={styles.carouselText1}>ALWAYS AVAILABLE</span>
+               <span className={styles.carouselText1}>ALWAYS READY WHEN YOU NEED US.</span>
                </HeaderAnimation>
                <HeaderAnimation>
-                <span className={styles.carouselText2}>COUNT ON US TO BE THE BEST, WITH<br/>
- GUARANTEED 24/7 CARE SERVICES</span>
+                <span className={styles.carouselText2}>A dependable point of contact for families, caregivers, and referral partners. We stay available 24/7 to answer questions, respond to changes, and keep care moving without unnecessary delays.</span>
  </HeaderAnimation>
                 <br/> <br/>
                 <Animation2>
@@ -290,10 +288,10 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                    <HeaderAnimation>
                    <div className={styles.carouselContent}>
                    <HeaderAnimation>
-                <span className={styles.carouselText1}>REFERRALS</span>
+                <span className={styles.carouselText1}>READY FOR THE NEXT STEP.</span>
                 </HeaderAnimation>
                 <Animation2>
-                <span className={styles.carouselText2}>CALL/FAX REFERRALS NOW,<br/></span>
+                <span className={styles.carouselText2}>Simple intake, prompt response, and practical support from the first call. Submit referrals by phone or fax and let our team move quickly from first contact to care planning.</span>
                 <br/> <br/>
               <div  className={styles.carouselButton}>   <a href="tel:713 592 8955"><button>Fax Referrals</button></a></div>
               </Animation2>
