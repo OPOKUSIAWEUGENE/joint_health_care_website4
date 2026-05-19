@@ -313,15 +313,79 @@ font-family:serif;
 padding:15px 0 15px 8px;
 
 }
-.fa_container{
+.frameHighlights{
   display:flex;
-  flex-direction: column;
+  flex-wrap:wrap;
   gap:10px;
-  background:rgb(237, 235, 235, 0.6);
-  width:380px;
-  border-radius: 0 0 75px 5px;
-  padding:15px 0 15px 8px;
+  width:100%;
+  padding-left: 8px;
+}
+.frameHighlight{
+  display:inline-flex;
+  align-items:center;
+  padding:8px 12px;
+  border-radius:999px;
+  background: rgba(255,255,255,0.92);
+  border:1px solid rgba(20,73,106,0.12);
+  color:rgb(53, 86, 109);
+  font-size:0.8rem;
+  font-weight:700;
+  box-shadow:0 10px 18px rgba(18, 60, 88, 0.05);
+}
+.fa_container{
+  display:grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap:12px;
+  width:100%;
+  background: linear-gradient(135deg, rgba(13, 102, 141, 0.08), rgba(201, 139, 54, 0.08));
+  border:1px solid rgba(20,73,106,0.08);
+  border-radius: 22px;
+  padding:14px;
 
+}
+.contactCard{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+  padding:12px 14px;
+  border-radius:18px;
+  background: rgba(255,255,255,0.94);
+  border:1px solid rgba(20,73,106,0.12);
+  box-shadow:0 10px 18px rgba(18, 60, 88, 0.05);
+  text-decoration:none;
+  color: #0d6a8e;
+}
+.contactCard i{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:32px;
+  height:32px;
+  flex:0 0 32px;
+  border-radius:999px;
+  background: rgba(13, 102, 141, 0.08);
+  color:#0d6a8e;
+  font-size: 0.9rem;
+}
+.contactMeta{
+  display:flex;
+  flex-direction:column;
+  gap:2px;
+  min-width:0;
+}
+.contactLabel{
+  font-size:0.65rem;
+  font-weight:800;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:#6a8397;
+}
+.contactValue{
+  font-size:0.88rem;
+  font-weight:800;
+  line-height:1.35;
+  color:#153a50;
+  word-break:break-word;
 }
 .fa a{
   text-decoration: none;
@@ -881,32 +945,50 @@ padding:10px 0 10px 0;
 .slogan{
   display:flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   height:auto;
-  padding:10px 0 10px 0;
+  padding:12px 16px;
   width:100%;
   margin-top: 5px;
-  gap: 12px;
+  gap: 14px;
   flex-wrap: nowrap;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(255,255,255,0.92), rgba(247, 250, 253, 0.98));
+  border:1px solid rgba(20,73,106,0.08);
+  box-shadow: 0 10px 24px rgba(18, 60, 88, 0.06);
 }
 
-.sloganLogo{
-  width:30px;
+.sloganLogoWrap{
+  width:56px;
+  height:56px;
+  flex: 0 0 56px;
+  border-radius:18px;
+  background:#fff;
+  border:1px solid rgba(20,73,106,0.12);
+  box-shadow:0 10px 18px rgba(18, 60, 88, 0.05);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.sloganLogoImg{
+  width:38px;
+  height:38px;
+  object-fit:contain;
+  display:block;
 }
 
 .sloganText{
-  font-size:14px;
-  font-weight: 700;
-  border-top:1px solid rgb(93, 143, 166, 0.35);
-  border-bottom:1px solid rgb(93, 143, 166,0.35);
-  color:rgb(37, 145, 164);
-
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(13, 106, 142);
   display:flex;
   justify-content: flex-start;
   align-items: center;
   gap:10px;
-  padding:10px 14px;
-  padding-right:10px;
+  padding:0;
   flex: 1;
   min-width: 0;
   white-space: normal;
@@ -2009,13 +2091,33 @@ gap:10px;
   gap:30px;
 }
 .fa_container{
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
   width:100%;
-  padding:10px;
-  border-radius: 0 0 60px 60px;
+  padding:14px;
+  border-radius: 20px;
+}
+.contactCard{
+  width:100%;
+}
+.slogan{
+  padding:12px 14px;
+  flex-wrap: wrap;
+}
+.sloganLogoWrap{
+  width:48px;
+  height:48px;
+  flex-basis:48px;
+}
+.sloganLogoImg{
+  width:32px;
+  height:32px;
+}
+.sloganText{
+  font-size:0.8rem;
 }
 .rowHeadingCase{
   width:100%;
@@ -2683,8 +2785,11 @@ text-align: center;
 }
 
 .frameRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   padding: 42px 40px;
-  gap: 18px;
+  gap: 20px;
   justify-content: center;
   background:
     radial-gradient(circle at top right, rgba(13, 102, 141, 0.08), transparent 32%),
@@ -2711,7 +2816,7 @@ text-align: center;
   line-height: 1.05;
   letter-spacing: -0.03em;
   color: #153a50;
-  max-width: 15ch;
+  max-width: 13ch;
 }
 
 .frame_text {
@@ -2720,7 +2825,7 @@ text-align: center;
   line-height: 1.9;
   color: #52697b;
   padding: 0;
-  max-width: 52ch;
+  max-width: 54ch;
 }
 
 .frameHighlights {
@@ -2728,30 +2833,80 @@ text-align: center;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 4px;
+  max-width: 56ch;
 }
 
 .frameHighlight {
   display: inline-flex;
   align-items: center;
-  padding: 10px 14px;
+  padding: 8px 12px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(20, 73, 106, 0.12);
   color: #35566d;
-  font-size: 0.86rem;
+  font-size: 0.8rem;
   font-weight: 700;
   box-shadow: 0 10px 18px rgba(18, 60, 88, 0.05);
 }
 
 .fa_container {
   width: 100%;
-  padding: 16px 18px;
-  border-radius: 22px;
+  padding: 14px;
+  border-radius: 24px;
   background: linear-gradient(135deg, rgba(13, 102, 141, 0.08), rgba(201, 139, 54, 0.08));
   border: 1px solid rgba(20, 73, 106, 0.08);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.contactCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.94);
+  border: 1px solid rgba(20, 73, 106, 0.12);
+  box-shadow: 0 10px 18px rgba(18, 60, 88, 0.05);
+  text-decoration: none;
+  color: #0d6a8e;
+}
+
+.contactCard i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 32px;
+  border-radius: 999px;
+  background: rgba(13, 102, 141, 0.08);
+  color: #0d6a8e;
+  font-size: 0.9rem;
+}
+
+.contactMeta {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 2px;
+  min-width: 0;
+}
+
+.contactLabel {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6a8397;
+}
+
+.contactValue {
+  font-size: 0.88rem;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #153a50;
+  word-break: break-word;
 }
 
 .frameContactNote {
@@ -2760,6 +2915,8 @@ text-align: center;
   line-height: 1.6;
   display: block;
   margin-top: 2px;
+  max-width: 46ch;
+  grid-column: 1 / -1;
 }
 
 .fa a {
@@ -3225,6 +3382,7 @@ text-align: center;
   }
 
   .frameRight {
+    align-items: flex-start;
     padding: 24px 18px 28px;
     gap: 14px;
   }
@@ -3247,6 +3405,49 @@ text-align: center;
   .frameHighlight {
     width: 100%;
     justify-content: center;
+    font-size: 0.78rem;
+  }
+
+  .fa_container {
+    grid-template-columns: 1fr;
+    padding: 12px;
+  }
+
+  .contactCard {
+    width: 100%;
+    padding: 11px 13px;
+    gap: 10px;
+  }
+
+  .contactCard i {
+    width: 30px;
+    height: 30px;
+    flex-basis: 30px;
+    font-size: 0.85rem;
+  }
+
+  .contactValue {
+    font-size: 0.84rem;
+  }
+
+  .slogan {
+    padding: 12px 14px;
+    flex-wrap: wrap;
+  }
+
+  .sloganLogoWrap {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+
+  .sloganLogoImg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .sloganText {
+    font-size: 0.76rem;
   }
 
   .why_us_contents {

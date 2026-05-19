@@ -385,20 +385,46 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     </div>
     <div className={styles.frameRight}>
     <Animation2>
-        <span className={styles.frame_text}>We provide high quality and holistic care that meets and exceeds
-         the expectation of our clients in the comfort of their homes
+        <span className={styles.frameEyebrow}>What we stand for</span>
+        </Animation2>
+    <Animation2>
+        <span className={styles.frameHeadline}>Personal care, trusted support, and calm at home.</span>
+        </Animation2>
+    <Animation2>
+        <span className={styles.frame_text}>We deliver dependable home care with thoughtful communication, reliable follow-through, and support families can trust from the first call onward.
         </span>
         </Animation2>
+    <Animation1>
+        <div className={styles.frameHighlights}>
+          <span className={styles.frameHighlight}>Personalized plans</span>
+          <span className={styles.frameHighlight}>Clear communication</span>
+          <span className={styles.frameHighlight}>Trusted by families</span>
+          <span className={styles.frameHighlight}>Reliable follow-up</span>
+        </div>
+     </Animation1>
     <Animation1>  
     <span className={styles.fa_container}>
-        <span className={styles.fa}><a href="mailto:jointhealthcare@yahoo.com"> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; jointhealthcare@yahoo.com</a></span>
-     <span className={styles.fa}><a href="tel:713 592 8955"> <i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 713 592 8955</a></span>
+        <a className={styles.contactCard} href="mailto:jointhealthcare@yahoo.com">
+            <i className="fa fa-envelope" aria-hidden="true"></i>
+            <span className={styles.contactMeta}>
+              <span className={styles.contactLabel}>Email</span>
+              <span className={styles.contactValue}>jointhealthcare@yahoo.com</span>
+            </span>
+        </a>
+     <a className={styles.contactCard} href="tel:713 592 8955">
+            <i className="fa fa-phone" aria-hidden="true"></i>
+            <span className={styles.contactMeta}>
+              <span className={styles.contactLabel}>Call</span>
+              <span className={styles.contactValue}>713 592 8955</span>
+            </span>
+        </a>
+     <span className={styles.frameContactNote}>For referrals, questions, or care coordination.</span>
      </span>
      </Animation1>
          <Animation2> 
             <div className={styles.slogan}>
-<div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
-<div className={styles.sloganText}> PROVIDING COMFORT CARE IN YOUR HOMES</div>
+<div className={styles.sloganLogoWrap}>    <img alt="logo" className={styles.sloganLogoImg} src={Logos} /></div>
+<div className={styles.sloganText}>COMFORT CARE AT HOME, DELIVERED WITH TRUST AND CALM.</div>
                     </div>
                     </Animation2> 
     </div>

@@ -263,37 +263,49 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
       </Animation2>
       <Animation2>
         <span className={styles.frameHeadline}>
-          Care that is personal, reliable, and centered on the comfort of every home.
+          Personal care, trusted support, and calm at home.
         </span>
       </Animation2>
       <Animation2>
         <span className={styles.frame_text}>
-          We provide high-quality, holistic home care that supports clients where they feel safest and most at ease, in the comfort of their own homes. Our team brings together clinical skill, responsive communication, and compassionate follow-through to create care that feels steady, respectful, and personal. From the first conversation to ongoing visits, we focus on making every step clear for families, patients, and referral partners.
+          We deliver dependable home care with thoughtful communication, reliable follow-through, and support families can trust from the first call onward.
         </span>
       </Animation2>
       <Animation1>
         <div className={styles.frameHighlights}>
-          <span className={styles.frameHighlight}>Comfort-first care plans</span>
-          <span className={styles.frameHighlight}>Trusted by families and partners</span>
-          <span className={styles.frameHighlight}>Prompt response and follow-up</span>
-          <span className={styles.frameHighlight}>Consistent support at home</span>
+          <span className={styles.frameHighlight}>Personalized plans</span>
+          <span className={styles.frameHighlight}>Clear communication</span>
+          <span className={styles.frameHighlight}>Trusted by families</span>
+          <span className={styles.frameHighlight}>Reliable follow-up</span>
         </div>
       </Animation1>
       <Animation1>  
         <span className={styles.fa_container}>
-          <span className={styles.fa}><a href="mailto:jointhealthcare@yahoo.com"> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; jointhealthcare@yahoo.com</a></span>
-          <span className={styles.fa}><a href="tel:713 592 8955"> <i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 713 592 8955</a></span>
-          <span className={styles.frameContactNote}>Reach out anytime for referrals, questions, or care coordination.</span>
+          <a className={styles.contactCard} href="mailto:jointhealthcare@yahoo.com">
+            <i className="fa fa-envelope" aria-hidden="true"></i>
+            <span className={styles.contactMeta}>
+              <span className={styles.contactLabel}>Email</span>
+              <span className={styles.contactValue}>jointhealthcare@yahoo.com</span>
+            </span>
+          </a>
+          <a className={styles.contactCard} href="tel:713 592 8955">
+            <i className="fa fa-phone" aria-hidden="true"></i>
+            <span className={styles.contactMeta}>
+              <span className={styles.contactLabel}>Call</span>
+              <span className={styles.contactValue}>713 592 8955</span>
+            </span>
+          </a>
+          <span className={styles.frameContactNote}>For referrals, questions, or care coordination.</span>
         </span>
       </Animation1>
       <Animation2> 
         <div className={styles.slogan}>
-          <div className={styles.sloganLogo}>
-            <img alt="logo" className={styles.sloganLogo} src={Logos} />
+          <div className={styles.sloganLogoWrap}>
+            <img alt="logo" className={styles.sloganLogoImg} src={Logos} />
           </div>
-          <div className={styles.sloganText}>PROVIDING COMFORT CARE IN YOUR HOMES AND PEACE OF MIND FOR EVERY FAMILY</div>
+          <div className={styles.sloganText}>COMFORT CARE AT HOME, DELIVERED WITH TRUST AND CALM.</div>
         </div>
-      </Animation2> 
+      </Animation2>
     </div>
 
 </div>
