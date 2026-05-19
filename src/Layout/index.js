@@ -341,13 +341,13 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                     
                     wordtitle={"Quality Services"} >
            
-           Get the best health care services from this group of dedicated professionals
+	           Skilled care tailored to each patient and family. Comfort, clarity, and steady follow-through.
             </Parallaxword>
             <Parallaxword icon={ <span class='fa-stack '>
         <i className='fa fa-circle fa-stack-2x'></i>
         <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
     </span>}   wordtitle={"Always Available"} >
-            Count on us to be the best, with guaranteed  24/7 care services
+	            24/7 support for questions and care changes. Quick response when you need it most.
             </Parallaxword>
             <Parallaxword 
               icon={ <span class='fa-stack '>
@@ -356,7 +356,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
           </span>} 
             
              wordtitle={"Certified"} >
-            Fully certified and accredited by the State of Taxas
+	            Certified care with safe, clear coordination. Trusted processes and respectful communication.
             </Parallaxword>
                         </div>
             {/* <Animation1> 
@@ -632,13 +632,13 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                     
                     wordtitle={"Quality Services"} >
            
-           Get the best health care services from this group of dedicated professionals
+	           Skilled care tailored to each patient and family. Comfort, clarity, and steady follow-through.
             </Parallaxword>
             <Parallaxword icon={ <span class='fa-stack '>
         <i className='fa fa-circle fa-stack-2x'></i>
         <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
     </span>}   wordtitle={"Always Available"} >
-            Count on us to be the best, with guaranteed  24/7 care services
+	            24/7 support for questions and care changes. Quick response when you need it most.
             </Parallaxword>
             <Parallaxword 
               icon={ <span class='fa-stack '>
@@ -647,7 +647,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
           </span>} 
             
              wordtitle={"Certified"} >
-            Fully certified and accredited by the State of Taxas
+	            Certified care with safe, clear coordination. Trusted processes and respectful communication.
             </Parallaxword>
                         </div>
                     </div>

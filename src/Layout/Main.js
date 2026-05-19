@@ -226,15 +226,15 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                     <i className='fa fa-thin fa-check fa-stack-1x fa-inverse'></i>
                 </span>}  
                     
-                    wordtitle={"Quality Services"} >
-           
-           We deliver attentive home health services with skilled clinicians, dependable follow-through, and a care plan that is built around the needs of each patient and family.
+	                    wordtitle={"Quality Services"} >
+	           
+	           Skilled care tailored to each patient and family. Comfort, clarity, and steady follow-through.
             </Parallaxword>
             <Parallaxword icon={ <span class='fa-stack '>
         <i className='fa fa-circle fa-stack-2x'></i>
         <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
-    </span>}   wordtitle={"Always Available"} >
-            Our team remains available day and night to answer questions, respond to changes, and keep care moving without delay when families need support most.
+	    </span>}   wordtitle={"Always Available"} >
+	            24/7 support for questions and care changes. Quick response when you need it most.
             </Parallaxword>
             <Parallaxword 
               icon={ <span class='fa-stack '>
@@ -242,8 +242,8 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
               <i className='fa fa-diamond fa-spin fa-stack-1x fa-inverse'></i>
           </span>} 
             
-             wordtitle={"Certified"} >
-            We are fully certified and committed to maintaining the standards, accountability, and professionalism families expect from trusted home care.
+	             wordtitle={"Certified"} >
+	            Certified care with safe, clear coordination. Trusted processes and respectful communication.
             </Parallaxword>
                         </div>
             
@@ -515,15 +515,15 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                     <i className='fa fa-thin fa-check fa-stack-1x fa-inverse'></i>
                 </span>}  
                     
-                    wordtitle={"Quality Services"} >
-           
-           Get the best health care services from this group of dedicated professionals
+	                    wordtitle={"Quality Services"} >
+	           
+	           Skilled care tailored to each patient and family. Comfort, clarity, and steady follow-through.
             </Parallaxword>
             <Parallaxword icon={ <span class='fa-stack '>
         <i className='fa fa-circle fa-stack-2x'></i>
         <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
-    </span>}   wordtitle={"Always Available"} >
-            Count on us to be the best, with guaranteed  24/7 care services
+	    </span>}   wordtitle={"Always Available"} >
+	            24/7 support for questions and care changes. Quick response when you need it most.
             </Parallaxword>
             <Parallaxword 
               icon={ <span class='fa-stack '>
@@ -531,8 +531,8 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
               <i className='fa fa-diamond fa-spin fa-stack-1x fa-inverse'></i>
           </span>} 
             
-             wordtitle={"Certified"} >
-            Fully certified and accredited by the State of Taxas
+	             wordtitle={"Certified"} >
+	            Certified care with safe, clear coordination. Trusted processes and respectful communication.
             </Parallaxword>
                         </div>
                     </div>
