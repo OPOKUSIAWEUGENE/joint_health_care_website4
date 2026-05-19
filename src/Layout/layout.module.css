@@ -2967,9 +2967,11 @@ text-align: center;
 
 .disciplineTitle {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.38rem;
-  line-height: 1.12;
-  color: #153a50;
+  font-size: 1.46rem;
+  line-height: 1.05;
+  color: #0f5f80;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   max-width: 18ch;
   text-wrap: balance;
 }
@@ -3565,7 +3567,7 @@ text-align: center;
   }
 
   .disciplineTitle {
-    font-size: 1.25rem;
+    font-size: 1.28rem;
     max-width: none;
   }
 
