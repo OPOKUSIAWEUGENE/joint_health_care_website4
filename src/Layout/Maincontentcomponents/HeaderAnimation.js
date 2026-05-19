@@ -24,7 +24,7 @@ export default function HeaderAnimation(props)
 
     return(
         <motion.div
-        className="box"
+        className={`box ${props.className || ""}`.trim()}
         ref={ref}
         variants={boxVariant}
         initial="hidden"
