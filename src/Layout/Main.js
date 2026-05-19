@@ -324,7 +324,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                 <Row>
                   <div className={styles.rowContent2}>
                     <HeaderAnimation>
-                      <div className={styles.rowHeadingCase}>
+                      <div className={styles.disciplineHeadingCase}>
                         <div className={styles.rowHeading}>Our Disciplines</div>
                         <div className={styles.disciplineLead}>Three service lines under the Joint Health Care umbrella.</div>
                       </div>

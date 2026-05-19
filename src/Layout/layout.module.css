@@ -2905,6 +2905,19 @@ text-align: center;
   text-wrap: balance;
 }
 
+.disciplineHeadingCase {
+  width: 100%;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.disciplineHeadingCase .rowHeading {
+  width: auto;
+}
+
 .disciplineCard {
   position: relative;
   display: flex;
@@ -2950,21 +2963,6 @@ text-align: center;
   font-weight: 800;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-}
-
-.disciplineIndex {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: fit-content;
-  min-width: 48px;
-  padding: 7px 11px;
-  border-radius: 999px;
-  background: rgba(13, 102, 141, 0.1);
-  color: #0d6a8e;
-  font-size: 0.7rem;
-  font-weight: 800;
-  letter-spacing: 0.14em;
 }
 
 .disciplineTitle {
@@ -3560,6 +3558,10 @@ text-align: center;
   .disciplineLead {
     font-size: 0.88rem;
     max-width: none;
+  }
+
+  .disciplineHeadingCase {
+    gap: 8px;
   }
 
   .disciplineTitle {
