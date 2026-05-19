@@ -2893,18 +2893,63 @@ text-align: center;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
+  align-items: stretch;
+}
+
+.disciplineLead {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #587082;
+  max-width: 52ch;
+  text-wrap: balance;
 }
 
 .disciplineCard {
+  position: relative;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  padding: 22px 20px;
-  border-radius: 24px;
+  gap: 12px;
+  padding: 24px 22px 22px;
+  border-radius: 26px;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(247, 250, 253, 0.98));
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(247, 250, 253, 0.98));
   border: 1px solid rgba(20, 73, 106, 0.1);
   box-shadow: 0 16px 40px rgba(18, 60, 88, 0.08);
+  overflow: hidden;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.disciplineCard::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 5px;
+  background: linear-gradient(90deg, #0d6a8e, #c98b36);
+}
+
+.disciplineCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(13, 102, 141, 0.18);
+  box-shadow: 0 22px 50px rgba(18, 60, 88, 0.12);
+}
+
+.disciplineBadge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(201, 139, 54, 0.12);
+  border: 1px solid rgba(201, 139, 54, 0.18);
+  color: #a7651d;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
 .disciplineIndex {
@@ -2912,28 +2957,32 @@ text-align: center;
   align-items: center;
   justify-content: center;
   width: fit-content;
-  min-width: 44px;
-  padding: 6px 10px;
+  min-width: 48px;
+  padding: 7px 11px;
   border-radius: 999px;
-  background: rgba(13, 102, 141, 0.08);
+  background: rgba(13, 102, 141, 0.1);
   color: #0d6a8e;
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.14em;
 }
 
 .disciplineTitle {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.35rem;
-  line-height: 1.1;
+  font-size: 1.38rem;
+  line-height: 1.12;
   color: #153a50;
+  max-width: 18ch;
+  text-wrap: balance;
 }
 
 .disciplineText {
   font-family: "Manrope", sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #587082;
+  font-size: 0.94rem;
+  line-height: 1.85;
+  color: #5c7385;
+  max-width: 32ch;
+  text-wrap: pretty;
 }
 
 .fa_container {
@@ -3501,11 +3550,26 @@ text-align: center;
   }
 
   .disciplineCard {
-    padding: 18px 16px;
+    padding: 20px 18px 18px;
+  }
+
+  .disciplineBadge {
+    font-size: 0.64rem;
+  }
+
+  .disciplineLead {
+    font-size: 0.88rem;
+    max-width: none;
   }
 
   .disciplineTitle {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    max-width: none;
+  }
+
+  .disciplineText {
+    max-width: none;
+    font-size: 0.9rem;
   }
 
   .fa_container {
