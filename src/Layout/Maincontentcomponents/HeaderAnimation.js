@@ -8,7 +8,7 @@ export default function HeaderAnimation(props)
 {
 
     const boxVariant = {
-        visible: { opacity: 1, x: 0, transition: { duration: 1 } },
+        visible: { opacity: 1, x: 0, transition: { duration: 0.45 } },
         hidden: { opacity: 0, x: -50 }
       };
       const control = useAnimation();

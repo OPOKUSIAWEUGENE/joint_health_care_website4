@@ -8,7 +8,7 @@ export default function Animation1(props)
 {
 
     const boxVariant = {
-        visible: { opacity: 1, scale: 1, y:0, transition: { duration: 1.5 } },
+        visible: { opacity: 1, scale: 1, y:0, transition: { duration: 0.55 } },
         hidden: { opacity: 0.7, scale: 0.7, y: 10  }
       };
       const control = useAnimation();

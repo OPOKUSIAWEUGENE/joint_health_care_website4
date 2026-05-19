@@ -1,8 +1,6 @@
 import styles from "./layout.module.css"
 import Slider from "./Maincontentcomponents/Slider.js"
 import Row from "./Maincontentcomponents/Row"
-// import Rowcard from "./Maincontentcomponents/Rowcard"
-// import Word from "./Maincontentcomponents/word"
 import Rowparagraph from "./Maincontentcomponents/Rowparagraph"
 import Parallaxrow from "./Maincontentcomponents/Parallaxrow"
 import Parallaxcard from "./Maincontentcomponents/Parallaxcard"
@@ -31,16 +29,6 @@ import Electricity from "./Headercomponents/electricity"
 import { useNavigate } from "react-router-dom"
 
 export default function Main(){
-    // const styles=(image)=>({    
-    //     backgroundImage: `linear-gradient( rgba(24, 24, 25, 0.7), rgba(24, 24, 24, 0.7)),url(${image}`,
-    //   //  backgroundImage: `url(${image})`,
-    //     backgroundSize: 'cover',
-    //     backgroundRepeat: 'no-repeat',
-    //     backgroundPosition: 'center',
-    //     height:"100%",
-    //     width:"100%",  
-        
-    //   })
 
     const navigate=useNavigate();
 
@@ -50,7 +38,7 @@ export default function Main(){
         navigate('/new-application');
     }
     const boxVariant = {
-        visible: { opacity: 1,  y: 0, transition: { duration: 2 } },
+        visible: { opacity: 1,  y: 0, transition: { duration: 0.8 } },
         hidden: { opacity: 0.2,  y: 20  }
       };
       const control = useAnimation();
@@ -119,7 +107,6 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
        
         const requestOptions = {
           method: 'POST',
-          // headers: { 'Content-Type': 'application/json' },
           body: data
       };
       const response = await fetch(`${process.env.REACT_APP_BASE_URL}add-comment`,requestOptions);
@@ -140,13 +127,13 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
       {
         image: Img1,
         eyebrow: "Compassionate care at home",
-        title: "Expert Care From a Team You Can Trust.",
+        title: "Experienced Care, Delivered With Heart.",
         subtitle:
-          "Reliable home health services delivered with compassion, consistency, and attention to detail.",
+          "High-quality home health support designed to bring comfort, confidence, and clarity to every visit.",
         body:
-          "Get the highest standard of home health support from a dedicated team of experienced professionals who understand the importance of comfort, dignity, and dependable follow-through. We focus on clear communication, thoughtful coordination, and care that adapts to each patient's needs.",
+          "Choose a team of dedicated professionals who bring skill, compassion, and dependable follow-through to every plan of care. We work closely with families and referral partners to provide consistent support, clear communication, and a calm experience from the first call onward.",
         action: "Call for Referrals",
-        details: ["Experienced professionals", "Patient-centered care", "Clear coordination"],
+        details: ["Dedicated professionals", "Comfort and dignity", "Clear communication"],
       },
       {
         image: Img3,
@@ -221,41 +208,17 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
         <div className={styles.main}>   
 
 <div className="carousel-wrapper" >
-            <Carousel  infiniteLoop useKeyboardArrows autoPlay showThumbs={false} stopOnHover={false} interval={7000} transitionTime={500}>
+            <Carousel  infiniteLoop useKeyboardArrows autoPlay showThumbs={false} stopOnHover={false} interval={4500} transitionTime={300}>
               {slides.map((slide, index) => renderSlide(slide, index))}
             </Carousel>
         </div>
 
-            {/* <Slider/> */}
+            
             <Row>
                 <div className={styles.rowContent}>
           <div className={styles.rowContentLeft}>
-            {/* <HeaderAnimation>
-            <div className={styles.rowTitle}>Welcome to <span style={{color:" rgb(189, 35, 35)"}}>Joint Health Care Service Inc.</span></div>
-            </HeaderAnimation> */}
-            {/* <span className={styles.rowParagraph}>
-            <br/>  <motion.div
-      className="box"
-      ref={ref}
-      variants={boxVariant}
-      initial="hidden"
-      animate={control}
-    >
-            <span className={styles.rowContentSpan}>Our Mission</span>
-             <br/>
-            To promote high quality and holistic care that meets and exceeds the expectation of our clients in the confort of their homes
-            <br/><br/>
-        <span className={styles.rowContentSpan}>Objectives  </span>
-        <br/>
-        To provide quality care that exceeds the expectation of our client and provide
-            coordinated approach to home healthcare through our network providers: Skilled Nurs, Physical Therapy, 
-            Social Workers, Home Health Aids. We also include family, primary physicians to create better care plan for individual treatmemnt to gain better understanding to desease process, better medication management and deit management.
-            Our home care personnel are highly trained, skilled and compassionate staff that will result in effective outcome towards patient regaining optimum health            
-      
-</motion.div>
-
-
-            </span> */}
+            
+            
               <div className={styles.why_us_contents}>
                     <Parallaxword 
                     icon={ <span class='fa-stack '>
@@ -283,22 +246,10 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
             We are fully certified and committed to maintaining the standards, accountability, and professionalism families expect from trusted home care.
             </Parallaxword>
                         </div>
-            {/* <Animation1> 
-            <div className={styles.slogan}>
-
-<div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
-
-<div className={styles.sloganText}> PROVIDING CONFORT CARE IN YOUR HOMES</div>
-
-
-                    </div>
-                    </Animation1>  */}
+            
 
           </div>
-          {/* <div className={styles.rowContentRight}>
-
-            <img src={BackgroundLessImage} alt="logo"/>
-          </div> */}
+          
           </div>
                 </Row>
                 <Row>
@@ -307,23 +258,42 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     <img className={styles.frameLeftImg} src={BackgroundLessImage2} alt="logo"/>
     </div>
     <div className={styles.frameRight}>
-    <Animation2>
-        <span className={styles.frame_text}>We provide high quality and holistic care that meets and exceeds
-         the expectation of our clients in the comfort of their homes
+      <Animation2>
+        <span className={styles.frameEyebrow}>What we stand for</span>
+      </Animation2>
+      <Animation2>
+        <span className={styles.frameHeadline}>
+          Care that is personal, reliable, and centered on the comfort of every home.
         </span>
-        </Animation2>
-    <Animation1>  
-    <span className={styles.fa_container}>
-        <span className={styles.fa}><a href="mailto:jointhealthcare@yahoo.com"> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; jointhealthcare@yahoo.com</a></span>
-     <span className={styles.fa}><a href="tel:713 592 8955"> <i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 713 592 8955</a></span>
-     </span>
-     </Animation1>
-         <Animation2> 
-            <div className={styles.slogan}>
-<div className={styles.sloganLogo}>    <img alt="logo" className={styles.sloganLogo} src={Logos} /></div>
-<div className={styles.sloganText}> PROVIDING COMFORT CARE IN YOUR HOMES</div>
-                    </div>
-                    </Animation2> 
+      </Animation2>
+      <Animation2>
+        <span className={styles.frame_text}>
+          We provide high-quality, holistic home care that supports clients where they feel safest and most at ease, in the comfort of their own homes. Our team brings together clinical skill, responsive communication, and compassionate follow-through to create care that feels steady, respectful, and personal. From the first conversation to ongoing visits, we focus on making every step clear for families, patients, and referral partners.
+        </span>
+      </Animation2>
+      <Animation1>
+        <div className={styles.frameHighlights}>
+          <span className={styles.frameHighlight}>Comfort-first care plans</span>
+          <span className={styles.frameHighlight}>Trusted by families and partners</span>
+          <span className={styles.frameHighlight}>Prompt response and follow-up</span>
+          <span className={styles.frameHighlight}>Consistent support at home</span>
+        </div>
+      </Animation1>
+      <Animation1>  
+        <span className={styles.fa_container}>
+          <span className={styles.fa}><a href="mailto:jointhealthcare@yahoo.com"> <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; jointhealthcare@yahoo.com</a></span>
+          <span className={styles.fa}><a href="tel:713 592 8955"> <i class="fa fa-phone" aria-hidden="true"></i>&nbsp; 713 592 8955</a></span>
+          <span className={styles.frameContactNote}>Reach out anytime for referrals, questions, or care coordination.</span>
+        </span>
+      </Animation1>
+      <Animation2> 
+        <div className={styles.slogan}>
+          <div className={styles.sloganLogo}>
+            <img alt="logo" className={styles.sloganLogo} src={Logos} />
+          </div>
+          <div className={styles.sloganText}>PROVIDING COMFORT CARE IN YOUR HOMES AND PEACE OF MIND FOR EVERY FAMILY</div>
+        </div>
+      </Animation2> 
     </div>
 
 </div>
@@ -342,7 +312,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                     <div className={styles.ServiceRowContents}>
        
     <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><i className="fa fa-user-md"></i></div> */}
+
 
 <div className={styles.fa_icons}><i className="fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
@@ -363,7 +333,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     
     </div>
        <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.fa_icons}><i className="fa fa-home"></i></div>
 <div className={styles.serviceContent}>
 <div className={styles.serviceContentHeader}>Non-skilled</div>
@@ -379,7 +349,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     
     </div>
      <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.fa_icons}><i className="fa fa-bicycle"></i></div>
 <div className={styles.serviceContent}>
 <div className={styles.serviceContentHeader}>Physical Therapy</div>
@@ -394,7 +364,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     
     </div>
      <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
 <div className={styles.serviceContentHeader}>Occupational Therapy</div>
@@ -411,7 +381,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
 
     <div className={styles.ServiceRowContents}>    
          <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
 <div className={styles.serviceContentHeader}>Speech Therapy</div>
@@ -424,7 +394,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     </div>
 
            <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
 <div className={styles.serviceContentHeader}>Healthcare Social Worker</div>
@@ -436,20 +406,12 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     </div>
 
            <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.fa_icons}><i className="fa fa fa-user-md"></i></div>
 <div className={styles.serviceContent}>
 <span className={styles.serviceContentHeader}>Medical Supply Equipment</span>
         <span className={styles.serviceContentText}>
-            {/* <strong>*</strong>Walker Wheelchair
-            <strong>*</strong> Clutches
-             <strong>*</strong>Hospital Bed
-              <strong>*</strong>Wound Care Supplies
-               <strong>*</strong>Foley Catheter
-                <strong>*</strong>Breathin Equipment
-                 <strong>*</strong>Commode
-                  <strong>*</strong>Diapers
-                   <strong>*</strong>Underpaid Etc. */}
+            
             
           </span>
 
@@ -457,7 +419,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     </div>
 
             <div className={styles.services}>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.fa_icons}><i class="fa fa-ambulance" aria-hidden="true"></i></div>
 <div className={styles.serviceContent}>
 <span className={styles.serviceContentHeader}>Transportation to doctor's visit </span>
@@ -475,11 +437,11 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     <div className={styles.ServiceRowContents}>
      <div className={styles.services}>
    <div className={styles.fa_icons}><i className="fa fa-home"></i></div>     
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.serviceContent}>
 <span className={styles.serviceContentHeader}>Home health and CNA</span>
         <span className={styles.serviceContentText}>
-            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+            
           
              </span>
 
@@ -488,11 +450,11 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     </div>
       <div className={styles.services}>
         <div className={styles.fa_icons}><i className="fa fa-user-md" aria-hidden="true"></i></div>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.serviceContent}>
 <span className={styles.serviceContentHeader}>MSW</span>
         <span className={styles.serviceContentText}>
-            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+            
         
              </span>
 
@@ -501,11 +463,11 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     </div>
       <div className={styles.services}>
         <div className={styles.fa_icons}><i class="fa fa-hospital-o" aria-hidden="true"></i></div>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.serviceContent}>
 <span className={styles.serviceContentHeader}>Hospice care</span>
         <span className={styles.serviceContentText}>
-            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+            
            
              </span>
 
@@ -514,11 +476,11 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
     </div>
     <div className={styles.services}>
         <div className={styles.fa_icons}><i class="fa fa fa-user-md" aria-hidden="true"></i></div>
-{/* <div className={styles.serviceImageContainer}><img className={styles.serviceImage} src={Img2} alt="services"/></div> */}
+
 <div className={styles.serviceContent}>
 <span className={styles.serviceContentHeader}>Pediatrics consult</span>
         <span className={styles.serviceContentText}>
-            {/* <span><Electricity height={10} width={30} fill={"rgb(189, 175, 175)"}/>the book </span> */}
+            
             
              </span>
 
