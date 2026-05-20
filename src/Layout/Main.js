@@ -24,9 +24,11 @@ import Animation1 from "./Maincontentcomponents/Animation1"
 import Animation2 from "./Maincontentcomponents/Animation2"
 import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
+import AlternatingServices from "./Maincontentcomponents/AlternatingServices"
 import Logos from "../resources/logo.svg"
 import Electricity from "./Headercomponents/electricity"
 import { useNavigate } from "react-router-dom"
+import { serviceRows } from "./servicesData"
 
 export default function Main(){
 
@@ -356,6 +358,7 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                     <div className={styles.rowHeading}>  Our Services</div>
                     </div>
                     </HeaderAnimation>
+                    <AlternatingServices rows={serviceRows} />
                     <div className={styles.contentDivide}>
                    
                     <div className={styles.ServiceRowContents}>
@@ -550,6 +553,202 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
         
           </div>
           </Parallaxrow >
+
+                <Row>
+                  <div className={styles.rowContent2}>
+                    <div className={styles.serviceAlternating}>
+                      <div className={styles.serviceAltRow}>
+                        <div className={styles.serviceAltMedia}>
+                          <img src={BackgroundLessImage2} alt="Home care services" />
+                        </div>
+                        <div className={styles.serviceAltBody}>
+                          <div className={styles.serviceAltGrid}>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-user-md" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Skilled nurse</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Injection and wound care</div>
+                                <div><strong>*</strong>Tube feeding and catheter care</div>
+                                <div><strong>*</strong>Medication administration</div>
+                                <div><strong>*</strong>Education and respiratory support</div>
+                              </div>
+                            </div>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-home" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Non-skilled</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Home-health aid and bath support</div>
+                                <div><strong>*</strong>Dressing and personal linen change</div>
+                                <div><strong>*</strong>Light household duties</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={`${styles.serviceAltRow} ${styles.serviceAltRowReverse}`}>
+                        <div className={styles.serviceAltBody}>
+                          <div className={styles.serviceAltGrid}>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-bicycle" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Physical Therapy</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Gait training and range of motion</div>
+                                <div><strong>*</strong>Muscle strengthening</div>
+                                <div><strong>*</strong>Functional recovery support</div>
+                              </div>
+                            </div>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-briefcase" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Occupational Therapy</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Fine motor skill support</div>
+                                <div><strong>*</strong>Daily living independence</div>
+                                <div><strong>*</strong>Proper equipment use</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.serviceAltMedia}>
+                          <img src={BackgroundLessImage2} alt="Home care services" />
+                        </div>
+                      </div>
+
+                      <div className={styles.serviceAltRow}>
+                        <div className={styles.serviceAltMedia}>
+                          <img src={BackgroundLessImage2} alt="Home care services" />
+                        </div>
+                        <div className={styles.serviceAltBody}>
+                          <div className={styles.serviceAltGrid}>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-comments" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Speech Therapy</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Swallowing support</div>
+                                <div><strong>*</strong>Speech recovery after illness</div>
+                              </div>
+                            </div>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-users" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Healthcare Social Worker</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Help with assistance needs</div>
+                                <div><strong>*</strong>Care coordination and resources</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={`${styles.serviceAltRow} ${styles.serviceAltRowReverse}`}>
+                        <div className={styles.serviceAltBody}>
+                          <div className={styles.serviceAltGrid}>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-medkit" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Medical Supply Equipment</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Walker and wheelchair options</div>
+                                <div><strong>*</strong>Hospital bed and wound supplies</div>
+                                <div><strong>*</strong>Daily support equipment</div>
+                              </div>
+                            </div>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-ambulance" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Transportation to doctor's visit</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Clinic visits and follow-ups</div>
+                                <div><strong>*</strong>Scheduled medical appointments</div>
+                                <div><strong>*</strong>Safe and timely rides</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.serviceAltMedia}>
+                          <img src={BackgroundLessImage2} alt="Home care services" />
+                        </div>
+                      </div>
+
+                      <div className={styles.serviceAltRow}>
+                        <div className={styles.serviceAltMedia}>
+                          <img src={BackgroundLessImage2} alt="Home care services" />
+                        </div>
+                        <div className={styles.serviceAltBody}>
+                          <div className={styles.serviceAltGrid}>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-home" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Home health and CNA</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Bathing and dressing support</div>
+                                <div><strong>*</strong>Personal care routines</div>
+                                <div><strong>*</strong>Light household help</div>
+                              </div>
+                            </div>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-users" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>MSW</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Care coordination</div>
+                                <div><strong>*</strong>Family resources and referrals</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div className={`${styles.serviceAltRow} ${styles.serviceAltRowReverse}`}>
+                        <div className={styles.serviceAltBody}>
+                          <div className={styles.serviceAltGrid}>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-hospital-o" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Hospice care</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Comfort-focused support</div>
+                                <div><strong>*</strong>Family-centered guidance</div>
+                                <div><strong>*</strong>Respectful end-of-life care</div>
+                              </div>
+                            </div>
+                            <div className={styles.serviceAltItem}>
+                              <div className={styles.serviceAltItemHeader}>
+                                <span className={styles.serviceAltItemIcon}><i className="fa fa-child" aria-hidden="true"></i></span>
+                                <div className={styles.serviceAltItemTitle}>Pediatrics consult</div>
+                              </div>
+                              <div className={styles.serviceAltItemText}>
+                                <div><strong>*</strong>Care planning for younger patients</div>
+                                <div><strong>*</strong>Guidance for home-based support</div>
+                                <div><strong>*</strong>Family questions answered clearly</div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.serviceAltMedia}>
+                          <img src={BackgroundLessImage2} alt="Home care services" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Row>
               
                 <div className={styles.rowContent2}>
                     <HeaderAnimation>

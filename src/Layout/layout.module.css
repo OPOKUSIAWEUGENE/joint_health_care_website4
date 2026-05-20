@@ -1071,23 +1071,21 @@ padding:10px 0 10px 0;
   }
   .services{
     display: flex;
-flex-direction:column;
-justify-content: flex-start;
-align-items:center;
-width:300px;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    width:100%;
     color:rgb(87, 62, 47);
     font-size: 15px;
-  
-    padding-top:10px;
-    /* border:none; */
-    border:1px solid rgb(255, 255, 255,0.8);
-    background:transparent;
+    padding:18px 16px 16px;
+    border:1px solid rgba(20, 73, 106, 0.08);
+    border-left: 4px solid #0d6a8e;
+    background: rgba(255,255,255,0.82);
     font-family: 'Times New Roman', Times, serif;
-  
-    border-radius: 5px;
-    animation:  fadeIn 10s, flash 1100ms ease infinite alternate;
-    transition: transform .2s;
-   
+    border-radius: 22px;
+    box-shadow:none;
+    animation: none;
+    transition: transform .2s, background .2s;
     height:auto;
   }
 
@@ -1104,63 +1102,75 @@ width:300px;
    
   }
 .serviceContent{
-  height:50%;
   width:100%;
-  padding-left: 20px;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
-
-  gap:7px;
+  gap:8px;
 }
 .serviceContentHeader{
   /* width:100%; */
 
 text-align: left;
-  font-weight: 600;
-
-  font-size:18px;
-  color:rgb(32, 61, 84);
+  font-weight: 800;
+  font-size:1rem;
+  color:#153a50;
 
 }
 .ServiceRowContents{
 
-  display: flex;
-justify-content:center;
-align-items: center;
-gap:50px;
-align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap:12px;
+  align-items: stretch;
+  justify-content:center;
+  width:100%;
 
 }
 .contentDivide{
   display: flex;
   flex-direction: column;
-  gap:50px;
+  gap:18px;
+  padding:0;
+  border-radius:0;
+  background: transparent;
+  border: 0;
+  backdrop-filter:none;
 
 }
 .serviceContentText{
-display:flex;
-flex-direction:column;
-justify-content: flex-start;
-align-items: flex-start;
-gap:7px;
-width:100%;
-height:auto;
-  font-size:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap:8px;
+  width:100%;
+  height:auto;
+  font-size:0.92rem;
+  line-height:1.7;
 
 }
  
   .services:hover{
-    background:rgb(251, 251, 251,0.3);
-    transform: scale(1.02);
+    background:rgba(255,255,255,0.95);
+    transform: translateY(-2px);
   }
 .fa_icons{
-  width:100%;
-  font-size: 70px;
-  text-align: left;
+  display:flex;
+  width:56px;
+  height:56px;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:12px;
+  border-radius:18px;
+  background: rgba(13, 102, 141, 0.08);
+  color:#0d6a8e;
+  font-size:24px;
+  box-shadow:none;
 }
   .services i{
    
-    color:rgb(173, 172, 172);
+    color:#0d6a8e;
     
   }
   .textUpper, .textLower{
@@ -2134,40 +2144,58 @@ padding:0;
 .contentDivide{
 
   width:100%;
-  gap:0;
+  gap:16px;
+  padding:0;
+  background: transparent;
+  border: 0;
+  border-radius:0;
+  backdrop-filter: none;
 }
 
 .ServiceRowContents{
   width:100%;
 
-  display:flex;
- flex-direction: column;
-  gap:0;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap:12px;
   padding:0;
+  align-items:center;
 }
 
 .services{
-  width:90%;
+  width:100%;
   height:auto;
-text-align: center;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding:0;
+  padding:18px 16px 16px;
   gap:0;
   margin:0;
+  border-radius:22px;
+  border:1px solid rgba(20, 73, 106, 0.08);
+  border-left: 4px solid #0d6a8e;
+  background: rgba(255,255,255,0.82);
+  box-shadow: none;
 
 }
 .serviceContent
 {
   padding:0;
+  width:100%;
+  gap:8px;
 
 }
 .serviceContentText{
   text-align: left;
- width:100%;
- padding: 0;
+  width:100%;
+  padding: 0;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+  font-size:0.92rem;
+  line-height:1.7;
 
 }
 .rowContent2{
@@ -2177,9 +2205,14 @@ text-align: center;
 }
 .parallaxrow{
 
-  padding:0;
-  gap:0;
+  padding:42px 0 48px;
+  gap:18px;
   width:100%;
+  background: linear-gradient(180deg, rgba(245, 249, 252, 0.98), rgba(237, 244, 249, 0.98));
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
 }
 .parallaxRowContents{
   flex-direction: column;
@@ -2844,7 +2877,7 @@ text-align: center;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(20, 73, 106, 0.12);
   color: #35566d;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 700;
   box-shadow: 0 10px 18px rgba(18, 60, 88, 0.05);
 }
@@ -3030,7 +3063,7 @@ text-align: center;
 }
 
 .contactLabel {
-  font-size: 0.65rem;
+  font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -3038,7 +3071,7 @@ text-align: center;
 }
 
 .contactValue {
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-weight: 800;
   line-height: 1.35;
   color: #153a50;
@@ -3086,55 +3119,342 @@ text-align: center;
   padding-top: 10px;
 }
 
-.ServiceRowContents {
-  flex-wrap: wrap;
+.rowContent2 > .contentDivide {
+  display: none !important;
+}
+
+.serviceSequence {
+  width: min(1240px, 94vw);
+  margin: 26px auto 0;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
 }
 
-.services {
-  width: min(270px, 100%);
-  padding: 22px 20px 24px;
-  border-radius: 24px;
-  border: 1px solid rgba(20, 73, 106, 0.1);
-  background: rgba(255, 255, 255, 0.78);
-  box-shadow: 0 16px 40px rgba(18, 60, 88, 0.08);
+.serviceRow {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr);
+  gap: 18px;
+  align-items: stretch;
 }
 
-.services:hover {
-  transform: translateY(-4px);
-  background: rgba(255, 255, 255, 0.92);
+.serviceRowReverse .serviceMedia {
+  order: 2;
 }
 
-.fa_icons {
-  font-size: 42px;
+.serviceRowReverse .servicePanel {
+  order: 1;
+}
+
+.serviceMedia {
+  position: relative;
+  min-height: 100%;
+  aspect-ratio: 4 / 5;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 18px 44px rgba(18, 60, 88, 0.12);
+}
+
+.serviceMediaImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.serviceMediaShade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(9, 31, 48, 0.12), rgba(9, 31, 48, 0.32));
+}
+
+.serviceMediaTag {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  z-index: 1;
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
   color: #0d6a8e;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
 }
 
-.serviceContent {
-  padding-left: 0;
+.servicePanel {
+  padding: 24px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(20, 73, 106, 0.08);
+  box-shadow: 0 18px 44px rgba(18, 60, 88, 0.08);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-content: center;
+}
+
+.serviceGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px 16px;
+  border-radius: 22px;
+  background: rgba(245, 249, 252, 0.9);
+  border: 1px solid rgba(20, 73, 106, 0.08);
+}
+
+.serviceGroupTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.45rem;
+  line-height: 1.08;
+  color: #153a50;
+}
+
+.serviceGroupList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
   gap: 8px;
 }
 
+.serviceGroupList li {
+  position: relative;
+  padding-left: 16px;
+  font-family: "Manrope", sans-serif;
+  color: #587082;
+  font-size: 0.95rem;
+  line-height: 1.75;
+}
+
+.serviceGroupList li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.72em;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #0d6a8e, #c98b36);
+}
+
+.ServiceRowContents {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+  width: 100%;
+}
+
+.rowContent2 > .contentDivide {
+  display: none !important;
+}
+
+.services {
+  width: 100%;
+  padding: 20px 18px 18px;
+  border-radius: 24px;
+  border: 1px solid rgba(20, 73, 106, 0.08);
+  border-left: 4px solid #0d6a8e;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.services:hover {
+  transform: translateY(-2px);
+  border-color: rgba(13, 102, 141, 0.18);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.fa_icons {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  border-radius: 18px;
+  background: rgba(13, 102, 141, 0.08);
+  color: #0d6a8e;
+  font-size: 26px;
+  box-shadow: none;
+}
+
+.serviceContent {
+  width: 100%;
+  padding-left: 0;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
 .serviceContentHeader {
-  font-size: 1.02rem;
-  color: #183d55;
+  font-size: 1.08rem;
+  color: #153a50;
+  font-weight: 800;
+  letter-spacing: -0.02em;
 }
 
 .serviceContentText {
   font-size: 0.95rem;
   color: #587082;
-  line-height: 1.7;
+  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.serviceContentText div {
+  position: relative;
+  padding-left: 18px;
+}
+
+.serviceContentText div strong {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #c98b36;
+}
+
+.serviceAlternating {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.serviceAltRow {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.95fr) minmax(0, 1.05fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.serviceAltRowReverse {
+  grid-template-columns: minmax(0, 1.05fr) minmax(280px, 0.95fr);
+}
+
+.serviceAltMedia {
+  position: relative;
+  min-height: 320px;
+  border-radius: 32px;
+  overflow: hidden;
+  background: #0d6a8e;
+  box-shadow: 0 22px 50px rgba(18, 60, 88, 0.14);
+}
+
+.serviceAltMedia::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(10, 28, 40, 0.14), rgba(10, 28, 40, 0.36)),
+    linear-gradient(135deg, rgba(13, 102, 141, 0.12), rgba(201, 139, 54, 0.12));
+  pointer-events: none;
+}
+
+.serviceAltMedia img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  filter: saturate(0.96) contrast(1.03);
+}
+
+.serviceAltBody {
+  padding: 20px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: stretch;
+}
+
+.serviceAltGrid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.serviceAltItem {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(20, 73, 106, 0.1);
+  box-shadow: 0 14px 32px rgba(18, 60, 88, 0.08);
+}
+
+.serviceAltItemHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.serviceAltItemIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 14px;
+  background: rgba(13, 102, 141, 0.1);
+  color: #0d6a8e;
+  font-size: 18px;
+}
+
+.serviceAltItemTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.18rem;
+  line-height: 1.08;
+  color: #153a50;
+  font-weight: 700;
+}
+
+.serviceAltItemText {
+  font-family: "Manrope", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.72;
+  color: #5c7385;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.serviceAltItemText div {
+  position: relative;
+  padding-left: 14px;
+}
+
+.serviceAltItemText div strong {
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #0d6a8e;
 }
 
 .parallaxrow {
   width: 100%;
-  padding: 48px 0;
+  padding: 64px 0 72px;
   gap: 36px;
   border-radius: 0;
-  background:
-    linear-gradient(180deg, rgba(11, 44, 66, 0.94), rgba(14, 72, 98, 0.94)),
-    url("../resources/images/reminder.png");
-  background-attachment: fixed;
+  background: linear-gradient(180deg, rgba(245, 249, 252, 0.98), rgba(237, 244, 249, 0.98));
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -3144,6 +3464,10 @@ text-align: center;
   width: 100%;
   gap: 18px;
   flex-wrap: wrap;
+}
+
+.contentDivide {
+  display: none;
 }
 
 .parallaxcard {
@@ -3171,6 +3495,13 @@ text-align: center;
   color: #0d6a8e;
   letter-spacing: 0.16em;
   font-size: 0.9rem;
+}
+
+.ServiceRowContents,
+.services,
+.serviceContent,
+.fa_icons {
+  display: none;
 }
 
 .application {
@@ -3541,7 +3872,51 @@ text-align: center;
   .frameHighlight {
     width: 100%;
     justify-content: center;
-    font-size: 0.78rem;
+    font-size: 0.84rem;
+  }
+
+  .serviceAlternating {
+    gap: 14px;
+  }
+
+  .serviceAltRow,
+  .serviceAltRowReverse {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .serviceAltMedia {
+    min-height: 220px;
+    border-radius: 26px;
+  }
+
+  .serviceAltBody {
+    padding: 16px;
+    border-radius: 26px;
+  }
+
+  .serviceAltGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .serviceAltItem {
+    padding: 16px;
+  }
+
+  .serviceAltItemIcon {
+    width: 40px;
+    height: 40px;
+    flex-basis: 40px;
+  }
+
+  .serviceAltItemTitle {
+    font-size: 1.1rem;
+  }
+
+  .serviceAltItemText {
+    font-size: 0.88rem;
+    line-height: 1.68;
   }
 
   .disciplineGrid {
@@ -3595,7 +3970,81 @@ text-align: center;
   }
 
   .contactValue {
-    font-size: 0.84rem;
+    font-size: 0.92rem;
+  }
+
+  .serviceSequence {
+    width: min(94vw, 94vw);
+    margin-top: 18px;
+    gap: 14px;
+  }
+
+  .serviceRow {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .serviceRowReverse .serviceMedia,
+  .serviceRowReverse .servicePanel {
+    order: initial;
+  }
+
+  .serviceMedia {
+    min-height: 220px;
+    aspect-ratio: auto;
+    border-radius: 24px;
+  }
+
+  .servicePanel {
+    padding: 20px 18px;
+    border-radius: 24px;
+    grid-template-columns: 1fr;
+  }
+
+  .serviceGroupTitle {
+    font-size: 1.25rem;
+  }
+
+  .serviceGroupList li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .contentDivide {
+    width: 100%;
+    padding: 14px;
+    border-radius: 24px;
+  }
+
+  .ServiceRowContents {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .services {
+    width: 100%;
+    padding: 18px 16px 16px;
+  }
+
+  .fa_icons {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 12px;
+    font-size: 24px;
+  }
+
+  .serviceContentHeader {
+    font-size: 1rem;
+  }
+
+  .serviceContentText {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .parallaxrow {
+    padding: 36px 0 42px;
+    gap: 14px;
   }
 
   .slogan {
@@ -3625,6 +4074,18 @@ text-align: center;
 
   .services {
     width: 100%;
+    padding: 18px 16px 16px;
+    border-radius: 22px;
+    border: 1px solid rgba(20, 73, 106, 0.08);
+    border-left: 4px solid #0d6a8e;
+    background: rgba(255,255,255,0.82);
+    box-shadow: none;
+  }
+
+  .fa_icons {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
   }
 
   .disciplineGrid {
@@ -3720,9 +4181,59 @@ text-align: center;
     gap: 8px;
   }
 
+  .serviceAlternating {
+    gap: 16px;
+  }
+
+  .serviceAltRow,
+  .serviceAltRowReverse {
+    grid-template-columns: minmax(260px, 0.9fr) minmax(0, 1.1fr);
+    gap: 16px;
+  }
+
+  .serviceAltMedia {
+    min-height: 280px;
+  }
+
+  .serviceAltBody {
+    padding: 18px;
+  }
+
+  .serviceAltGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
   .why_us_contents {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 16px;
+  }
+
+  .serviceSequence {
+    width: min(94vw, 94vw);
+    gap: 16px;
+  }
+
+  .serviceRow {
+    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+    gap: 14px;
+  }
+
+  .serviceMedia {
+    min-height: 280px;
+  }
+
+  .servicePanel {
+    padding: 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .serviceGroupTitle {
+    font-size: 1.35rem;
+  }
+
+  .serviceGroupList li {
+    font-size: 0.92rem;
   }
 
   .parallaxwordcontainer {
@@ -3730,11 +4241,19 @@ text-align: center;
   }
 
   .services {
-    width: calc(50% - 12px);
+    width: 100%;
+    padding: 20px 18px 18px;
   }
 
   .ServiceRowContents {
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .fa_icons {
+    width: 60px;
+    height: 60px;
+    font-size: 26px;
   }
 
   .footerLower {
