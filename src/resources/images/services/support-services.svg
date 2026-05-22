@@ -1,0 +1,30 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Support services illustration</title>
+  <desc id="desc">An illustration showing speech therapy and social work support with connected conversation bubbles.</desc>
+  <defs>
+    <linearGradient id="bg" x1="140" y1="90" x2="1040" y2="810" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#153A50"/>
+      <stop offset="1" stop-color="#0D6A8E"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="240" y1="180" x2="940" y2="720" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4C26B"/>
+      <stop offset="1" stop-color="#C98B36"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="48" fill="url(#bg)"/>
+  <circle cx="980" cy="210" r="140" fill="#FFFFFF" fill-opacity="0.07"/>
+  <circle cx="220" cy="760" r="170" fill="#FFFFFF" fill-opacity="0.05"/>
+  <rect x="110" y="150" width="980" height="600" rx="40" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <path d="M270 310H520C560 310 590 340 590 380V470C590 510 560 540 520 540H400L320 610V540H270C230 540 200 510 200 470V380C200 340 230 310 270 310Z" fill="#FFFFFF" fill-opacity="0.92"/>
+  <path d="M680 245H900C940 245 970 275 970 315V390C970 430 940 460 900 460H842L778 520V460H680C640 460 610 430 610 390V315C610 275 640 245 680 245Z" fill="#FFFFFF" fill-opacity="0.15"/>
+  <circle cx="360" cy="420" r="48" fill="#0D6A8E"/>
+  <path d="M340 420H380M360 400V440" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <circle cx="760" cy="350" r="48" fill="url(#accent)"/>
+  <path d="M740 350H780M760 330V370" stroke="#FFFFFF" stroke-width="14" stroke-linecap="round"/>
+  <path d="M470 420C560 390 640 370 710 360" stroke="#C98B36" stroke-width="14" stroke-linecap="round" stroke-dasharray="10 18"/>
+  <path d="M470 445C560 425 650 405 760 398" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-opacity="0.6" stroke-dasharray="8 16"/>
+  <rect x="250" y="610" width="240" height="26" rx="13" fill="#0D6A8E" fill-opacity="0.25"/>
+  <rect x="250" y="646" width="180" height="26" rx="13" fill="#0D6A8E" fill-opacity="0.18"/>
+  <text x="110" y="118" fill="white" fill-opacity="0.96" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="2">SUPPORT SERVICES</text>
+  <text x="110" y="828" fill="white" fill-opacity="0.88" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600">Speech therapy and social work support for planning, guidance, and follow-up.</text>
+</svg>

@@ -3133,55 +3133,67 @@ padding:0;
 
 .serviceRow {
   display: grid;
-  grid-template-columns: minmax(280px, 1fr) minmax(0, 2fr);
+  grid-template-columns: minmax(0, 33.333%) minmax(0, 66.667%);
   gap: 18px;
   align-items: stretch;
-}
-
-.serviceRowReverse .serviceMedia {
-  order: 2;
-}
-
-.serviceRowReverse .servicePanel {
-  order: 1;
+  width: 100%;
 }
 
 .serviceMedia {
   position: relative;
   min-height: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 16 / 11;
+  max-height: 320px;
+  width: 100%;
   border-radius: 30px;
   overflow: hidden;
   box-shadow: 0 18px 44px rgba(18, 60, 88, 0.12);
+  background:
+    radial-gradient(circle at top left, rgba(244, 194, 107, 0.28), transparent 34%),
+    linear-gradient(135deg, #0d6a8e, #153a50);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.serviceMediaImg {
+.serviceMediaCard {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+  color: #ffffff;
 }
 
-.serviceMediaShade {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(9, 31, 48, 0.12), rgba(9, 31, 48, 0.32));
-}
-
-.serviceMediaTag {
-  position: absolute;
-  left: 18px;
-  bottom: 18px;
-  z-index: 1;
-  display: inline-flex;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.9);
-  color: #0d6a8e;
+.serviceMediaLabel {
   font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.serviceMediaTitle {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.9rem, 2.4vw, 3rem);
+  line-height: 0.98;
+  letter-spacing: -0.03em;
+}
+
+.serviceMediaLine {
+  width: 72px;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #f4c26b, #c98b36);
+}
+
+.serviceMediaCopy {
+  max-width: 250px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.84);
+  font-family: "Manrope", sans-serif;
+  font-size: 0.92rem;
+  line-height: 1.65;
 }
 
 .servicePanel {
@@ -3193,7 +3205,26 @@ padding:0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  align-content: center;
+  width: 100%;
+  min-width: 0;
+  align-content: stretch;
+  align-items: stretch;
+  height: 100%;
+}
+
+.serviceDescription {
+  grid-column: 1 / -1;
+  display: grid;
+  gap: 10px;
+  padding: 4px 2px 6px;
+}
+
+.serviceDescription p {
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  color: #587082;
+  font-size: 0.95rem;
+  line-height: 1.75;
 }
 
 .serviceGroup {
@@ -3204,6 +3235,9 @@ padding:0;
   border-radius: 22px;
   background: rgba(245, 249, 252, 0.9);
   border: 1px solid rgba(20, 73, 106, 0.08);
+  width: 100%;
+  min-width: 0;
+  height: 100%;
 }
 
 .serviceGroupTitle {
@@ -3219,6 +3253,7 @@ padding:0;
   padding: 0;
   display: grid;
   gap: 8px;
+  flex: 1;
 }
 
 .serviceGroupList li {
@@ -3264,6 +3299,9 @@ padding:0;
   position: relative;
   overflow: hidden;
   backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition:
     transform 180ms ease,
     border-color 180ms ease,
@@ -3296,6 +3334,7 @@ padding:0;
   gap: 10px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 
 .serviceContentHeader {
@@ -3380,6 +3419,7 @@ padding:0;
   backdrop-filter: blur(8px);
   display: flex;
   align-items: stretch;
+  height: 100%;
 }
 
 .serviceAltGrid {
@@ -3991,7 +4031,8 @@ padding:0;
 
   .serviceMedia {
     min-height: 220px;
-    aspect-ratio: auto;
+    max-height: 240px;
+    aspect-ratio: 16 / 10;
     border-radius: 24px;
   }
 
@@ -4215,12 +4256,13 @@ padding:0;
   }
 
   .serviceRow {
-    grid-template-columns: minmax(260px, 1fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 33.333%) minmax(0, 66.667%);
     gap: 14px;
   }
 
   .serviceMedia {
-    min-height: 280px;
+    min-height: 240px;
+    max-height: 280px;
   }
 
   .servicePanel {

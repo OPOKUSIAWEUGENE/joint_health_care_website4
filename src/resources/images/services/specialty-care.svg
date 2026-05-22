@@ -1,0 +1,27 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Specialty care illustration</title>
+  <desc id="desc">An illustration showing hospice and pediatrics support with calming star and heart symbols.</desc>
+  <defs>
+    <linearGradient id="bg" x1="150" y1="90" x2="1060" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#153A50"/>
+      <stop offset="1" stop-color="#0A2A3B"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="250" y1="170" x2="940" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C98B36"/>
+      <stop offset="1" stop-color="#F4C26B"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="48" fill="url(#bg)"/>
+  <circle cx="970" cy="170" r="140" fill="#FFFFFF" fill-opacity="0.07"/>
+  <circle cx="200" cy="760" r="180" fill="#FFFFFF" fill-opacity="0.05"/>
+  <rect x="110" y="150" width="980" height="600" rx="40" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <path d="M600 260C534 260 480 314 480 380C480 494 600 610 600 610C600 610 720 494 720 380C720 314 666 260 600 260Z" fill="#FFFFFF" fill-opacity="0.92"/>
+  <path d="M600 330L618 366L658 372L630 399L637 439L600 420L563 439L570 399L542 372L582 366L600 330Z" fill="url(#accent)"/>
+  <path d="M330 500C330 450 370 410 420 410C470 410 510 450 510 500C510 560 420 620 420 620C420 620 330 560 330 500Z" fill="#FFFFFF" fill-opacity="0.15"/>
+  <path d="M420 452L430 472L452 476L436 491L440 513L420 503L400 513L404 491L388 476L410 472L420 452Z" fill="url(#accent)"/>
+  <path d="M750 500C750 450 790 410 840 410C890 410 930 450 930 500C930 560 840 620 840 620C840 620 750 560 750 500Z" fill="#FFFFFF" fill-opacity="0.15"/>
+  <path d="M840 452C825 452 815 463 815 478C815 505 840 527 840 527C840 527 865 505 865 478C865 463 855 452 840 452Z" fill="#C98B36"/>
+  <rect x="250" y="690" width="700" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.2"/>
+  <text x="110" y="118" fill="white" fill-opacity="0.96" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="2">SPECIALTY CARE</text>
+  <text x="110" y="828" fill="white" fill-opacity="0.88" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600">Hospice and pediatrics support centered on comfort, calm, and family guidance.</text>
+</svg>

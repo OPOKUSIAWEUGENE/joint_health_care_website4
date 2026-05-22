@@ -1,0 +1,29 @@
+<svg width="1200" height="900" viewBox="0 0 1200 900" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Home support illustration</title>
+  <desc id="desc">An illustration of home health support and social work with a house and helper figures.</desc>
+  <defs>
+    <linearGradient id="bg" x1="130" y1="90" x2="1070" y2="820" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D6A8E"/>
+      <stop offset="1" stop-color="#153A50"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="250" y1="170" x2="930" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4C26B"/>
+      <stop offset="1" stop-color="#C98B36"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="900" rx="48" fill="url(#bg)"/>
+  <circle cx="980" cy="180" r="130" fill="#FFFFFF" fill-opacity="0.07"/>
+  <circle cx="220" cy="740" r="170" fill="#FFFFFF" fill-opacity="0.05"/>
+  <rect x="110" y="150" width="980" height="600" rx="40" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <path d="M210 470L430 280L650 470V650H210V470Z" fill="#FFFFFF" fill-opacity="0.92"/>
+  <path d="M300 650V500H420V650" fill="#0D6A8E" fill-opacity="0.18"/>
+  <path d="M720 310H940C970 310 995 335 995 365V545C995 575 970 600 940 600H820L760 660V600H720C690 600 665 575 665 545V365C665 335 690 310 720 310Z" fill="#FFFFFF" fill-opacity="0.15"/>
+  <circle cx="355" cy="385" r="42" fill="#0D6A8E"/>
+  <path d="M335 385H375M355 365V405" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="840" cy="470" r="42" fill="url(#accent)"/>
+  <path d="M820 470H860M840 450V490" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M420 520C520 500 640 480 790 455" stroke="#C98B36" stroke-width="14" stroke-linecap="round" stroke-dasharray="9 16"/>
+  <rect x="250" y="690" width="700" height="26" rx="13" fill="#FFFFFF" fill-opacity="0.2"/>
+  <text x="110" y="118" fill="white" fill-opacity="0.96" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" letter-spacing="2">HOME SUPPORT</text>
+  <text x="110" y="828" fill="white" fill-opacity="0.88" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="600">Home health, CNA help, and MSW coordination for daily support at home.</text>
+</svg>

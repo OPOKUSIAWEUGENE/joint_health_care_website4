@@ -6,16 +6,26 @@ export default function AlternatingServices({ rows }) {
       {rows.map((row, index) => (
         <section
           key={`${row.tag}-${index}`}
-          className={`${styles.serviceRow} ${
-            index % 2 === 1 ? styles.serviceRowReverse : ""
-          }`}
+          className={styles.serviceRow}
         >
           <div className={styles.serviceMedia}>
-            <img src={row.image} alt={row.alt} className={styles.serviceMediaImg} />
-            <div className={styles.serviceMediaShade} />
-            <div className={styles.serviceMediaTag}>{row.tag}</div>
+            <div className={styles.serviceMediaCard}>
+              <span className={styles.serviceMediaLabel}>Service</span>
+              <h3 className={styles.serviceMediaTitle}>{row.tag}</h3>
+              <span className={styles.serviceMediaLine} />
+              <p className={styles.serviceMediaCopy}>
+                Clear, dependable support tailored to this service area.
+              </p>
+            </div>
           </div>
           <div className={styles.servicePanel}>
+            {row.description && (
+              <div className={styles.serviceDescription}>
+                {row.description.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+            )}
             {row.groups.map((group, groupIndex) => (
               <div
                 key={group.title}
