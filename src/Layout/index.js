@@ -400,6 +400,76 @@ export default function Layout(){
                     <AlternatingServices rows={serviceRows} />
                 </div>
           </Parallaxrow >
+                </Row>
+
+                <Row>
+                  <div className={styles.whyUsAltSection}>
+                    <div className={styles.whyUsAltMedia}>
+                      <img
+                        className={styles.whyUsAltImage}
+                        src={BackgroundLessImage}
+                        alt="Care team supporting a family"
+                      />
+                      <div className={styles.whyUsAltBadge}>Why families stay with us</div>
+                    </div>
+                    <div className={styles.whyUsAltContent}>
+                      <HeaderAnimation>
+                        <div className={styles.rowHeadingCase}>
+                          <div className={styles.rowHeading}>Why Us?</div>
+                          <div className={styles.disciplineLead}>
+                            The same steady team, clear communication, and practical support throughout care.
+                          </div>
+                        </div>
+                      </HeaderAnimation>
+                      <div className={styles.whyUsAltList}>
+                        <div className={styles.whyUsAltItem}>
+                          <div className={styles.whyUsAltIcon}>
+                            <i className="fa fa-heart" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <div className={styles.whyUsAltTitle}>Compassion first</div>
+                            <div className={styles.whyUsAltText}>
+                              We lead with empathy and keep each visit centered on dignity, comfort, and peace of mind.
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.whyUsAltItem}>
+                          <div className={styles.whyUsAltIcon}>
+                            <i className="fa fa-clock-o" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <div className={styles.whyUsAltTitle}>Always responsive</div>
+                            <div className={styles.whyUsAltText}>
+                              Questions, changes, and next steps are handled with quick follow-up and clear guidance.
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.whyUsAltItem}>
+                          <div className={styles.whyUsAltIcon}>
+                            <i className="fa fa-shield" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <div className={styles.whyUsAltTitle}>Reliable care</div>
+                            <div className={styles.whyUsAltText}>
+                              Families rely on our consistent team and practical care planning to keep things steady.
+                            </div>
+                          </div>
+                        </div>
+                        <div className={styles.whyUsAltItem}>
+                          <div className={styles.whyUsAltIcon}>
+                            <i className="fa fa-users" aria-hidden="true"></i>
+                          </div>
+                          <div>
+                            <div className={styles.whyUsAltTitle}>Family-centered</div>
+                            <div className={styles.whyUsAltText}>
+                              We stay connected with families and referral partners so everyone knows what comes next.
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Row>
 
             <Parallaxrow >
       
