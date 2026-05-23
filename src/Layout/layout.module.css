@@ -3739,20 +3739,324 @@ padding:0;
 }
 
 .feedbackTab {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   gap: 18px;
+  padding: 22px;
+  box-sizing: border-box;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 248, 251, 0.96)),
+    radial-gradient(circle at top right, rgba(13, 102, 141, 0.16), transparent 34%);
+}
+
+.feedbackHero,
+.applicationHero {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.feedbackBadge,
+.applicationBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #0d6a8e;
+  background: rgba(13, 102, 141, 0.1);
+}
+
+.feedbackBadge i,
+.applicationBadge i {
+  color: #c98b36;
+}
+
+.feedbackHeroRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.feedbackTitle,
+.applicationTitle {
+  color: #163a50;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 2vw, 2.2rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+.feedbackCopy,
+.applicationCopy {
+  color: #5d7485;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.feedbackScorePill {
+  min-width: 82px;
+  padding: 10px 12px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #0d6a8e, #163a50);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  box-shadow: 0 14px 28px rgba(13, 102, 141, 0.22);
+}
+
+.feedbackScoreValue {
+  font-size: 1.35rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.feedbackScoreLabel {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.86;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+}
+
+.rateContent {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rate {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.rate input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.rate label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 64px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(13, 102, 141, 0.16);
+  background: rgba(255, 255, 255, 0.94);
+  color: #365265;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 160ms ease,
+    background 160ms ease,
+    color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.rate input:checked + label,
+.rate label:hover {
+  background: linear-gradient(135deg, #0d6a8e, #c98b36);
+  color: #fff;
+  box-shadow: 0 14px 24px rgba(13, 102, 141, 0.2);
+  transform: translateY(-1px);
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.commentTitle {
+  color: #163a50;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.commentForm {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .commentForm textarea {
-  min-height: 110px;
-  border-radius: 16px;
-  padding: 14px;
-  border: 1px solid rgba(20, 73, 106, 0.16);
-  background: rgba(255, 255, 255, 0.94);
+  min-height: 112px;
+  border-radius: 18px;
+  padding: 14px 16px;
+  border: 1px solid rgba(20, 73, 106, 0.14);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 253, 0.96));
+  color: #213949;
+  resize: none;
+  outline: none;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85);
 }
 
-.afterfeedbackTab {
+.commentForm textarea::placeholder {
+  color: #7b93a3;
+}
+
+.commentForm textarea:focus {
+  border-color: rgba(13, 102, 141, 0.42);
+  box-shadow: 0 0 0 4px rgba(13, 102, 141, 0.12);
+}
+
+.feedbackSuccess {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 24px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(13, 102, 141, 0.12), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(241, 248, 251, 0.96));
+}
+
+.feedbackSuccessBadge {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #0d6a8e, #c98b36);
+  box-shadow: 0 16px 30px rgba(13, 102, 141, 0.22);
+}
+
+.feedbackSuccessTitle {
+  color: #163a50;
   font-family: "Cormorant Garamond", serif;
-  color: #0d6a8e;
+  font-size: 2rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.feedbackSuccessText {
+  max-width: 220px;
+  color: #587081;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.applicationCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  box-sizing: border-box;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(245, 248, 250, 0.96)),
+    radial-gradient(circle at top left, rgba(201, 139, 54, 0.18), transparent 36%);
+}
+
+.applicationGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.applicationFormCard {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 10px 12px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid rgba(13, 102, 141, 0.12);
+  box-shadow: 0 12px 24px rgba(4, 18, 32, 0.05);
+}
+
+.applicationFormIcon {
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(135deg, #0d6a8e, #134f73);
+  box-shadow: 0 10px 18px rgba(13, 102, 141, 0.18);
+  flex-shrink: 0;
+}
+
+.applicationFormContent {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.applicationFormRole {
+  color: #183d55;
+  font-size: 0.84rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.applicationFormTone {
+  color: #5e7485;
+  font-size: 0.72rem;
+  line-height: 1.25;
+}
+
+.applicationButtonContainer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.applicationButton {
+  width: 100%;
+  height: 52px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0d6a8e, #134f73);
+  color: #fff;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 18px 30px rgba(13, 102, 141, 0.24);
+  transition:
+    transform 160ms ease,
+    box-shadow 160ms ease,
+    filter 160ms ease;
+}
+
+.applicationButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 22px 34px rgba(13, 102, 141, 0.28);
+  filter: brightness(1.03);
+}
+
+.applicationFormElastic {
+  color: #4f6b7d;
+  font-weight: 700;
 }
 
 @media only screen and (max-width: 780px) {
@@ -4034,6 +4338,31 @@ padding:0;
     max-height: 240px;
     aspect-ratio: 16 / 10;
     border-radius: 24px;
+  }
+
+  .feedbackTab,
+  .feedbackSuccess,
+  .applicationCard {
+    padding: 16px;
+  }
+
+  .feedbackHeroRow {
+    flex-direction: column;
+  }
+
+  .feedbackScorePill {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 18px;
+  }
+
+  .applicationGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .applicationFormCard {
+    min-height: 54px;
   }
 
   .servicePanel {

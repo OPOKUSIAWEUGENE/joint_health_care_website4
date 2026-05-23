@@ -29,6 +29,8 @@ import Animation2 from "./Maincontentcomponents/Animation2"
 import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
 import AlternatingServices from "./Maincontentcomponents/AlternatingServices"
+import FeedbackCard from "./Maincontentcomponents/FeedbackCard"
+import ApplicationCard from "./Maincontentcomponents/ApplicationCard"
 import Logos from "../resources/logo.svg"
 import Electricity from "./Headercomponents/electricity"
 import { useNavigate } from "react-router-dom"
@@ -108,79 +110,6 @@ export default function Layout(){
           control.start("hidden");
         }
       }, [control, inView]);
-
-
-  const afterFeedback= <div className={styles.afterfeedbackTab} >
-    <div>Thanks!!</div>
-
-  </div>
-
-    const feedback=  <form className={styles.feedbackTab} onSubmit={handleSubmit}>
-          
-      <div className={styles.rating}>
-      <div className={styles.rateHeading}>  RATE US</div>
-  
-      <div className={styles.rateContent}>
-      <div className={styles.rate}>
-<input type="radio" id="star5" name="rate" value="5" />
-<label for="star5" title="text">5 stars</label>
-<input type="radio" id="star4" name="rate" value="4" />
-<label for="star4" title="text">4 stars</label>
-<input type="radio" id="star3" name="rate" value="3" />
-<label for="star3" title="text">3 stars</label>
-<input type="radio" id="star2" name="rate" value="2" />
-<label for="star2" title="text">2 stars</label>
-<input type="radio" id="star1" name="rate" value="1" />
-<label for="star1" title="text">1 star</label>
-</div>
-</div>
-<div className={styles.rateCaptions}>
-<i className="fa fa-hand-o-up fa-flip "></i>
-Rate Us
-</div>
-</div>
-
-<div className={styles.comments}>
-
-<div className={styles.commentTitle}>Kindly leave your feedback</div>
-<div>
-    <div className={styles.commentForm}>
-        <textarea required name="comments">
-
-        </textarea>
-        <button  className={styles.applicationButton}>Submit</button>
-    </div>
-</div>
-</div>
-</form>
-
-const [feedbackTab, setfeedbackTab]=useState(feedback);
-
-
-
-      async function handleSubmit(event) {
-        event.preventDefault();
-    
-        const data = new FormData(event.target);
-       
-        const requestOptions = {
-          method: 'POST',
-          // headers: { 'Content-Type': 'application/json' },
-          body: data
-      };
-      const response = await fetch(`${process.env.REACT_APP_BASE_URL}add-comment`,requestOptions);
-  
-      const datas = await response.json();
-     
-     if(response.ok)
-     { 
-        setfeedbackTab(afterFeedback)
-     }
-   else{
-    alert('application not sent. please try sending the application again')
-   }
-      }
-    
 
     return(
         <div className={styles.layout}>
@@ -472,106 +401,21 @@ const [feedbackTab, setfeedbackTab]=useState(feedback);
                 </div>
           </Parallaxrow >
 
-                <div className={styles.rowContent2}>
-                    <HeaderAnimation>
-                        <div className={styles.rowHeadingCase}>
-                    <div className={styles.rowHeading}>Why Us?</div>
-                    </div>
-                    </HeaderAnimation>
-                    <div className={styles.why_us_contents}>
-                    <Parallaxword 
-                    icon={ <span class='fa-stack '>
-                    <i className='fa fa-circle fa-stack-2x'></i>
-                    <i className='fa fa-thin fa-check fa-stack-1x fa-inverse'></i>
-                </span>}  
-                    
-                    wordtitle={"Quality Services"} >
-           
-	           Skilled care tailored to each patient and family. Comfort, clarity, and steady follow-through.
-            </Parallaxword>
-            <Parallaxword icon={ <span class='fa-stack '>
-        <i className='fa fa-circle fa-stack-2x'></i>
-        <i className='fa fa-phone fa-stack-1x fa-inverse'></i>
-    </span>}   wordtitle={"Always Available"} >
-	            24/7 support for questions and care changes. Quick response when you need it most.
-            </Parallaxword>
-            <Parallaxword 
-              icon={ <span class='fa-stack '>
-              <i className='fa fa-circle fa-stack-2x'></i>
-              <i className='fa fa-diamond fa-spin fa-stack-1x fa-inverse'></i>
-          </span>} 
-            
-             wordtitle={"Certified"} >
-	            Certified care with safe, clear coordination. Trusted processes and respectful communication.
-            </Parallaxword>
-                        </div>
-                    </div>
-
-                </Row>
-               
             <Parallaxrow >
       
 <Row>
  <div className={styles.parallaxRowContents}>
-                <Parallaxcard height={"350px"} width={"28%"} >
+                <Parallaxcard height={"420px"} width={"28%"} >
       
- {feedbackTab}
+ <FeedbackCard />
             </Parallaxcard>
           
-            <Parallaxcard height={"350px"} width={"50%"} >
+            <Parallaxcard height={"420px"} width={"50%"} >
             <img className={styles.parallaxCardImg} src={BackgroundLessImage2} alt="logo"/>
                 </Parallaxcard>
               
-            <Parallaxcard height={"350px"} width={"25%"} >
-                <div className={styles.application}>
-            <div className={styles.applicationFormHeading}>APPLICATION FORMS</div>
-            <div className={styles.contentLeftContent}>
-            
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}> <i className="fa fa-files-o"></i>
-  </span>
-        <span className={styles.textLower2}>Registered Nurse (RN)</span>
-            </button>
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}>  <i className="fa fa-file-text "></i></span>
-        <span className={styles.textLower2}> LVN/LPN</span>
-            </button>
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}><i className="fa fa-file "></i></span>
-        <span className={styles.textLower2}> CNA</span>
-            </button>
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}><i className="fa fa-file-text-o "></i></span>
-        <span className={styles.textLower2}>Home Health Aid</span>
-            </button>
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}><i className="fa fa-files-o "></i></span>
-        <span className={styles.textLower2}>Physical Therapy</span>
-            </button>
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}><i className="fa fa-file-text "></i></span>
-        <span className={styles.textLower2}>Occupational Therapy</span>
-            </button>
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}><i className="fa fa-file "></i></span>
-        <span className={styles.textLower2}>Speech Therapy</span>
-            </button>
-            <button className={styles.applicationForms}>
-            <span className={styles.textupper}><i className="fa fa-file-text-o "></i></span>
-        <span className={styles.textLower2}>MSW</span>
-            </button>
-            </div>
-            <div className={styles.applicationButtonContainer}>
-            <button onClick={Apply} className={styles.applicationButton}>Apply</button>
-            <div className={styles.applicationFormElastic}> 
-           
-           <div className={styles.lineUp}> <i className="fa fa-hand-o-up fa-flip "></i>
-           <span>  Open an application form</span>
-         
-           </div>
-            </div>
-            </div>
-            </div>
+            <Parallaxcard height={"420px"} width={"25%"} >
+                <ApplicationCard onApply={Apply} />
                 </Parallaxcard>
               
              
