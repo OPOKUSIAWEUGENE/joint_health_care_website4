@@ -29,7 +29,6 @@ import Animation2 from "./Maincontentcomponents/Animation2"
 import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
 import AlternatingServices from "./Maincontentcomponents/AlternatingServices"
-import FeedbackCard from "./Maincontentcomponents/FeedbackCard"
 import ApplicationCard from "./Maincontentcomponents/ApplicationCard"
 import Logos from "../resources/logo.svg"
 import Electricity from "./Headercomponents/electricity"
@@ -475,16 +474,7 @@ export default function Layout(){
       
 <Row>
  <div className={styles.parallaxRowContents}>
-                <Parallaxcard height={"420px"} width={"28%"} >
-      
- <FeedbackCard />
-            </Parallaxcard>
-          
-            <Parallaxcard height={"420px"} width={"50%"} >
-            <img className={styles.parallaxCardImg} src={BackgroundLessImage2} alt="logo"/>
-                </Parallaxcard>
-              
-            <Parallaxcard height={"420px"} width={"25%"} >
+            <Parallaxcard height={"420px"} width={"100%"} >
                 <ApplicationCard onApply={Apply} />
                 </Parallaxcard>
               
