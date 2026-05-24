@@ -8,7 +8,6 @@ import Parallaxcard from "./Maincontentcomponents/Parallaxcard"
 import Parallaxword from "./Maincontentcomponents/Parallaxword"
 import { Carousel } from 'react-responsive-carousel';
 import Img1 from '../resources/images/jhcimg4.jpg'
-import Img2 from '../resources/images/jhcimg3.jpg'
 import Img3 from '../resources/images/jhcimg2.webp'
 import Img4 from '../resources/images/jhcimg1.webp'
 import BackgroundLessImage from "../resources/images/BackgroundlessImage.png"
@@ -16,7 +15,7 @@ import BackgroundLessImage2 from "../resources/images/bgless4.png"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'font-awesome/css/font-awesome.min.css';
 import Square from "./Headercomponents/square"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Animation1 from "./Maincontentcomponents/Animation1"
 import Animation2 from "./Maincontentcomponents/Animation2"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
@@ -134,7 +133,7 @@ export default function Layout(){
             <Carousel  infiniteLoop useKeyboardArrows autoPlay showThumbs={false} stopOnHover={false} interval={7000} transitionTime={350}>
                 <div className={styles.carousel}>
              
-                    <img alt="picture" src={Img1} />
+                    <img alt="Experienced home care support" src={Img1} />
                <div className={styles.overlay}>
                <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>EXPERIENCED CARE, DELIVERED WITH HEART.</span>
@@ -145,7 +144,7 @@ export default function Layout(){
                 </div>
                 </div>
                 <div className={styles.carousel}>
-                    <img alt="picture" src={Img3} />
+                    <img alt="Always available care team" src={Img3} />
                <div className={styles.overlay}>
                <div className={styles.carouselContent}>
                <span className={styles.carouselText1}>ALWAYS READY WHEN YOU NEED US.</span>
@@ -156,7 +155,7 @@ export default function Layout(){
                </div>
                 </div>
                 <div className={styles.carousel}>      
-                    <img alt="picture" src={Img4} />
+                    <img alt="Ready for the next step in care" src={Img4} />
                    <div className={styles.overlay}>
                    <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>READY FOR THE NEXT STEP.</span>
