@@ -4651,6 +4651,21 @@ padding:0;
     width: min(94vw, 94vw);
   }
 
+  .rowContent {
+    margin-inline: 0;
+  }
+
+  .parallaxrow {
+    width: min(94vw, 94vw);
+    margin-inline: auto;
+  }
+
+  .rowContent2 {
+    width: min(92vw, 520px);
+    margin-inline: auto;
+    align-items: center;
+  }
+
   .frame {
     width: 94vw;
     grid-template-columns: 1fr;
@@ -4814,6 +4829,15 @@ padding:0;
     max-height: 240px;
     aspect-ratio: 16 / 10;
     border-radius: 24px;
+    width: min(100%, 520px);
+    margin-inline: auto;
+  }
+
+  .serviceMediaCard {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 20px 18px;
   }
 
   .feedbackTab,
@@ -5086,6 +5110,186 @@ padding:0;
 
   .response {
     width: 92%;
+  }
+
+  .row,
+  .rowContent,
+  .rowContentLeft,
+  .rowContent2,
+  .parallaxrow,
+  .frame,
+  .why_us_contents,
+  .disciplineGrid,
+  .serviceSequence,
+  .whyUsAltSection {
+    width: min(92vw, 520px);
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .rowContent,
+  .rowContentLeft,
+  .rowContent2,
+  .parallaxrow,
+  .why_us_contents,
+  .disciplineGrid,
+  .serviceSequence {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .serviceRow,
+  .serviceAltRow,
+  .serviceAltRowReverse,
+  .whyUsAltList {
+    width: 100%;
+    justify-items: center;
+  }
+
+  .parallaxwordcontainer,
+  .serviceMedia,
+  .servicePanel,
+  .serviceAltBody,
+  .serviceAltItem,
+  .disciplineCard,
+  .whyUsAltMedia,
+  .whyUsAltContent,
+  .whyUsAltItem,
+  .applicationCard,
+  .feedbackTab,
+  .feedbackSuccess,
+  .services,
+  .contentDivide {
+    width: 100%;
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+  }
+
+  .serviceMediaCard {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .serviceMediaLine,
+  .serviceMediaCopy {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .serviceMediaCard,
+  .whyUsAltContent .rowHeadingCase,
+  .whyUsAltContent .rowHeading,
+  .whyUsAltContent .disciplineLead {
+    align-items: center;
+    text-align: center;
+  }
+
+  .whyUsAltContent .rowHeading::after {
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100%, 140px);
+  }
+
+  .rowContent,
+  .rowContent2,
+  .frame,
+  .whyUsAltSection {
+    transform: translateX(clamp(-12px, -2.5vw, -8px));
+  }
+
+  .parallaxwordcontainer,
+  .parallaxwordheader,
+  .serviceMediaCard,
+  .serviceDescription,
+  .serviceGroup,
+  .serviceGroupList,
+  .serviceAltItem,
+  .serviceAltItemHeader,
+  .disciplineCard,
+  .whyUsAltItem,
+  .whyUsAltItem > div,
+  .services,
+  .serviceContent {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .parallaxwordheader,
+  .serviceAltItemHeader,
+  .whyUsAltItem {
+    flex-direction: column;
+  }
+
+  .serviceDescription,
+  .serviceGroupList,
+  .serviceContentText,
+  .serviceAltItemText {
+    width: 100%;
+    justify-items: center;
+  }
+
+  .parallaxwordtitle,
+  .parallaxwordcontent,
+  .serviceMediaTitle,
+  .serviceMediaCopy,
+  .serviceDescription p,
+  .serviceGroupTitle,
+  .serviceGroupList li,
+  .serviceAltItemTitle,
+  .serviceAltItemText,
+  .disciplineTitle,
+  .disciplineText,
+  .whyUsAltTitle,
+  .whyUsAltText,
+  .serviceContentHeader,
+  .serviceContentText {
+    text-align: center;
+  }
+
+  .serviceGroupList li,
+  .serviceContentText div,
+  .serviceAltItemText div {
+    padding-left: 0;
+  }
+
+  .serviceGroupList li::before {
+    display: none;
+  }
+
+  .serviceContentText div strong,
+  .serviceAltItemText div strong {
+    position: static;
+    display: inline-block;
+    margin-right: 6px;
+  }
+
+  .serviceDescription,
+  .serviceGroup,
+  .serviceGroupList {
+    align-items: stretch;
+    justify-content: flex-start;
+    justify-items: stretch;
+    text-align: left;
+  }
+
+  .serviceDescription p,
+  .serviceGroupTitle,
+  .serviceGroupList li {
+    text-align: left;
+  }
+
+  .serviceGroupList li {
+    padding-left: 18px;
+  }
+
+  .serviceGroupList li::before {
+    display: block;
   }
 }
 
