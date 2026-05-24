@@ -3114,6 +3114,13 @@ padding:0;
   width: auto;
 }
 
+.disciplineHeadingCase .disciplineLead {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
 .disciplineCard {
   position: relative;
   display: flex;
