@@ -1,5 +1,4 @@
 import Headers from "../Layout/Header";
-import Main from "../Layout/Main";
 import Footer from "../Layout/Footer";
 import Application from "./Application";
 import styles from "../Layout/layout.module.css";

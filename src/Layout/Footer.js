@@ -23,17 +23,11 @@ export default function Footer(){
             </div>
             </div>
             <div className={styles.footerLower}>
-            <Footercards title={"Aims and Objectives"} >
+            <Footercards title={"About Joint Health Care"} >
      
          <div className={styles.aboutus}>
-             {/* <img alt="logo" src={Logo} style={{width:100, height:100}}/>     */}
             <div className={styles.footerdescription}>
-            To provide quality care that exceeds the expectation of our client and provide
-            coordinated approach to home healthcare through our network providers: Skilled Nurs, Physical Therapy, 
-            Social Workers, Home Health Aids. We also include family, primary physicians to create better care plan for individual treatmemnt to gain better understanding to desease process, better medication management and deit management.
-            Our home care personnel are highly trained, skilled and compassionate staff that will result in effective outcome towards patient regaining optimum health            
-
-               
+            We provide dependable home health support with a calm approach, strong follow-through, and clear communication. Our team works closely with families, physicians, and referral partners to create practical care plans that support comfort, safety, and independence at home.
             </div>
             </div>
 </Footercards>
@@ -56,7 +50,7 @@ export default function Footer(){
         </div>
     </Footercards>
 
-    <Footercards title={"Our Info"} >
+    <Footercards title={"Contact & Hours"} >
     <div className={styles.footercolumns_infos}>
     <div className={styles.footer_infos}>
     <div className={styles.textBundle}>
@@ -70,18 +64,19 @@ export default function Footer(){
 </div>
 <div className={styles.textBundle}>
 <Footeraddress><strong>After Office Hours:</strong></Footeraddress>
-<Footeraddress> (code) 713 592 8955</Footeraddress>
+<Footeraddress> 24/7 referral response</Footeraddress>
 </div>
 </div>
 <div className={styles.footer_infos}>
 <div className={styles.textBundle}>
 <Footeraddress><strong>Location:</strong></Footeraddress>
-<Footeraddress>6430 Evening Rose Lare </Footeraddress>
+<Footeraddress>6430 Evening Rose Lane</Footeraddress>
 <Footeraddress>Katy Tx 77449</Footeraddress>
 
 </div>
 <div className={styles.textBundle}>
 <Footeraddress><span style={{fontSize:15, color:"rgb(252, 227, 209)" }}><strong>24 hour service</strong></span></Footeraddress>
+<Footeraddress><a href="mailto:jointhealthcare@yahoo.com" style={{color:"inherit"}}>jointhealthcare@yahoo.com</a></Footeraddress>
 </div>
 </div>
 </div>
@@ -89,13 +84,8 @@ export default function Footer(){
     </Footercards>
     </div>
     <div className={styles.footerSub}>
-        <div className={styles.footerSubLeft}>
-          <span className={styles.footerSubLabel}>Joint Health Care Service Inc.</span>
-          <span className={styles.footerSubCopy}>Copyright 2026 All Rights Reserved</span>
-        </div>
-        <div className={styles.footerSubRight}>
-          <a href="#" className={styles.footerPolicyLink}>Privacy Policy</a>
-        </div>
+        <span>Copyright 2026 <span style={{color:"rgb(218, 96, 9)"}}>Joint Health Care Inc.</span> All Rights Reserved</span>
+        <span><a href="tel:713 592 8955" className={styles.footerPolicyLink}>Call for referrals</a></span>
     </div>
 
         </div>

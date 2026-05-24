@@ -3703,6 +3703,220 @@ padding:0;
   font-weight: 700;
 }
 
+.applicationPage {
+  width: 100%;
+  padding: clamp(24px, 4vw, 56px) 0 42px;
+  background:
+    radial-gradient(circle at top left, rgba(13, 102, 141, 0.14), transparent 28%),
+    radial-gradient(circle at top right, rgba(201, 139, 54, 0.14), transparent 24%),
+    linear-gradient(180deg, #f7fbfd 0%, #eef4f8 48%, #f8f5f1 100%);
+}
+
+.applicationPageInner {
+  width: min(1180px, 92vw);
+  margin-inline: auto;
+  display: grid;
+  gap: 22px;
+}
+
+.applicationPageHero {
+  padding: 30px 32px;
+  border-radius: 32px;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.96), rgba(242, 247, 250, 0.96)),
+    radial-gradient(circle at top right, rgba(13, 102, 141, 0.12), transparent 30%);
+  border: 1px solid rgba(13, 102, 141, 0.08);
+  box-shadow: 0 26px 60px rgba(4, 18, 32, 0.08);
+}
+
+.applicationPageEyebrow {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(13, 102, 141, 0.1);
+  color: #0d6a8e;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.applicationPageTitle {
+  margin: 0;
+  color: #163a50;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  line-height: 0.95;
+  font-weight: 700;
+}
+
+.applicationPageCopy {
+  max-width: 760px;
+  margin: 14px 0 0;
+  color: #567081;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.applicationPagePills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.applicationPagePill {
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #355063;
+  border: 1px solid rgba(13, 102, 141, 0.12);
+  box-shadow: 0 10px 20px rgba(4, 18, 32, 0.04);
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.applicationPageFormShell {
+  overflow: hidden;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.98);
+  border: 1px solid rgba(13, 102, 141, 0.08);
+  box-shadow: 0 28px 64px rgba(4, 18, 32, 0.12);
+}
+
+.applicationPageFormHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 28px;
+  background: linear-gradient(135deg, rgba(13, 102, 141, 0.08), rgba(201, 139, 54, 0.08));
+  color: #183d55;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.applicationPageForm {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  padding: 28px;
+}
+
+.applicationPageSection {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.applicationPageSectionTitle {
+  color: #183d55;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.applicationPageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.applicationField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.applicationField label {
+  color: #29485d;
+  font-size: 0.9rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.applicationField input,
+.applicationField select,
+.applicationField textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border-radius: 16px;
+  border: 1px solid rgba(20, 73, 106, 0.14);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(248, 251, 253, 0.96));
+  color: #1d3342;
+  box-sizing: border-box;
+  outline: none;
+  transition:
+    border-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.applicationField textarea {
+  min-height: 128px;
+  resize: vertical;
+}
+
+.applicationField input:focus,
+.applicationField select:focus,
+.applicationField textarea:focus {
+  border-color: rgba(13, 102, 141, 0.42);
+  box-shadow: 0 0 0 4px rgba(13, 102, 141, 0.1);
+}
+
+.applicationSpanTwo {
+  grid-column: 1 / -1;
+}
+
+.applicationPageButtonRow {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-end;
+  padding-top: 4px;
+}
+
+.applicationPageButtonRow .applicationButton {
+  width: min(100%, 320px);
+  height: 54px;
+}
+
+.applicationPageBackButton {
+  width: min(100%, 320px);
+  height: 54px;
+  border: 1px solid rgba(13, 102, 141, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0d6a8e;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 12px 22px rgba(4, 18, 32, 0.06);
+  transition:
+    transform 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.applicationPageBackButton:hover {
+  transform: translateY(-1px);
+  border-color: rgba(13, 102, 141, 0.3);
+  background: rgba(13, 102, 141, 0.06);
+  box-shadow: 0 16px 26px rgba(4, 18, 32, 0.08);
+}
+
+.applicationPageSupportText {
+  color: #60798a;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
 .footer {
   width: 100%;
   margin-top: 18px;
@@ -3862,6 +4076,7 @@ padding:0;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  padding-bottom: 10px;
 }
 
 .feedbackBadge,
@@ -4070,7 +4285,8 @@ padding:0;
 }
 
 .applicationCard {
-  height: 100%;
+  height: auto;
+  min-height: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -4159,6 +4375,13 @@ padding:0;
   transform: translateY(-1px);
   box-shadow: 0 22px 34px rgba(13, 102, 141, 0.28);
   filter: brightness(1.03);
+}
+
+.applicationButton:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  transform: none;
+  box-shadow: 0 18px 30px rgba(13, 102, 141, 0.14);
 }
 
 .applicationFormElastic {
@@ -4451,6 +4674,73 @@ padding:0;
   .feedbackSuccess,
   .applicationCard {
     padding: 16px;
+  }
+
+  .applicationPage {
+    padding: 18px 0 34px;
+  }
+
+  .applicationPageInner {
+    width: 92vw;
+    gap: 16px;
+  }
+
+  .applicationPageHero {
+    padding: 22px 18px;
+    border-radius: 24px;
+  }
+
+  .applicationPageTitle {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+  }
+
+  .applicationPageCopy {
+    font-size: 0.95rem;
+  }
+
+  .applicationPagePills {
+    gap: 8px;
+  }
+
+  .applicationPagePill {
+    font-size: 0.8rem;
+  }
+
+  .applicationPageFormShell {
+    border-radius: 24px;
+  }
+
+  .applicationPageFormHeader {
+    padding: 16px 18px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .applicationPageForm {
+    padding: 18px;
+    gap: 20px;
+  }
+
+  .applicationPageGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .applicationSpanTwo {
+    grid-column: auto;
+  }
+
+  .applicationPageButtonRow {
+    align-items: stretch;
+  }
+
+  .applicationPageButtonRow .applicationButton {
+    width: 100%;
+    max-width: none;
+  }
+
+  .applicationPageBackButton {
+    width: 100%;
+    max-width: none;
   }
 
   .feedbackHeroRow {
