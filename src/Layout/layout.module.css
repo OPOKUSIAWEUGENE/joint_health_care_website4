@@ -129,7 +129,34 @@ color:rgb(250, 167, 148);
 right:0;
 top:70px;
 padding:10px;
+overflow: hidden;
+transform-origin: top center;
+transition:
+  opacity 220ms ease,
+  transform 220ms ease,
+  max-height 260ms ease,
+  padding 220ms ease,
+  box-shadow 220ms ease;
 
+}
+
+.dropdownmenuOpen {
+  opacity: 1;
+  max-height: 420px;
+  transform: translateY(0) scaleY(1);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.dropdownmenuClosed {
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  transform: translateY(-10px) scaleY(0.98);
+  pointer-events: none;
+  box-shadow: none;
+  visibility: hidden;
 }
 
 .menuicon button{
@@ -1877,10 +1904,12 @@ align-items: center;
   }
 
 .headerTopright span{
-  display:block;
-  width:100%;
-  text-align: center;
-
+  display:inline-flex;
+  width:auto;
+  text-align:left;
+  align-items:center;
+  white-space:nowrap;
+  gap:6px;
 
 }
 
@@ -1889,23 +1918,25 @@ align-items: center;
 }
 .headerTopright {
   display:flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   width:100%;
-  gap:5px;
+  gap:6px 10px;
   padding:0;
   padding-top: 15px;
   padding-bottom:15px;
 }
 .headerTopright span a{
   font-size: 12px;
-
-  
+  white-space: nowrap;
 }
 .headertop_fa{
 display: flex;
-gap:20px;
+gap:14px;
+width:100%;
+justify-content:center;
 }
 .rowContentRight img{
   display:none;
@@ -4476,6 +4507,13 @@ padding:0;
     display: none;
   }
 
+  .square {
+    padding: 0 10px;
+    height: 40px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
   .menuicon {
     width: auto;
     justify-content: flex-end;
@@ -4491,32 +4529,56 @@ padding:0;
   }
 
   .dropdownmenu {
-    right: 12px;
-    left: auto;
-    top: 74px;
-    width: min(82vw, 260px);
+    left: 0;
+    right: 0;
+    top: calc(100% + 8px);
+    width: 100%;
     min-width: 0;
-    padding: 10px;
-    border-radius: 18px;
-    background: rgba(14, 26, 36, 0.98);
+    padding: 12px 14px 14px;
+    border-radius: 0 0 22px 22px;
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid rgba(20, 73, 106, 0.08);
+    border-bottom: 1px solid rgba(20, 73, 106, 0.08);
+    box-shadow: 0 18px 40px rgba(10, 20, 30, 0.14);
     backdrop-filter: none;
+    will-change: opacity, transform, max-height, padding;
+  }
+
+  .dropdownmenuOpen {
+    max-height: 360px;
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    visibility: visible;
+  }
+
+  .dropdownmenuClosed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-12px) scaleY(0.98);
+    visibility: hidden;
   }
 
   .dropdown {
-    gap: 8px;
+    gap: 0;
+    color: #0d6a8e;
   }
 
   .dropdown span {
     width: 100%;
-    padding: 11px 12px;
-    border-radius: 14px;
+    padding: 14px 4px;
+    border-radius: 0;
     font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #0d6a8e;
+    background: transparent;
+    border-bottom: 1px solid rgba(20, 73, 106, 0.08);
+  }
+
+  .dropdown span i {
+    color: #c98b36;
   }
 
   .dropdown span:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(13, 102, 141, 0.06);
   }
 
   .carousel {
@@ -4589,7 +4651,7 @@ padding:0;
   }
 
   .frameRight {
-    align-items: flex-start;
+    align-items: center;
     padding: 24px 18px 28px;
     gap: 14px;
   }
@@ -4694,6 +4756,8 @@ padding:0;
   .fa_container {
     grid-template-columns: 1fr;
     padding: 12px;
+    width: min(100%, 420px);
+    margin-inline: auto;
   }
 
   .contactCard {
@@ -4711,6 +4775,12 @@ padding:0;
 
   .contactValue {
     font-size: 0.92rem;
+  }
+
+  .frameContactNote {
+    max-width: 420px;
+    margin-inline: auto;
+    text-align: center;
   }
 
   .serviceSequence {
@@ -4829,18 +4899,18 @@ padding:0;
   }
 
   .servicePanel {
-    padding: 20px 18px;
-    border-radius: 24px;
+    padding: 12px 10px;
+    border-radius: 18px;
     grid-template-columns: 1fr;
   }
 
   .serviceGroupTitle {
-    font-size: 1.25rem;
+    font-size: 1.05rem;
   }
 
   .serviceGroupList li {
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.8rem;
+    line-height: 1.45;
   }
 
   .contentDivide {
@@ -4856,14 +4926,14 @@ padding:0;
 
   .services {
     width: 100%;
-    padding: 18px 16px 16px;
+    padding: 12px 12px 10px;
   }
 
   .fa_icons {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 12px;
-    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+    font-size: 22px;
   }
 
   .serviceContentHeader {
@@ -4871,8 +4941,8 @@ padding:0;
   }
 
   .serviceContentText {
-    font-size: 0.9rem;
-    line-height: 1.7;
+    font-size: 0.84rem;
+    line-height: 1.5;
   }
 
   .parallaxrow {
@@ -5020,6 +5090,17 @@ padding:0;
     padding-right: 3vw;
   }
 
+  .headermiddle {
+    gap: 8px;
+  }
+
+  .square {
+    padding: 0 12px;
+    height: 44px;
+    gap: 6px;
+    font-size: 12px;
+  }
+
   .header,
   .headerMinimized {
     grid-template-columns: 34% 66%;
@@ -5032,31 +5113,56 @@ padding:0;
   }
 
   .dropdownmenu {
-    right: 3vw;
-    left: auto;
-    top: 78px;
-    min-width: 220px;
-    padding: 12px;
-    border-radius: 18px;
-    background: rgba(14, 26, 36, 0.98);
+    left: 0;
+    right: 0;
+    top: calc(100% + 8px);
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px 14px;
+    border-radius: 0 0 22px 22px;
+    background: rgba(255, 255, 255, 0.98);
+    border-top: 1px solid rgba(20, 73, 106, 0.08);
+    border-bottom: 1px solid rgba(20, 73, 106, 0.08);
+    box-shadow: 0 18px 40px rgba(10, 20, 30, 0.14);
     backdrop-filter: none;
+    will-change: opacity, transform, max-height, padding;
+  }
+
+  .dropdownmenuOpen {
+    max-height: 320px;
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+    visibility: visible;
+  }
+
+  .dropdownmenuClosed {
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-12px) scaleY(0.98);
+    visibility: hidden;
   }
 
   .dropdown {
-    gap: 8px;
+    gap: 0;
+    color: #0d6a8e;
   }
 
   .dropdown span {
     width: 100%;
-    padding: 11px 12px;
-    border-radius: 14px;
+    padding: 14px 4px;
+    border-radius: 0;
     font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #0d6a8e;
+    background: transparent;
+    border-bottom: 1px solid rgba(20, 73, 106, 0.08);
+  }
+
+  .dropdown span i {
+    color: #c98b36;
   }
 
   .dropdown span:hover {
-    background: rgba(255, 255, 255, 0.12);
+    background: rgba(13, 102, 141, 0.06);
   }
 
   .carousel {
@@ -5205,7 +5311,7 @@ padding:0;
 
   .services {
     width: 100%;
-    padding: 20px 18px 18px;
+    padding: 12px 12px 10px;
   }
 
   .ServiceRowContents {
@@ -5214,9 +5320,10 @@ padding:0;
   }
 
   .fa_icons {
-    width: 60px;
-    height: 60px;
-    font-size: 26px;
+    width: 48px;
+    height: 48px;
+    font-size: 22px;
+    margin-bottom: 8px;
   }
 
   .footerLower {

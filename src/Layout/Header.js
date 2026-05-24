@@ -20,20 +20,10 @@ else
 }
 
     window.addEventListener("scroll", modifyHeader)
-    const [ display, setDisplay ] = useState( 'none' )
+    const [ isMenuOpen, setIsMenuOpen ] = useState(false)
 
     function handleClick() {
-
-        if ( display === 'none' ) {
-
-            setDisplay( 'block' )
-
-        } else {
-
-            setDisplay( 'none' )
-
-        }
-
+        setIsMenuOpen((open) => !open)
     }
     return (<>  <div className={styles.headerTop}>
         <div class={styles.headerTopleft}>
@@ -75,7 +65,7 @@ else
         </div>
         <div className={styles.menuicon}>
             <button onClick={handleClick}> <i className="fa fa-bars" aria-hidden="true"></i></button>
-            <div className={styles.dropdownmenu} style={{display:display}}>
+            <div className={`${styles.dropdownmenu} ${isMenuOpen ? styles.dropdownmenuOpen : styles.dropdownmenuClosed}`}>
             <div className={styles.dropdown}>
             {/* <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span> */}
             <span ><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Our Services</span>
