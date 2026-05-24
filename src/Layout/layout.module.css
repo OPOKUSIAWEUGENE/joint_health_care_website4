@@ -2591,7 +2591,7 @@ padding:0;
   backface-visibility: hidden;
   contain: paint;
 }
-
+/**/
 .overlay {
   height: 100%;
   background:
