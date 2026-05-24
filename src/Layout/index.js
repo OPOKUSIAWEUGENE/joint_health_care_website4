@@ -1,11 +1,8 @@
-import Headers from "./Header";
 import Footer from "./Footer";
 import styles from "./layout.module.css"
-import Slider from "./Maincontentcomponents/Slider.js"
 import Row from "./Maincontentcomponents/Row"
 // import Rowcard from "./Maincontentcomponents/Rowcard"
 // import Word from "./Maincontentcomponents/word"
-import Rowparagraph from "./Maincontentcomponents/Rowparagraph"
 import Parallaxrow from "./Maincontentcomponents/Parallaxrow"
 import Parallaxcard from "./Maincontentcomponents/Parallaxcard"
 import Parallaxword from "./Maincontentcomponents/Parallaxword"
@@ -19,13 +16,9 @@ import BackgroundLessImage2 from "../resources/images/bgless4.png"
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import 'font-awesome/css/font-awesome.min.css';
 import Square from "./Headercomponents/square"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { useAnimation, motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import { useEffect, useState } from "react"
 import Animation1 from "./Maincontentcomponents/Animation1"
 import Animation2 from "./Maincontentcomponents/Animation2"
-import Animation3 from "./Maincontentcomponents/Animation3"
 import HeaderAnimation from "./Maincontentcomponents/HeaderAnimation"
 import AlternatingServices from "./Maincontentcomponents/AlternatingServices"
 import ApplicationCard from "./Maincontentcomponents/ApplicationCard"
@@ -66,22 +59,10 @@ export default function Layout(){
       
           window.addEventListener("scroll", modifyHeader)
           const [ display, setDisplay ] = useState( 'none' )
-      
-          function handleClick() {
-      
-              if ( display === 'none' ) {
-      
-                  setDisplay( 'block' )
-      
-              } else {
-      
-                  setDisplay( 'none' )
-      
-              }
-      
-          }
 
-    
+          function handleClick() {
+              setDisplay((current) => (current === 'none' ? 'block' : 'none'))
+          }
     const navigate=useNavigate();
 
 
@@ -89,20 +70,6 @@ export default function Layout(){
     {
         navigate('/new-application');
     }
-    const boxVariant = {
-        visible: { opacity: 1,  y: 0, transition: { duration: 2 } },
-        hidden: { opacity: 0.2,  y: 20  }
-      };
-      const control = useAnimation();
-      const [ref, inView] = useInView();
-     useEffect(() => {
-        if (inView) {
-          control.start("visible");
-        } else {
-          control.start("hidden");
-        }
-      }, [control, inView]);
-
     return(
         <div className={styles.layout}>
             <>  <div className={styles.headerTop}>
@@ -115,10 +82,10 @@ export default function Layout(){
          <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; <a href="tel:713 592 8955"> 713 592 8955</a></span>
         
         <span className={styles.headertop_fa}>
-<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
-  <a href="#" class="google"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;
-   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+<a href="https://www.facebook.com" class="facebook" target="_blank" rel="noreferrer"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
+  <a href="https://www.twitter.com" class="twitter" target="_blank" rel="noreferrer"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+  <a href="https://www.instagram.com" class="google" target="_blank" rel="noreferrer"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;
+   <a href="https://www.linkedin.com" class="linkedin" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
    </span>
         </div>
          </div>  
@@ -145,7 +112,7 @@ export default function Layout(){
         </div>
         <div className={styles.menuicon}>
             <button onClick={handleClick}> <i className="fa fa-bars" aria-hidden="true"></i></button>
-            <div className={styles.dropdownmenu} style={{display:display}}>
+            <div className={styles.dropdownmenu} style={{display: display}}>
             <div className={styles.dropdown}>
             {/* <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span> */}
             <span ><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Our Services</span>

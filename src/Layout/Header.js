@@ -61,12 +61,12 @@ else
         <div class={styles.headerTopright}>
         <span><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; <a href="mailto:jointhealthcare@yahoo.com"> jointhealthcare@yahoo.com</a></span>
          <span><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; <a href="tel:713 592 8955"> 713 592 8955</a></span>
-        
-        <span className={styles.headertop_fa}>
-<a href="#" class="facebook"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
-  <a href="#" class="google"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;
-   <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
+	        
+	        <span className={styles.headertop_fa}>
+<a href="https://www.facebook.com" class="facebook" target="_blank" rel="noreferrer"><i class="fa fa-facebook"></i></a>&nbsp;&nbsp;
+  <a href="https://www.twitter.com" class="twitter" target="_blank" rel="noreferrer"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;
+  <a href="https://www.instagram.com" class="google" target="_blank" rel="noreferrer"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;
+   <a href="https://www.linkedin.com" class="linkedin" target="_blank" rel="noreferrer"><i class="fa fa-linkedin"></i></a>&nbsp;&nbsp;
    </span>
         </div>
          </div>  

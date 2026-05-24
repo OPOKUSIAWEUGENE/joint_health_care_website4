@@ -16,10 +16,10 @@ export default function Footer(){
    </div>
             </div>
             <div className={styles.socialmedia}>
-              <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
-              <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
-              <a href="#" className="google"><i className="fa fa-instagram"></i></a>
-              <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a>
+              <a href="https://www.facebook.com" className="facebook" target="_blank" rel="noreferrer"><i className="fa fa-facebook"></i></a>
+              <a href="https://www.twitter.com" className="twitter" target="_blank" rel="noreferrer"><i className="fa fa-twitter"></i></a>
+              <a href="https://www.instagram.com" className="google" target="_blank" rel="noreferrer"><i className="fa fa-instagram"></i></a>
+              <a href="https://www.linkedin.com" className="linkedin" target="_blank" rel="noreferrer"><i className="fa fa-linkedin"></i></a>
             </div>
             </div>
             <div className={styles.footerLower}>
