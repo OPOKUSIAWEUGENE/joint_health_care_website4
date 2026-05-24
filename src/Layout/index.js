@@ -133,7 +133,7 @@ export default function Layout(){
             <Carousel  infiniteLoop useKeyboardArrows autoPlay showThumbs={false} stopOnHover={false} interval={7000} transitionTime={350}>
                 <div className={styles.carousel}>
              
-                    <img alt="Experienced home care support" src={Img1} />
+                    <img alt="Experienced home care support" className={styles.carouselImage} loading="eager" decoding="async" fetchPriority="high" src={Img1} />
                <div className={styles.overlay}>
                <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>EXPERIENCED CARE, DELIVERED WITH HEART.</span>
@@ -144,7 +144,7 @@ export default function Layout(){
                 </div>
                 </div>
                 <div className={styles.carousel}>
-                    <img alt="Always available care team" src={Img3} />
+                    <img alt="Always available care team" className={styles.carouselImage} loading="lazy" decoding="async" fetchPriority="low" src={Img3} />
                <div className={styles.overlay}>
                <div className={styles.carouselContent}>
                <span className={styles.carouselText1}>ALWAYS READY WHEN YOU NEED US.</span>
@@ -155,7 +155,7 @@ export default function Layout(){
                </div>
                 </div>
                 <div className={styles.carousel}>      
-                    <img alt="Ready for the next step in care" src={Img4} />
+                    <img alt="Ready for the next step in care" className={styles.carouselImage} loading="lazy" decoding="async" fetchPriority="low" src={Img4} />
                    <div className={styles.overlay}>
                    <div className={styles.carouselContent}>
                 <span className={styles.carouselText1}>READY FOR THE NEXT STEP.</span>
