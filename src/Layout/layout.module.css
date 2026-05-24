@@ -66,15 +66,27 @@
       position: sticky;
       top: 0;
       z-index:10;
-      transition: all 2s;
+      transition:
+        background-color 220ms ease,
+        border-color 220ms ease,
+        box-shadow 220ms ease,
+        min-height 220ms ease;
       
   }
   .logoFrame{
     display:flex;
+    align-items:center;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
   }
   .logoFrame img{
     width:80px;
     height:80px;
+    object-fit: contain;
+    flex: 0 0 auto;
+    aspect-ratio: 1 / 1;
+    backface-visibility: hidden;
+    transform: translateZ(0);
   }
 
 .logoCaption{
@@ -2394,6 +2406,7 @@ padding:0;
 
 .header .logoCaption {
   align-items: flex-start;
+  gap: 4px;
 }
 
 .header .logoCaptionText1 {
@@ -2401,7 +2414,7 @@ padding:0;
   font-family: "Cormorant Garamond", serif;
   font-size: clamp(1.9rem, 2.4vw, 3rem);
   letter-spacing: 0.14em;
-  line-height: 0.92;
+  line-height: 1;
 }
 
 .header .logoCaptionText2 {
@@ -2410,6 +2423,7 @@ padding:0;
   font-size: 0.73rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  line-height: 1.2;
 }
 
 .logoFrame {
