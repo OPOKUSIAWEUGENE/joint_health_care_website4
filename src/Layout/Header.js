@@ -1,7 +1,7 @@
 
 import styles from "./layout.module.css"
 import Square from "./Headercomponents/square"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import 'font-awesome/css/font-awesome.min.css';
 import Logos from "../resources/logo.svg"
 
@@ -21,9 +21,37 @@ else
 
     window.addEventListener("scroll", modifyHeader)
     const [ isMenuOpen, setIsMenuOpen ] = useState(false)
+    const [ isMenuMounted, setIsMenuMounted ] = useState(false)
+    const closeTimerRef = useRef(null)
+
+    useEffect(() => {
+        return () => {
+            window.removeEventListener("scroll", modifyHeader)
+            if (closeTimerRef.current) {
+                clearTimeout(closeTimerRef.current)
+            }
+        }
+    }, [])
 
     function handleClick() {
-        setIsMenuOpen((open) => !open)
+        if (isMenuOpen) {
+            setIsMenuOpen(false)
+            if (closeTimerRef.current) {
+                clearTimeout(closeTimerRef.current)
+            }
+            closeTimerRef.current = setTimeout(() => {
+                setIsMenuMounted(false)
+            }, 240)
+            return
+        }
+
+        if (closeTimerRef.current) {
+            clearTimeout(closeTimerRef.current)
+        }
+        setIsMenuMounted(true)
+        requestAnimationFrame(() => {
+            setIsMenuOpen(true)
+        })
     }
     return (<>  <div className={styles.headerTop}>
         <div class={styles.headerTopleft}>
@@ -65,18 +93,16 @@ else
         </div>
         <div className={styles.menuicon}>
             <button onClick={handleClick}> <i className="fa fa-bars" aria-hidden="true"></i></button>
-            <div className={`${styles.dropdownmenu} ${isMenuOpen ? styles.dropdownmenuOpen : styles.dropdownmenuClosed}`}>
-            <div className={styles.dropdown}>
-            {/* <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span> */}
-            <span ><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Our Services</span>
-            <span ><i class='fa fa-map-marker' style={{fontSize:20}}></i>&nbsp;Our Location</span>
-                <span><i class='fa fa-phone' style={{fontSize:20}}></i>&nbsp;Contacts</span>
-               
-     
-
-   
-            </div>
-     </div>
+            {isMenuMounted ? (
+              <div className={`${styles.dropdownmenu} ${isMenuOpen ? styles.dropdownmenuOpen : styles.dropdownmenuClosed}`}>
+                <div className={styles.dropdown}>
+                  {/* <span><i class='fa fa-info' style={{fontSize:20}}></i>&nbsp;About Us</span> */}
+                  <span ><i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;Our Services</span>
+                  <span ><i class='fa fa-map-marker' style={{fontSize:20}}></i>&nbsp;Our Location</span>
+                  <span><i class='fa fa-phone' style={{fontSize:20}}></i>&nbsp;Contacts</span>
+                </div>
+              </div>
+            ) : null}
             </div>
      
         </div>

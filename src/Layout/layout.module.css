@@ -156,7 +156,6 @@ transition:
   transform: translateY(-10px) scaleY(0.98);
   pointer-events: none;
   box-shadow: none;
-  visibility: hidden;
 }
 
 .menuicon button{
@@ -4531,17 +4530,24 @@ padding:0;
   .dropdownmenu {
     left: 0;
     right: 0;
-    top: calc(100% + 8px);
+    top: 100%;
+    margin-top: -1px;
     width: 100%;
     min-width: 0;
     padding: 12px 14px 14px;
     border-radius: 0 0 22px 22px;
     background: rgba(255, 255, 255, 0.98);
-    border-top: 1px solid rgba(20, 73, 106, 0.08);
+    border-top: none;
     border-bottom: 1px solid rgba(20, 73, 106, 0.08);
     box-shadow: 0 18px 40px rgba(10, 20, 30, 0.14);
     backdrop-filter: none;
     will-change: opacity, transform, max-height, padding;
+    transition:
+      opacity 320ms ease,
+      transform 320ms ease,
+      max-height 320ms ease,
+      padding 320ms ease,
+      box-shadow 320ms ease;
   }
 
   .dropdownmenuOpen {
@@ -4555,7 +4561,6 @@ padding:0;
     max-height: 0;
     opacity: 0;
     transform: translateY(-12px) scaleY(0.98);
-    visibility: hidden;
   }
 
   .dropdown {
@@ -5115,17 +5120,24 @@ padding:0;
   .dropdownmenu {
     left: 0;
     right: 0;
-    top: calc(100% + 8px);
+    top: 100%;
+    margin-top: -1px;
     width: 100%;
     min-width: 0;
     padding: 12px 14px 14px;
     border-radius: 0 0 22px 22px;
     background: rgba(255, 255, 255, 0.98);
-    border-top: 1px solid rgba(20, 73, 106, 0.08);
+    border-top: none;
     border-bottom: 1px solid rgba(20, 73, 106, 0.08);
     box-shadow: 0 18px 40px rgba(10, 20, 30, 0.14);
     backdrop-filter: none;
     will-change: opacity, transform, max-height, padding;
+    transition:
+      opacity 320ms ease,
+      transform 320ms ease,
+      max-height 320ms ease,
+      padding 320ms ease,
+      box-shadow 320ms ease;
   }
 
   .dropdownmenuOpen {
@@ -5139,7 +5151,6 @@ padding:0;
     max-height: 0;
     opacity: 0;
     transform: translateY(-12px) scaleY(0.98);
-    visibility: hidden;
   }
 
   .dropdown {
