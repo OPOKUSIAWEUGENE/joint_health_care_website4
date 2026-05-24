@@ -1810,64 +1810,71 @@ align-items: center;
     border-bottom:5px solid rgb(218, 108, 29);
 }
 
-.headerleft{
-padding:0;
-}
-.logoFrame img{
-  width:70px;
-  height:70px;
-}
-.logoCaptionText1{
-  font-size: 30px;
-}
-.logoCaptionText2{
-  font-size: 9px;
-}
-.header,.headerMinimized{
-  
-     grid-template-columns: 50% 50%;
-     font-size: 18px;;   
- }
+  .headerleft{
+    padding:0;
+    width:auto;
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+  .logoFrame{
+    justify-content:flex-start;
+    gap:8px;
+    align-items:center;
+  }
+  .logoFrame img{
+    width:54px;
+    height:54px;
+  }
+  .logoCaption{
+    align-items:flex-start;
+    gap:2px;
+  }
+  .logoCaptionText1{
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+  .logoCaptionText2{
+    font-size: 8px;
+    line-height: 1.1;
+  }
+  .header,.headerMinimized{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 12px;
+    font-size: 18px;
+  }
 
   .menuicon{
-   display:flex;
-   justify-content:flex-end;
-   align-items: center;
-   font-size: 30px;
-   margin-right:10px;
-   cursor: pointer;
-}
-.menuicon button {
-  width: 44px;
-  height: 44px;
-}
-.headermiddle{
-   display:none;
-}
-.menuicon:hover{
-   opacity: 0.9;
-   color:#978e8a;
-} 
-.header,.headerMinimized{
-  
-  grid-template-columns: 50% 50%;
-  font-size: 18px;;   
-}
-.headerMinimized, .header{
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-bottom:25px;
-  padding-top:25px;
-}
+    display:flex;
+    justify-content:flex-end;
+    align-items: center;
+    margin-right:0;
+    margin-left:auto;
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+  .menuicon button {
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+  }
+  .headermiddle{
+    display:none;
+  }
+  .menuicon:hover{
+    opacity: 0.9;
+    color:#978e8a;
+  }
 
-.headerButton {
-  min-width: 180px;
-  height: 44px;
-  font-size: 0.75rem;
-  padding: 0 18px;
-}
+  .headerButton {
+    min-width: 180px;
+    height: 44px;
+    font-size: 0.75rem;
+    padding: 0 18px;
+  }
 
 .headerTopright span{
   display:block;
@@ -4410,8 +4417,10 @@ padding:0;
   }
 
   .headerleft {
-    width: 100%;
+    width: auto;
     padding: 0;
+    flex: 1 1 auto;
+    min-width: 0;
   }
 
   .headerTopright {
@@ -4429,19 +4438,38 @@ padding:0;
   }
 
   .logoFrame {
-    justify-content: center;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 8px;
   }
 
   .logoFrame img {
-    width: 68px;
-    height: 68px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .logoCaption {
+    align-items: flex-start;
+    gap: 2px;
+  }
+
+  .logoCaptionText1 {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+
+  .logoCaptionText2 {
+    font-size: 8px;
+    line-height: 1.1;
   }
 
   .header,
   .headerMinimized {
-    padding: 12px 16px 16px;
-    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 12px;
+    gap: 12px;
   }
 
   .headermiddle {
@@ -4449,22 +4477,46 @@ padding:0;
   }
 
   .menuicon {
-    width: 100%;
-    justify-content: center;
+    width: auto;
+    justify-content: flex-end;
     margin-right: 0;
+    margin-left: auto;
+    flex: 0 0 auto;
   }
 
   .menuicon button {
-    width: 44px;
-    height: 44px;
+    width: 42px;
+    height: 42px;
     font-size: 22px;
   }
 
   .dropdownmenu {
-    right: 16px;
-    left: 16px;
+    right: 12px;
+    left: auto;
     top: 74px;
+    width: min(82vw, 260px);
     min-width: 0;
+    padding: 10px;
+    border-radius: 18px;
+    background: rgba(14, 26, 36, 0.98);
+    backdrop-filter: none;
+  }
+
+  .dropdown {
+    gap: 8px;
+  }
+
+  .dropdown span {
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .dropdown span:hover {
+    background: rgba(255, 255, 255, 0.12);
   }
 
   .carousel {
@@ -4946,6 +4998,34 @@ padding:0;
     min-width: 166px;
     height: 44px;
     font-size: 0.76rem;
+  }
+
+  .dropdownmenu {
+    right: 3vw;
+    left: auto;
+    top: 78px;
+    min-width: 220px;
+    padding: 12px;
+    border-radius: 18px;
+    background: rgba(14, 26, 36, 0.98);
+    backdrop-filter: none;
+  }
+
+  .dropdown {
+    gap: 8px;
+  }
+
+  .dropdown span {
+    width: 100%;
+    padding: 11px 12px;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .dropdown span:hover {
+    background: rgba(255, 255, 255, 0.12);
   }
 
   .carousel {
