@@ -2534,6 +2534,20 @@ padding:0;
   height: 100%;
   object-fit: cover;
   filter: saturate(0.98) contrast(1.04) brightness(0.92);
+  transform: scale(1);
+  transform-origin: center center;
+  will-change: transform;
+  animation: carouselKenBurns 22s ease-in-out infinite alternate;
+}
+
+@keyframes carouselKenBurns {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.1);
+  }
 }
 
 .overlay {
